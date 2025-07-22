@@ -115,7 +115,7 @@
                         <!-- /Logo -->
                         <form id="formAuthentication" class="mb-3" method="POST" action="<?= base_url('process'); ?>">
                             <div class="mb-3">
-                                <label for="email" class="form-label">Username</label>
+                                <label for="email" class="form-label">Username xx</label>
                                 <input
                                     type="text"
                                     class="form-control"
