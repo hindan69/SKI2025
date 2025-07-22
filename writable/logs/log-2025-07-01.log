@@ -1,0 +1,561 @@
+INFO - 2025-07-01 04:13:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-01 04:14:21 --> mysqli_sql_exception: Table 'ski_db.users' doesn't exist in engine in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 D:\DLL\IT\SKI\SKI2025\app\Controllers\Otentikasi.php(31): CodeIgniter\BaseModel->first()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\Otentikasi->process()
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Otentikasi))
+#9 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#14 {main}
+CRITICAL - 2025-07-01 04:14:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ski_db.users' doesn't exist in engine
+[Method: POST, Route: process]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\Otentikasi.php(31): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Otentikasi->process()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Otentikasi))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-07-01 04:14:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ski_db.users' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `username` = \'pmitjen1\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `username` = \'pmitjen1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\Otentikasi.php(31): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Otentikasi->process()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Otentikasi))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-07-01 04:14:21 --> [Caused by] mysqli_sql_exception: Table 'ski_db.users' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `users`
+WHERE `username` = \'pmitjen1\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `users`
+WHERE `username` = \'pmitjen1\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `users`
+WHERE `username` = \'pmitjen1\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Otentikasi.php(31): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Otentikasi->process()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Otentikasi))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-07-01 04:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 04:25:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 04:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 04:25:31 --> Current route: /pm
+ERROR - 2025-07-01 04:25:31 --> mysqli_sql_exception: Table 'ski_db.status_klvl' doesn't exist in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `A`.`id_...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `A`.`id_...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `A`.`id_...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `A`.`id_...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\SkSatkerModel.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(40): App\Models\SkSatkerModel->statusSK('208')
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->index()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2025-07-01 04:25:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ski_db.status_klvl' doesn't exist
+[Method: GET, Route: pm]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `A`.`id_sk`, `A`.`id_satker`, `A`.`thn_anggaran`, `A`.`link_sk`, COALESCE(B.status, 0) AS status_pim, COALESCE(C.status, 0) AS status_kpk, COALESCE(D.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `A`
+LEFT JOIN `status_pim` AS `B` ON `A`.`id_satker` = `B`.`id_satker` AND `A`.`thn_anggaran` = `B`.`thn_dipa`
+LEFT JOIN `status_kpk` AS `C` ON `A`.`id_satker` = `C`.`id_satker` AND `A`.`thn_anggaran` = `C`.`thn_dipa`
+LEFT JOIN `status_klvl` AS `D` ON `A`.`id_satker` = `D`.`id_satker` AND `A`.`thn_anggaran` = `D`.`thn_dipa`
+WHERE `A`.`id_satker` = :A.id_satker:', [...], false)
+ 2 APPPATH\Models\SkSatkerModel.php(41): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PenilaianMandiri.php(40): App\Models\SkSatkerModel->statusSK('208')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-07-01 04:25:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ski_db.status_klvl' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `A`.`id_sk`, `A`.`id_satker`, `A`.`thn_anggaran`, `A`.`link_sk`, COALESCE(B.status, 0) AS status_pim, COALESCE(C.status, 0) AS status_kpk, COALESCE(D.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `A`
+LEFT JOIN `status_pim` AS `B` ON `A`.`id_satker` = `B`.`id_satker` AND `A`.`thn_anggaran` = `B`.`thn_dipa`
+LEFT JOIN `status_kpk` AS `C` ON `A`.`id_satker` = `C`.`id_satker` AND `A`.`thn_anggaran` = `C`.`thn_dipa`
+LEFT JOIN `status_klvl` AS `D` ON `A`.`id_satker` = `D`.`id_satker` AND `A`.`thn_anggaran` = `D`.`thn_dipa`
+WHERE `A`.`id_satker` = \'208\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `A`.`id_sk`, `A`.`id_satker`, `A`.`thn_anggaran`, `A`.`link_sk`, COALESCE(B.status, 0) AS status_pim, COALESCE(C.status, 0) AS status_kpk, COALESCE(D.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `A`
+LEFT JOIN `status_pim` AS `B` ON `A`.`id_satker` = `B`.`id_satker` AND `A`.`thn_anggaran` = `B`.`thn_dipa`
+LEFT JOIN `status_kpk` AS `C` ON `A`.`id_satker` = `C`.`id_satker` AND `A`.`thn_anggaran` = `C`.`thn_dipa`
+LEFT JOIN `status_klvl` AS `D` ON `A`.`id_satker` = `D`.`id_satker` AND `A`.`thn_anggaran` = `D`.`thn_dipa`
+WHERE `A`.`id_satker` = \'208\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `A`.`id_sk`, `A`.`id_satker`, `A`.`thn_anggaran`, `A`.`link_sk`, COALESCE(B.status, 0) AS status_pim, COALESCE(C.status, 0) AS status_kpk, COALESCE(D.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `A`
+LEFT JOIN `status_pim` AS `B` ON `A`.`id_satker` = `B`.`id_satker` AND `A`.`thn_anggaran` = `B`.`thn_dipa`
+LEFT JOIN `status_kpk` AS `C` ON `A`.`id_satker` = `C`.`id_satker` AND `A`.`thn_anggaran` = `C`.`thn_dipa`
+LEFT JOIN `status_klvl` AS `D` ON `A`.`id_satker` = `D`.`id_satker` AND `A`.`thn_anggaran` = `D`.`thn_dipa`
+WHERE `A`.`id_satker` = :A.id_satker:', [...], false)
+ 4 APPPATH\Models\SkSatkerModel.php(41): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PenilaianMandiri.php(40): App\Models\SkSatkerModel->statusSK('208')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-07-01 04:25:31 --> [Caused by] mysqli_sql_exception: Table 'ski_db.status_klvl' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `A`.`id_sk`, `A`.`id_satker`, `A`.`thn_anggaran`, `A`.`link_sk`, COALESCE(B.status, 0) AS status_pim, COALESCE(C.status, 0) AS status_kpk, COALESCE(D.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `A`
+LEFT JOIN `status_pim` AS `B` ON `A`.`id_satker` = `B`.`id_satker` AND `A`.`thn_anggaran` = `B`.`thn_dipa`
+LEFT JOIN `status_kpk` AS `C` ON `A`.`id_satker` = `C`.`id_satker` AND `A`.`thn_anggaran` = `C`.`thn_dipa`
+LEFT JOIN `status_klvl` AS `D` ON `A`.`id_satker` = `D`.`id_satker` AND `A`.`thn_anggaran` = `D`.`thn_dipa`
+WHERE `A`.`id_satker` = \'208\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `A`.`id_sk`, `A`.`id_satker`, `A`.`thn_anggaran`, `A`.`link_sk`, COALESCE(B.status, 0) AS status_pim, COALESCE(C.status, 0) AS status_kpk, COALESCE(D.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `A`
+LEFT JOIN `status_pim` AS `B` ON `A`.`id_satker` = `B`.`id_satker` AND `A`.`thn_anggaran` = `B`.`thn_dipa`
+LEFT JOIN `status_kpk` AS `C` ON `A`.`id_satker` = `C`.`id_satker` AND `A`.`thn_anggaran` = `C`.`thn_dipa`
+LEFT JOIN `status_klvl` AS `D` ON `A`.`id_satker` = `D`.`id_satker` AND `A`.`thn_anggaran` = `D`.`thn_dipa`
+WHERE `A`.`id_satker` = \'208\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `A`.`id_sk`, `A`.`id_satker`, `A`.`thn_anggaran`, `A`.`link_sk`, COALESCE(B.status, 0) AS status_pim, COALESCE(C.status, 0) AS status_kpk, COALESCE(D.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `A`
+LEFT JOIN `status_pim` AS `B` ON `A`.`id_satker` = `B`.`id_satker` AND `A`.`thn_anggaran` = `B`.`thn_dipa`
+LEFT JOIN `status_kpk` AS `C` ON `A`.`id_satker` = `C`.`id_satker` AND `A`.`thn_anggaran` = `C`.`thn_dipa`
+LEFT JOIN `status_klvl` AS `D` ON `A`.`id_satker` = `D`.`id_satker` AND `A`.`thn_anggaran` = `D`.`thn_dipa`
+WHERE `A`.`id_satker` = \'208\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `A`.`id_sk`, `A`.`id_satker`, `A`.`thn_anggaran`, `A`.`link_sk`, COALESCE(B.status, 0) AS status_pim, COALESCE(C.status, 0) AS status_kpk, COALESCE(D.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `A`
+LEFT JOIN `status_pim` AS `B` ON `A`.`id_satker` = `B`.`id_satker` AND `A`.`thn_anggaran` = `B`.`thn_dipa`
+LEFT JOIN `status_kpk` AS `C` ON `A`.`id_satker` = `C`.`id_satker` AND `A`.`thn_anggaran` = `C`.`thn_dipa`
+LEFT JOIN `status_klvl` AS `D` ON `A`.`id_satker` = `D`.`id_satker` AND `A`.`thn_anggaran` = `D`.`thn_dipa`
+WHERE `A`.`id_satker` = :A.id_satker:', [...], false)
+ 5 APPPATH\Models\SkSatkerModel.php(41): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PenilaianMandiri.php(40): App\Models\SkSatkerModel->statusSK('208')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-07-01 04:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 04:27:36 --> Current route: /pm
+INFO - 2025-07-01 06:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 06:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 06:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 06:54:52 --> Current route: /pm
+INFO - 2025-07-01 06:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 06:54:54 --> Current route: /dash_pm
+ERROR - 2025-07-01 06:54:55 --> mysqli_sql_exception: Table 'ski_db.nilai_level' doesn't exist in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id_...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id_...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id_...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id_...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\NilaiPMModel.php(90): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(135): App\Models\NilaiPMModel->precentage('208', '2024')
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->dash()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2025-07-01 06:54:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ski_db.nilai_level' doesn't exist
+[Method: GET, Route: dash_pm]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id_unsur`, COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker, COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pm, COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pk, COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_lvl
+FROM `pm_satker` as `a`
+LEFT JOIN `nilai_pm` as `n_pm` ON `n_pm`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pm`.`id_satker` = 208 AND `n_pm`.`thn_dipa` = 2024
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pk`.`id_satker` = 208 AND `n_pk`.`thn_dipa` = 2024
+LEFT JOIN `nilai_level` as `n_lvl` ON `n_lvl`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_lvl`.`id_satker` = 208 AND `n_lvl`.`thn_dipa` = 2024
+GROUP BY `a`.`id_unsur`', [], false)
+ 2 APPPATH\Models\NilaiPMModel.php(90): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PenilaianMandiri.php(135): App\Models\NilaiPMModel->precentage('208', '2024')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->dash()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-07-01 06:54:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ski_db.nilai_level' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id_unsur`, COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker, COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pm, COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pk, COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_lvl
+FROM `pm_satker` as `a`
+LEFT JOIN `nilai_pm` as `n_pm` ON `n_pm`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pm`.`id_satker` = 208 AND `n_pm`.`thn_dipa` = 2024
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pk`.`id_satker` = 208 AND `n_pk`.`thn_dipa` = 2024
+LEFT JOIN `nilai_level` as `n_lvl` ON `n_lvl`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_lvl`.`id_satker` = 208 AND `n_lvl`.`thn_dipa` = 2024
+GROUP BY `a`.`id_unsur`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id_unsur`, COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker, COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pm, COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pk, COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_lvl
+FROM `pm_satker` as `a`
+LEFT JOIN `nilai_pm` as `n_pm` ON `n_pm`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pm`.`id_satker` = 208 AND `n_pm`.`thn_dipa` = 2024
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pk`.`id_satker` = 208 AND `n_pk`.`thn_dipa` = 2024
+LEFT JOIN `nilai_level` as `n_lvl` ON `n_lvl`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_lvl`.`id_satker` = 208 AND `n_lvl`.`thn_dipa` = 2024
+GROUP BY `a`.`id_unsur`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id_unsur`, COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker, COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pm, COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pk, COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_lvl
+FROM `pm_satker` as `a`
+LEFT JOIN `nilai_pm` as `n_pm` ON `n_pm`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pm`.`id_satker` = 208 AND `n_pm`.`thn_dipa` = 2024
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pk`.`id_satker` = 208 AND `n_pk`.`thn_dipa` = 2024
+LEFT JOIN `nilai_level` as `n_lvl` ON `n_lvl`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_lvl`.`id_satker` = 208 AND `n_lvl`.`thn_dipa` = 2024
+GROUP BY `a`.`id_unsur`', [], false)
+ 4 APPPATH\Models\NilaiPMModel.php(90): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PenilaianMandiri.php(135): App\Models\NilaiPMModel->precentage('208', '2024')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->dash()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-07-01 06:54:55 --> [Caused by] mysqli_sql_exception: Table 'ski_db.nilai_level' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id_unsur`, COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker, COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pm, COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pk, COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_lvl
+FROM `pm_satker` as `a`
+LEFT JOIN `nilai_pm` as `n_pm` ON `n_pm`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pm`.`id_satker` = 208 AND `n_pm`.`thn_dipa` = 2024
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pk`.`id_satker` = 208 AND `n_pk`.`thn_dipa` = 2024
+LEFT JOIN `nilai_level` as `n_lvl` ON `n_lvl`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_lvl`.`id_satker` = 208 AND `n_lvl`.`thn_dipa` = 2024
+GROUP BY `a`.`id_unsur`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id_unsur`, COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker, COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pm, COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pk, COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_lvl
+FROM `pm_satker` as `a`
+LEFT JOIN `nilai_pm` as `n_pm` ON `n_pm`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pm`.`id_satker` = 208 AND `n_pm`.`thn_dipa` = 2024
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pk`.`id_satker` = 208 AND `n_pk`.`thn_dipa` = 2024
+LEFT JOIN `nilai_level` as `n_lvl` ON `n_lvl`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_lvl`.`id_satker` = 208 AND `n_lvl`.`thn_dipa` = 2024
+GROUP BY `a`.`id_unsur`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id_unsur`, COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker, COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pm, COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pk, COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_lvl
+FROM `pm_satker` as `a`
+LEFT JOIN `nilai_pm` as `n_pm` ON `n_pm`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pm`.`id_satker` = 208 AND `n_pm`.`thn_dipa` = 2024
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pk`.`id_satker` = 208 AND `n_pk`.`thn_dipa` = 2024
+LEFT JOIN `nilai_level` as `n_lvl` ON `n_lvl`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_lvl`.`id_satker` = 208 AND `n_lvl`.`thn_dipa` = 2024
+GROUP BY `a`.`id_unsur`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id_unsur`, COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker, COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pm, COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pk, COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_lvl
+FROM `pm_satker` as `a`
+LEFT JOIN `nilai_pm` as `n_pm` ON `n_pm`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pm`.`id_satker` = 208 AND `n_pm`.`thn_dipa` = 2024
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pk`.`id_satker` = 208 AND `n_pk`.`thn_dipa` = 2024
+LEFT JOIN `nilai_level` as `n_lvl` ON `n_lvl`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_lvl`.`id_satker` = 208 AND `n_lvl`.`thn_dipa` = 2024
+GROUP BY `a`.`id_unsur`', [], false)
+ 5 APPPATH\Models\NilaiPMModel.php(90): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PenilaianMandiri.php(135): App\Models\NilaiPMModel->precentage('208', '2024')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->dash()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-07-01 06:55:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 06:55:55 --> Current route: /dash_pm
+INFO - 2025-07-01 06:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 06:56:01 --> Current route: /soal_pengungkit
+ERROR - 2025-07-01 06:56:01 --> mysqli_sql_exception: Unknown column 'idx' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `idx`, `...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idx`, `...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idx`, `...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `idx`, `...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\NilaiPKModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(164): App\Models\NilaiPKModel->filter('208', '2024')
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal_pengungkit()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2025-07-01 06:56:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idx' in 'field list'
+[Method: GET, Route: soal_pengungkit]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `idx`, `id_user`, `id_satker`, `id_pm_satker`, `nilai`, `komenpk`, `rekomendasi`, `thn_dipa`, `date_created`
+FROM `nilai_pk`
+WHERE `id_satker` = :id_satker:
+AND `thn_dipa` = :thn_dipa:', [...], false)
+ 2 APPPATH\Models\NilaiPKModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PenilaianMandiri.php(164): App\Models\NilaiPKModel->filter('208', '2024')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal_pengungkit()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-07-01 06:56:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'idx' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idx`, `id_user`, `id_satker`, `id_pm_satker`, `nilai`, `komenpk`, `rekomendasi`, `thn_dipa`, `date_created`
+FROM `nilai_pk`
+WHERE `id_satker` = \'208\'
+AND `thn_dipa` = \'2024\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idx`, `id_user`, `id_satker`, `id_pm_satker`, `nilai`, `komenpk`, `rekomendasi`, `thn_dipa`, `date_created`
+FROM `nilai_pk`
+WHERE `id_satker` = \'208\'
+AND `thn_dipa` = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `idx`, `id_user`, `id_satker`, `id_pm_satker`, `nilai`, `komenpk`, `rekomendasi`, `thn_dipa`, `date_created`
+FROM `nilai_pk`
+WHERE `id_satker` = :id_satker:
+AND `thn_dipa` = :thn_dipa:', [...], false)
+ 4 APPPATH\Models\NilaiPKModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PenilaianMandiri.php(164): App\Models\NilaiPKModel->filter('208', '2024')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal_pengungkit()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-07-01 06:56:01 --> [Caused by] mysqli_sql_exception: Unknown column 'idx' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `idx`, `id_user`, `id_satker`, `id_pm_satker`, `nilai`, `komenpk`, `rekomendasi`, `thn_dipa`, `date_created`
+FROM `nilai_pk`
+WHERE `id_satker` = \'208\'
+AND `thn_dipa` = \'2024\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idx`, `id_user`, `id_satker`, `id_pm_satker`, `nilai`, `komenpk`, `rekomendasi`, `thn_dipa`, `date_created`
+FROM `nilai_pk`
+WHERE `id_satker` = \'208\'
+AND `thn_dipa` = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idx`, `id_user`, `id_satker`, `id_pm_satker`, `nilai`, `komenpk`, `rekomendasi`, `thn_dipa`, `date_created`
+FROM `nilai_pk`
+WHERE `id_satker` = \'208\'
+AND `thn_dipa` = \'2024\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `idx`, `id_user`, `id_satker`, `id_pm_satker`, `nilai`, `komenpk`, `rekomendasi`, `thn_dipa`, `date_created`
+FROM `nilai_pk`
+WHERE `id_satker` = :id_satker:
+AND `thn_dipa` = :thn_dipa:', [...], false)
+ 5 APPPATH\Models\NilaiPKModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PenilaianMandiri.php(164): App\Models\NilaiPKModel->filter('208', '2024')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal_pengungkit()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-07-01 07:05:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:05:25 --> Current route: /soal_pengungkit
+INFO - 2025-07-01 07:05:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:05:42 --> Current route: /dash_pm
+INFO - 2025-07-01 07:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:05:46 --> Current route: /pm
+INFO - 2025-07-01 07:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:07:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:07:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:07:12 --> Current route: /tu
+INFO - 2025-07-01 07:09:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:09:58 --> Current route: /cTim
+INFO - 2025-07-01 07:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:10:52 --> Current route: /cTim
+INFO - 2025-07-01 07:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:16:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:17:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:26:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:27:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:28:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:29:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:29:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:30:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:31:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:32:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:32:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:33:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:33:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:34:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:54:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:54:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:54:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:54:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:54:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:54:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 07:54:53 --> Current route: /pm
+INFO - 2025-07-01 08:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 08:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 08:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 08:05:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-01 08:06:29 --> ErrorException: Undefined variable $SK
+[Method: GET, Route: riwayat]
+in APPPATH\Views\auditor\riwayat_penilaian.php on line 21.
+ 1 APPPATH\Views\auditor\riwayat_penilaian.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $SK', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\auditor\\riwayat_penilaian.php', 21)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\auditor\\riwayat_penilaian.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('auditor/riwayat_penilaian', [], true)
+ 5 APPPATH\Controllers\Auditor.php(53): view('auditor/riwayat_penilaian')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->riwayat()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-07-01 08:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 08:07:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 08:08:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-01 08:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

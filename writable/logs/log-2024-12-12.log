@@ -1,0 +1,1089 @@
+CRITICAL - 2024-12-12 02:08:57 --> ErrorException: Undefined variable $data
+[Method: GET, Route: soal]
+in APPPATH\Views\penilaianMandiri\soal.php on line 4.
+ 1 APPPATH\Views\penilaianMandiri\soal.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php', 4)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(39): view('/penilaianMandiri/soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+ERROR - 2024-12-12 02:46:46 --> mysqli_sql_exception: Unknown column 'su.nama_sub_unsur' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT * FROM (...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\PertanyaanModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2024-12-12 02:46:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'su.nama_sub_unsur' in 'field list'
+[Method: GET, Route: soal]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT `k`.`id_komponen`, `k`.`id_unsur`, `k`.`id_sub_unsur`, `k`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, `su`.`nama_sub_unsur`
+FROM `komponen_sub_unsur` `k`
+LEFT JOIN `indikator` `i` ON `k`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `unsur` `u` ON `k`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `sub_unsur` `su` ON `k`.`id_sub_unsur` = `su`.`id_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `ku`.`id_komponen`, `ku`.`id_unsur`, NULL AS id_sub_unsur, `ku`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, NULL AS nama_sub_unsur FROM `komponen_unsur` `ku` LEFT JOIN `indikator` `i` ON `ku`.`id_indikator` = `i`.`id_indikator` LEFT JOIN `unsur` `u` ON `ku`.`id_unsur` = `u`.`id_unsur`) `uwrp1`', [], false)
+ 2 APPPATH\Models\PertanyaanModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 02:46:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'su.nama_sub_unsur' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT `k`.`id_komponen`, `k`.`id_unsur`, `k`.`id_sub_unsur`, `k`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, `su`.`nama_sub_unsur`
+FROM `komponen_sub_unsur` `k`
+LEFT JOIN `indikator` `i` ON `k`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `unsur` `u` ON `k`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `sub_unsur` `su` ON `k`.`id_sub_unsur` = `su`.`id_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `ku`.`id_komponen`, `ku`.`id_unsur`, NULL AS id_sub_unsur, `ku`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, NULL AS nama_sub_unsur FROM `komponen_unsur` `ku` LEFT JOIN `indikator` `i` ON `ku`.`id_indikator` = `i`.`id_indikator` LEFT JOIN `unsur` `u` ON `ku`.`id_unsur` = `u`.`id_unsur`) `uwrp1`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT `k`.`id_komponen`, `k`.`id_unsur`, `k`.`id_sub_unsur`, `k`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, `su`.`nama_sub_unsur`
+FROM `komponen_sub_unsur` `k`
+LEFT JOIN `indikator` `i` ON `k`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `unsur` `u` ON `k`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `sub_unsur` `su` ON `k`.`id_sub_unsur` = `su`.`id_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `ku`.`id_komponen`, `ku`.`id_unsur`, NULL AS id_sub_unsur, `ku`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, NULL AS nama_sub_unsur FROM `komponen_unsur` `ku` LEFT JOIN `indikator` `i` ON `ku`.`id_indikator` = `i`.`id_indikator` LEFT JOIN `unsur` `u` ON `ku`.`id_unsur` = `u`.`id_unsur`) `uwrp1`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT `k`.`id_komponen`, `k`.`id_unsur`, `k`.`id_sub_unsur`, `k`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, `su`.`nama_sub_unsur`
+FROM `komponen_sub_unsur` `k`
+LEFT JOIN `indikator` `i` ON `k`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `unsur` `u` ON `k`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `sub_unsur` `su` ON `k`.`id_sub_unsur` = `su`.`id_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `ku`.`id_komponen`, `ku`.`id_unsur`, NULL AS id_sub_unsur, `ku`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, NULL AS nama_sub_unsur FROM `komponen_unsur` `ku` LEFT JOIN `indikator` `i` ON `ku`.`id_indikator` = `i`.`id_indikator` LEFT JOIN `unsur` `u` ON `ku`.`id_unsur` = `u`.`id_unsur`) `uwrp1`', [], false)
+ 4 APPPATH\Models\PertanyaanModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 02:46:46 --> [Caused by] mysqli_sql_exception: Unknown column 'su.nama_sub_unsur' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT * FROM (SELECT `k`.`id_komponen`, `k`.`id_unsur`, `k`.`id_sub_unsur`, `k`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, `su`.`nama_sub_unsur`
+FROM `komponen_sub_unsur` `k`
+LEFT JOIN `indikator` `i` ON `k`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `unsur` `u` ON `k`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `sub_unsur` `su` ON `k`.`id_sub_unsur` = `su`.`id_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `ku`.`id_komponen`, `ku`.`id_unsur`, NULL AS id_sub_unsur, `ku`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, NULL AS nama_sub_unsur FROM `komponen_unsur` `ku` LEFT JOIN `indikator` `i` ON `ku`.`id_indikator` = `i`.`id_indikator` LEFT JOIN `unsur` `u` ON `ku`.`id_unsur` = `u`.`id_unsur`) `uwrp1`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT `k`.`id_komponen`, `k`.`id_unsur`, `k`.`id_sub_unsur`, `k`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, `su`.`nama_sub_unsur`
+FROM `komponen_sub_unsur` `k`
+LEFT JOIN `indikator` `i` ON `k`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `unsur` `u` ON `k`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `sub_unsur` `su` ON `k`.`id_sub_unsur` = `su`.`id_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `ku`.`id_komponen`, `ku`.`id_unsur`, NULL AS id_sub_unsur, `ku`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, NULL AS nama_sub_unsur FROM `komponen_unsur` `ku` LEFT JOIN `indikator` `i` ON `ku`.`id_indikator` = `i`.`id_indikator` LEFT JOIN `unsur` `u` ON `ku`.`id_unsur` = `u`.`id_unsur`) `uwrp1`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT `k`.`id_komponen`, `k`.`id_unsur`, `k`.`id_sub_unsur`, `k`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, `su`.`nama_sub_unsur`
+FROM `komponen_sub_unsur` `k`
+LEFT JOIN `indikator` `i` ON `k`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `unsur` `u` ON `k`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `sub_unsur` `su` ON `k`.`id_sub_unsur` = `su`.`id_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `ku`.`id_komponen`, `ku`.`id_unsur`, NULL AS id_sub_unsur, `ku`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, NULL AS nama_sub_unsur FROM `komponen_unsur` `ku` LEFT JOIN `indikator` `i` ON `ku`.`id_indikator` = `i`.`id_indikator` LEFT JOIN `unsur` `u` ON `ku`.`id_unsur` = `u`.`id_unsur`) `uwrp1`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT `k`.`id_komponen`, `k`.`id_unsur`, `k`.`id_sub_unsur`, `k`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, `su`.`nama_sub_unsur`
+FROM `komponen_sub_unsur` `k`
+LEFT JOIN `indikator` `i` ON `k`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `unsur` `u` ON `k`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `sub_unsur` `su` ON `k`.`id_sub_unsur` = `su`.`id_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `ku`.`id_komponen`, `ku`.`id_unsur`, NULL AS id_sub_unsur, `ku`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, NULL AS nama_sub_unsur FROM `komponen_unsur` `ku` LEFT JOIN `indikator` `i` ON `ku`.`id_indikator` = `i`.`id_indikator` LEFT JOIN `unsur` `u` ON `ku`.`id_unsur` = `u`.`id_unsur`) `uwrp1`', [], false)
+ 5 APPPATH\Models\PertanyaanModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+ERROR - 2024-12-12 03:05:46 --> mysqli_sql_exception: Unknown column 'su.nama_sub_unsur' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT * FROM (...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\PertanyaanModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2024-12-12 03:05:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'su.nama_sub_unsur' in 'field list'
+[Method: GET, Route: soal]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT `k`.`id_komponen`, `k`.`id_unsur`, `k`.`id_sub_unsur`, `k`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, `su`.`nama_sub_unsur`
+FROM `komponen_sub_unsur` `k`
+LEFT JOIN `indikator` `i` ON `k`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `unsur` `u` ON `k`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `sub_unsur` `su` ON `k`.`id_sub_unsur` = `su`.`id_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `ku`.`id_komponen`, `ku`.`id_unsur`, NULL AS id_sub_unsur, `ku`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, NULL AS nama_sub_unsur FROM `komponen_unsur` `ku` LEFT JOIN `indikator` `i` ON `ku`.`id_indikator` = `i`.`id_indikator` LEFT JOIN `unsur` `u` ON `ku`.`id_unsur` = `u`.`id_unsur`) `uwrp1`', [], false)
+ 2 APPPATH\Models\PertanyaanModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 03:05:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'su.nama_sub_unsur' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT `k`.`id_komponen`, `k`.`id_unsur`, `k`.`id_sub_unsur`, `k`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, `su`.`nama_sub_unsur`
+FROM `komponen_sub_unsur` `k`
+LEFT JOIN `indikator` `i` ON `k`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `unsur` `u` ON `k`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `sub_unsur` `su` ON `k`.`id_sub_unsur` = `su`.`id_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `ku`.`id_komponen`, `ku`.`id_unsur`, NULL AS id_sub_unsur, `ku`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, NULL AS nama_sub_unsur FROM `komponen_unsur` `ku` LEFT JOIN `indikator` `i` ON `ku`.`id_indikator` = `i`.`id_indikator` LEFT JOIN `unsur` `u` ON `ku`.`id_unsur` = `u`.`id_unsur`) `uwrp1`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT `k`.`id_komponen`, `k`.`id_unsur`, `k`.`id_sub_unsur`, `k`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, `su`.`nama_sub_unsur`
+FROM `komponen_sub_unsur` `k`
+LEFT JOIN `indikator` `i` ON `k`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `unsur` `u` ON `k`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `sub_unsur` `su` ON `k`.`id_sub_unsur` = `su`.`id_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `ku`.`id_komponen`, `ku`.`id_unsur`, NULL AS id_sub_unsur, `ku`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, NULL AS nama_sub_unsur FROM `komponen_unsur` `ku` LEFT JOIN `indikator` `i` ON `ku`.`id_indikator` = `i`.`id_indikator` LEFT JOIN `unsur` `u` ON `ku`.`id_unsur` = `u`.`id_unsur`) `uwrp1`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT `k`.`id_komponen`, `k`.`id_unsur`, `k`.`id_sub_unsur`, `k`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, `su`.`nama_sub_unsur`
+FROM `komponen_sub_unsur` `k`
+LEFT JOIN `indikator` `i` ON `k`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `unsur` `u` ON `k`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `sub_unsur` `su` ON `k`.`id_sub_unsur` = `su`.`id_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `ku`.`id_komponen`, `ku`.`id_unsur`, NULL AS id_sub_unsur, `ku`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, NULL AS nama_sub_unsur FROM `komponen_unsur` `ku` LEFT JOIN `indikator` `i` ON `ku`.`id_indikator` = `i`.`id_indikator` LEFT JOIN `unsur` `u` ON `ku`.`id_unsur` = `u`.`id_unsur`) `uwrp1`', [], false)
+ 4 APPPATH\Models\PertanyaanModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 03:05:46 --> [Caused by] mysqli_sql_exception: Unknown column 'su.nama_sub_unsur' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT * FROM (SELECT `k`.`id_komponen`, `k`.`id_unsur`, `k`.`id_sub_unsur`, `k`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, `su`.`nama_sub_unsur`
+FROM `komponen_sub_unsur` `k`
+LEFT JOIN `indikator` `i` ON `k`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `unsur` `u` ON `k`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `sub_unsur` `su` ON `k`.`id_sub_unsur` = `su`.`id_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `ku`.`id_komponen`, `ku`.`id_unsur`, NULL AS id_sub_unsur, `ku`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, NULL AS nama_sub_unsur FROM `komponen_unsur` `ku` LEFT JOIN `indikator` `i` ON `ku`.`id_indikator` = `i`.`id_indikator` LEFT JOIN `unsur` `u` ON `ku`.`id_unsur` = `u`.`id_unsur`) `uwrp1`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM (SELECT `k`.`id_komponen`, `k`.`id_unsur`, `k`.`id_sub_unsur`, `k`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, `su`.`nama_sub_unsur`
+FROM `komponen_sub_unsur` `k`
+LEFT JOIN `indikator` `i` ON `k`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `unsur` `u` ON `k`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `sub_unsur` `su` ON `k`.`id_sub_unsur` = `su`.`id_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `ku`.`id_komponen`, `ku`.`id_unsur`, NULL AS id_sub_unsur, `ku`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, NULL AS nama_sub_unsur FROM `komponen_unsur` `ku` LEFT JOIN `indikator` `i` ON `ku`.`id_indikator` = `i`.`id_indikator` LEFT JOIN `unsur` `u` ON `ku`.`id_unsur` = `u`.`id_unsur`) `uwrp1`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM (SELECT `k`.`id_komponen`, `k`.`id_unsur`, `k`.`id_sub_unsur`, `k`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, `su`.`nama_sub_unsur`
+FROM `komponen_sub_unsur` `k`
+LEFT JOIN `indikator` `i` ON `k`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `unsur` `u` ON `k`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `sub_unsur` `su` ON `k`.`id_sub_unsur` = `su`.`id_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `ku`.`id_komponen`, `ku`.`id_unsur`, NULL AS id_sub_unsur, `ku`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, NULL AS nama_sub_unsur FROM `komponen_unsur` `ku` LEFT JOIN `indikator` `i` ON `ku`.`id_indikator` = `i`.`id_indikator` LEFT JOIN `unsur` `u` ON `ku`.`id_unsur` = `u`.`id_unsur`) `uwrp1`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT * FROM (SELECT `k`.`id_komponen`, `k`.`id_unsur`, `k`.`id_sub_unsur`, `k`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, `su`.`nama_sub_unsur`
+FROM `komponen_sub_unsur` `k`
+LEFT JOIN `indikator` `i` ON `k`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `unsur` `u` ON `k`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `sub_unsur` `su` ON `k`.`id_sub_unsur` = `su`.`id_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `ku`.`id_komponen`, `ku`.`id_unsur`, NULL AS id_sub_unsur, `ku`.`id_indikator`, `i`.`nama_indikator`, `u`.`nama_unsur`, NULL AS nama_sub_unsur FROM `komponen_unsur` `ku` LEFT JOIN `indikator` `i` ON `ku`.`id_indikator` = `i`.`id_indikator` LEFT JOIN `unsur` `u` ON `ku`.`id_unsur` = `u`.`id_unsur`) `uwrp1`', [], false)
+ 5 APPPATH\Models\PertanyaanModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+ERROR - 2024-12-12 03:18:14 --> mysqli_sql_exception: Unknown column 'NULL' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ks`.`id...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\PertanyaanModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2024-12-12 03:18:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'NULL' in 'field list'
+[Method: GET, Route: soal]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, `id_indikator` FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 2 APPPATH\Models\PertanyaanModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 03:18:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'NULL' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, `id_indikator` FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, `id_indikator` FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, `id_indikator` FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 4 APPPATH\Models\PertanyaanModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 03:18:14 --> [Caused by] mysqli_sql_exception: Unknown column 'NULL' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, `id_indikator` FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, `id_indikator` FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, `id_indikator` FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, `id_indikator` FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 5 APPPATH\Models\PertanyaanModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+ERROR - 2024-12-12 03:21:07 --> mysqli_sql_exception: Unknown column 'NULL' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ks`.`id...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\PertanyaanModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2024-12-12 03:21:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'NULL' in 'field list'
+[Method: GET, Route: soal]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 2 APPPATH\Models\PertanyaanModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 03:21:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'NULL' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 4 APPPATH\Models\PertanyaanModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 03:21:07 --> [Caused by] mysqli_sql_exception: Unknown column 'NULL' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 5 APPPATH\Models\PertanyaanModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+ERROR - 2024-12-12 03:24:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''0'' AS id_sub_unsur, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEF...' at line 4 in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ks`.`id...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\PertanyaanModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2024-12-12 03:24:03 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''0'' AS id_sub_unsur, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEF...' at line 4
+[Method: GET, Route: soal]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, \'0\'\' AS id_sub_unsur, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 2 APPPATH\Models\PertanyaanModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 03:24:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''0'' AS id_sub_unsur, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEF...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, \'0\'\' AS id_sub_unsur, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, \'0\'\' AS id_sub_unsur, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, \'0\'\' AS id_sub_unsur, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 4 APPPATH\Models\PertanyaanModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 03:24:03 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''0'' AS id_sub_unsur, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEF...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, \'0\'\' AS id_sub_unsur, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, \'0\'\' AS id_sub_unsur, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, \'0\'\' AS id_sub_unsur, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, \'0\'\' AS id_sub_unsur, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 5 APPPATH\Models\PertanyaanModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 03:29:15 --> Error: Call to a member function union() on null
+[Method: GET, Route: soal]
+in APPPATH\Models\PertanyaanModel.php on line 31.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+ERROR - 2024-12-12 03:30:37 --> mysqli_sql_exception: Unknown column 'id_sub_unsur' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ks`.`id...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\PertanyaanModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2024-12-12 03:30:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_sub_unsur' in 'field list'
+[Method: GET, Route: soal]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`` FROM ``komponen_sub_unsur`` UNION SELECT` `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator
+FROM `komponen_unsur`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 2 APPPATH\Models\PertanyaanModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 03:30:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_sub_unsur' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`` FROM ``komponen_sub_unsur`` UNION SELECT` `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator
+FROM `komponen_unsur`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`` FROM ``komponen_sub_unsur`` UNION SELECT` `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator
+FROM `komponen_unsur`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`` FROM ``komponen_sub_unsur`` UNION SELECT` `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator
+FROM `komponen_unsur`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 4 APPPATH\Models\PertanyaanModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 03:30:37 --> [Caused by] mysqli_sql_exception: Unknown column 'id_sub_unsur' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`` FROM ``komponen_sub_unsur`` UNION SELECT` `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator
+FROM `komponen_unsur`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`` FROM ``komponen_sub_unsur`` UNION SELECT` `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator
+FROM `komponen_unsur`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`` FROM ``komponen_sub_unsur`` UNION SELECT` `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator
+FROM `komponen_unsur`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`` FROM ``komponen_sub_unsur`` UNION SELECT` `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator
+FROM `komponen_unsur`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 5 APPPATH\Models\PertanyaanModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+ERROR - 2024-12-12 03:30:54 --> mysqli_sql_exception: Unknown column 'id_sub_unsur' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ks`.`id...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\PertanyaanModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2024-12-12 03:30:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_sub_unsur' in 'field list'
+[Method: GET, Route: soal]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`` FROM ``komponen_sub_unsur`` UNION SELECT` `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, `id_indikator`
+FROM `komponen_unsur`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 2 APPPATH\Models\PertanyaanModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 03:30:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_sub_unsur' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`` FROM ``komponen_sub_unsur`` UNION SELECT` `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, `id_indikator`
+FROM `komponen_unsur`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`` FROM ``komponen_sub_unsur`` UNION SELECT` `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, `id_indikator`
+FROM `komponen_unsur`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`` FROM ``komponen_sub_unsur`` UNION SELECT` `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, `id_indikator`
+FROM `komponen_unsur`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 4 APPPATH\Models\PertanyaanModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 03:30:54 --> [Caused by] mysqli_sql_exception: Unknown column 'id_sub_unsur' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`` FROM ``komponen_sub_unsur`` UNION SELECT` `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, `id_indikator`
+FROM `komponen_unsur`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`` FROM ``komponen_sub_unsur`` UNION SELECT` `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, `id_indikator`
+FROM `komponen_unsur`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`` FROM ``komponen_sub_unsur`` UNION SELECT` `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, `id_indikator`
+FROM `komponen_unsur`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`` FROM ``komponen_sub_unsur`` UNION SELECT` `id_komponen`, `id_unsur`, `NULL` AS `id_sub_unsur`, `id_indikator`
+FROM `komponen_unsur`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 5 APPPATH\Models\PertanyaanModel.php(39): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+ERROR - 2024-12-12 03:32:37 --> mysqli_sql_exception: Unknown column 'NULL' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ks`.`id...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\PertanyaanModel.php(38): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2024-12-12 03:32:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'NULL' in 'field list'
+[Method: GET, Route: soal]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 2 APPPATH\Models\PertanyaanModel.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 03:32:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'NULL' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 4 APPPATH\Models\PertanyaanModel.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 03:32:37 --> [Caused by] mysqli_sql_exception: Unknown column 'NULL' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `ks`.`id_unsur`, `ks`.`id_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`
+FROM ((SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS ks)
+LEFT JOIN `indikator` AS `i` ON `ks`.`id_indikator` = `i`.`id_indikator`', [], false)
+ 5 APPPATH\Models\PertanyaanModel.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+ERROR - 2024-12-12 03:36:26 --> mysqli_sql_exception: Unknown column 'NULL' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM (...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\PertanyaanModel.php(37): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2024-12-12 03:36:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'NULL' in 'field list'
+[Method: GET, Route: soal]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM (SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS combined', [], false)
+ 2 APPPATH\Models\PertanyaanModel.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 03:36:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'NULL' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM (SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS combined')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM (SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS combined')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM (SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS combined', [], false)
+ 4 APPPATH\Models\PertanyaanModel.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 03:36:26 --> [Caused by] mysqli_sql_exception: Unknown column 'NULL' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM (SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS combined', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM (SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS combined')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM (SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS combined')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM (SELECT * FROM (SELECT `id_komponen`, `id_unsur`, `id_sub_unsur`, `id_indikator`
+FROM `komponen_sub_unsur`) `uwrp0`
+UNION SELECT * FROM (SELECT id_komponen, `id_unsur`, `NULL` AS `id_sub_unsur`, id_indikator FROM `komponen_unsur`) `uwrp1`) AS combined', [], false)
+ 5 APPPATH\Models\PertanyaanModel.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PenilaianMandiri.php(37): App\Models\PertanyaanModel->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 04:05:21 --> ErrorException: Undefined variable $pertanyaan
+[Method: GET, Route: soal]
+in APPPATH\Views\penilaianMandiri\soal.php on line 4.
+ 1 APPPATH\Views\penilaianMandiri\soal.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pertanyaan', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php', 4)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(40): view('/penilaianMandiri/soal')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 04:34:46 --> ErrorException: Undefined property: stdClass::$judul
+[Method: GET, Route: soal]
+in APPPATH\Views\penilaianMandiri\soal.php on line 73.
+ 1 APPPATH\Views\penilaianMandiri\soal.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$judul', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php', 73)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(48): view('/penilaianMandiri/soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 07:10:14 --> TypeError: array_filter(): Argument #1 ($array) must be of type array, null given
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 47.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(47): array_filter(null, Object(Closure))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 07:10:23 --> TypeError: array_filter(): Argument #1 ($array) must be of type array, null given
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 47.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(47): array_filter(null, Object(Closure))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 07:10:24 --> TypeError: array_filter(): Argument #1 ($array) must be of type array, null given
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 47.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(47): array_filter(null, Object(Closure))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 07:17:09 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::getCompiledSelect()
+[Method: GET, Route: soal]
+in APPPATH\Models\NilaiModel.php on line 31.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(40): App\Models\NilaiModel->jawab()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 07:28:12 --> ParseError: syntax error, unexpected variable "$data"
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 51.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\PenilaianMandiri')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\PenilaianMandiri')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\PenilaianMandiri', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 07:29:49 --> ErrorException: Attempt to read property "id_indikator" on array
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 48.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id_indikator" on array', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 48)
+ 2 [internal function]: App\Controllers\PenilaianMandiri->App\Controllers\{closure}([...])
+ 3 APPPATH\Controllers\PenilaianMandiri.php(47): array_filter([...], Object(Closure))
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 07:30:23 --> ErrorException: Attempt to read property "nomer" on array
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 48.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nomer" on array', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 48)
+ 2 [internal function]: App\Controllers\PenilaianMandiri->App\Controllers\{closure}([...])
+ 3 APPPATH\Controllers\PenilaianMandiri.php(47): array_filter([...], Object(Closure))
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 07:32:23 --> ErrorException: Attempt to read property "nomer" on array
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 48.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nomer" on array', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 48)
+ 2 [internal function]: App\Controllers\PenilaianMandiri->App\Controllers\{closure}([...])
+ 3 APPPATH\Controllers\PenilaianMandiri.php(47): array_filter([...], Object(Closure))
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 07:51:36 --> ErrorException: Undefined variable $pertanyaan
+[Method: GET, Route: soal]
+in APPPATH\Views\penilaianMandiri\soal.php on line 22.
+ 1 APPPATH\Views\penilaianMandiri\soal.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pertanyaan', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php', 22)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(72): view('/penilaianMandiri/soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 07:53:05 --> ErrorException: Attempt to read property "nama_indikator" on array
+[Method: GET, Route: soal]
+in APPPATH\Views\penilaianMandiri\soal.php on line 32.
+ 1 APPPATH\Views\penilaianMandiri\soal.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_indikator" on array', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php', 32)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(72): view('/penilaianMandiri/soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 07:54:01 --> ErrorException: Attempt to read property "nama_indikator" on array
+[Method: GET, Route: soal]
+in APPPATH\Views\penilaianMandiri\soal.php on line 32.
+ 1 APPPATH\Views\penilaianMandiri\soal.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_indikator" on array', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php', 32)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(72): view('/penilaianMandiri/soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 07:56:25 --> ErrorException: Undefined variable $allPertanyaan
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 38.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $allPertanyaan', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 38)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 07:56:40 --> ErrorException: Attempt to read property "nama_indikator" on array
+[Method: GET, Route: soal]
+in APPPATH\Views\penilaianMandiri\soal.php on line 32.
+ 1 APPPATH\Views\penilaianMandiri\soal.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_indikator" on array', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php', 32)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(77): view('/penilaianMandiri/soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 08:03:02 --> ErrorException: Undefined array key "desc"
+[Method: GET, Route: soal]
+in APPPATH\Views\penilaianMandiri\soal.php on line 55.
+ 1 APPPATH\Views\penilaianMandiri\soal.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "desc"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php', 55)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(72): view('/penilaianMandiri/soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 08:03:19 --> ErrorException: Array to string conversion
+[Method: GET, Route: soal]
+in APPPATH\Views\penilaianMandiri\soal.php on line 55.
+ 1 APPPATH\Views\penilaianMandiri\soal.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php', 55)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(72): view('/penilaianMandiri/soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 08:03:29 --> ErrorException: Attempt to read property "jawaban" on array
+[Method: GET, Route: soal]
+in APPPATH\Views\penilaianMandiri\soal.php on line 55.
+ 1 APPPATH\Views\penilaianMandiri\soal.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "jawaban" on array', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php', 55)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(72): view('/penilaianMandiri/soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-12 08:03:36 --> ErrorException: Attempt to read property "jawaban" on array
+[Method: GET, Route: soal]
+in APPPATH\Views\penilaianMandiri\soal.php on line 55.
+ 1 APPPATH\Views\penilaianMandiri\soal.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "jawaban" on array', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php', 55)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(72): view('/penilaianMandiri/soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')

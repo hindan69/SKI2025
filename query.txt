@@ -1,0 +1,61 @@
+############################# Query Progress Chart #####################################
+
+SELECT 
+    a.id_unsur,
+    COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker,
+    COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm,
+    CASE 
+        WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+        WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+        ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+    END AS presentase_pm,
+    COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk,
+    CASE 
+        WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+        WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+        ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+    END AS presentase_pk,
+    COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl,
+    CASE 
+        WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+        WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+        ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+    END AS presentase_lvl   
+FROM pm_satker AS a
+LEFT JOIN nilai_pm AS n_pm 
+    ON n_pm.id_pm_satker = a.id_pm_satker 
+    AND n_pm.id_satker = '213' 
+    AND n_pm.thn_dipa = '2024'
+LEFT JOIN nilai_pk AS n_pk
+   ON n_pk.id_pm_satker = a.id_pm_satker
+   AND n_pk.id_satker = '213' 
+   AND n_pk.thn_dipa = '2024'
+LEFT JOIN nilai_level AS n_lvl
+   ON n_lvl.id_pm_satker = a.id_pm_satker
+   AND n_lvl.id_satker = '213' 
+   AND n_lvl.thn_dipa = '2024'
+GROUP BY a.id_unsur;
+
+############################# Query Pertanyaan #####################################
+
+SELECT 
+    ks.id_komponen,
+    c.nama_komponen,	
+    ks.id_unsur,
+u.nama_unsur,    
+    ks.id_sub_unsur,
+    su.name_sub_unsur,	
+    ks.id_indikator,
+    i.nama_indikator,
+    i.bobot_indikator  
+FROM (
+    SELECT id_komponen, id_unsur, id_sub_unsur, id_indikator 
+    FROM komponen_sub_unsur
+    UNION
+    SELECT id_komponen, id_unsur, '0' AS id_sub_unsur, id_indikator 
+    FROM komponen_unsur
+) AS ks
+LEFT JOIN indikator AS i ON ks.id_indikator = i.id_indikator
+LEFT JOIN komponen AS c ON ks.id_komponen = c.id_komponen
+LEFT JOIN sub_unsur AS su ON ks.id_sub_unsur = su.id_sub_unsur
+LEFT JOIN unsur AS u ON ks.id_unsur = u.id_unsur;

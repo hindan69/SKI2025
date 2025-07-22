@@ -1,0 +1,123 @@
+INFO - 2025-02-19 02:41:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 02:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 02:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 02:41:17 --> Current route: /pm
+INFO - 2025-02-19 02:41:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 02:41:21 --> Current route: /soal_pengungkit
+CRITICAL - 2025-02-19 02:41:21 --> ErrorException: Undefined variable $persentase
+[Method: GET, Route: soal_pengungkit]
+in APPPATH\Views\penilaianMandiri\soal_pengungkit_v2.php on line 14.
+ 1 APPPATH\Views\penilaianMandiri\soal_pengungkit_v2.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persentase', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal_pengungkit_v2.php', 14)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal_pengungkit_v2.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal_pengungkit_V2', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(214): view('/penilaianMandiri/soal_pengungkit_V2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal_pengungkit()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-02-19 02:41:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 02:41:41 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 07:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:09:30 --> Current route: /pm
+INFO - 2025-02-19 07:09:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:09:37 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 07:09:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:09:52 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 07:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:28:27 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 07:28:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:28:50 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 07:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:33:56 --> Current route: /soal_pengungkit
+CRITICAL - 2025-02-19 07:33:56 --> ErrorException: Undefined variable $pm_satker
+[Method: GET, Route: soal_pengungkit]
+in APPPATH\Views\penilaianMandiri\soal_pengungkit_v2.php on line 11.
+ 1 APPPATH\Views\penilaianMandiri\soal_pengungkit_v2.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pm_satker', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal_pengungkit_v2.php', 11)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal_pengungkit_v2.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal_pengungkit_V2', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(214): view('/penilaianMandiri/soal_pengungkit_V2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal_pengungkit()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-02-19 07:34:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:34:34 --> Current route: /soal_pengungkit
+CRITICAL - 2025-02-19 07:34:34 --> ErrorException: Undefined variable $totalKolom3
+[Method: GET, Route: soal_pengungkit]
+in APPPATH\Views\penilaianMandiri\soal_pengungkit_v2.php on line 17.
+ 1 APPPATH\Views\penilaianMandiri\soal_pengungkit_v2.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalKolom3', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal_pengungkit_v2.php', 17)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal_pengungkit_v2.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal_pengungkit_V2', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(214): view('/penilaianMandiri/soal_pengungkit_V2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal_pengungkit()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-02-19 07:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:36:38 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 07:38:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:38:29 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 07:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:38:59 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 07:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:39:01 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 07:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:40:09 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 07:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:42:14 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 07:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:45:31 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 07:46:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:46:25 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 07:46:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:46:52 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 07:50:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:50:13 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 07:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:57:18 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 07:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:59:19 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 07:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 07:59:48 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 08:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 08:16:51 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 08:17:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 08:17:25 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 08:18:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 08:18:04 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 08:18:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 08:18:31 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 08:19:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 08:19:22 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 08:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 08:27:26 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 08:28:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 08:28:37 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 08:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 08:28:51 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 08:37:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 08:37:41 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 08:38:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 08:38:04 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 08:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 08:46:34 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 08:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 08:46:55 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 08:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 08:48:15 --> Current route: /soal_pengungkit
+INFO - 2025-02-19 08:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-19 08:55:29 --> Current route: /soal_pengungkit

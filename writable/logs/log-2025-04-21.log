@@ -1,0 +1,1064 @@
+INFO - 2025-04-21 02:52:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 02:57:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 02:57:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:16:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-21 03:16:20 --> mysqli_sql_exception: Unknown column 'a.is_active' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id`...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2025-04-21 03:16:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.is_active' in 'field list'
+[Method: GET, Route: tabAnggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 2 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 03:16:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.is_active' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 4 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 03:16:20 --> [Caused by] mysqli_sql_exception: Unknown column 'a.is_active' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 5 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 03:16:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-21 03:16:22 --> mysqli_sql_exception: Unknown column 'a.is_active' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id`...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2025-04-21 03:16:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.is_active' in 'field list'
+[Method: GET, Route: tabAnggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 2 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 03:16:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.is_active' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 4 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 03:16:22 --> [Caused by] mysqli_sql_exception: Unknown column 'a.is_active' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 5 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 03:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-21 03:16:23 --> mysqli_sql_exception: Unknown column 'a.is_active' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id`...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2025-04-21 03:16:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.is_active' in 'field list'
+[Method: GET, Route: tabAnggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 2 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 03:16:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.is_active' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 4 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 03:16:23 --> [Caused by] mysqli_sql_exception: Unknown column 'a.is_active' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 5 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 03:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-21 03:16:24 --> mysqli_sql_exception: Unknown column 'a.is_active' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id`...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2025-04-21 03:16:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.is_active' in 'field list'
+[Method: GET, Route: tabAnggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 2 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 03:16:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.is_active' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 4 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 03:16:24 --> [Caused by] mysqli_sql_exception: Unknown column 'a.is_active' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 5 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 03:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-21 03:16:25 --> mysqli_sql_exception: Unknown column 'a.is_active' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id`...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2025-04-21 03:16:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.is_active' in 'field list'
+[Method: GET, Route: tabAnggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 2 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 03:16:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.is_active' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 4 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 03:16:25 --> [Caused by] mysqli_sql_exception: Unknown column 'a.is_active' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 5 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 03:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:16:37 --> Current route: /tu
+INFO - 2025-04-21 03:16:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:16:43 --> Current route: /cTim
+INFO - 2025-04-21 03:16:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-21 03:16:46 --> mysqli_sql_exception: Unknown column 'a.is_active' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id`...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('157')
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2025-04-21 03:16:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.is_active' in 'field list'
+[Method: GET, Route: tabAnggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 2 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('157')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 03:16:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.is_active' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'157\'
+ORDER BY `a`.`date_created` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'157\'
+ORDER BY `a`.`date_created` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 4 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('157')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 03:16:46 --> [Caused by] mysqli_sql_exception: Unknown column 'a.is_active' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'157\'
+ORDER BY `a`.`date_created` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'157\'
+ORDER BY `a`.`date_created` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'157\'
+ORDER BY `a`.`date_created` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 5 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('157')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 03:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:16:49 --> Current route: /cTim
+INFO - 2025-04-21 03:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:16:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-21 03:16:51 --> mysqli_sql_exception: Unknown column 'a.is_active' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id`...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2025-04-21 03:16:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.is_active' in 'field list'
+[Method: GET, Route: tabAnggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 2 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 03:16:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.is_active' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 4 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 03:16:51 --> [Caused by] mysqli_sql_exception: Unknown column 'a.is_active' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 5 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+ERROR - 2025-04-21 03:17:26 --> mysqli_sql_exception: Unknown column 'a.is_active' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id`...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2025-04-21 03:17:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.is_active' in 'field list'
+[Method: GET, Route: tabAnggota]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 2 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 03:17:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'a.is_active' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 4 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 03:17:26 --> [Caused by] mysqli_sql_exception: Unknown column 'a.is_active' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = \'156\'
+ORDER BY `a`.`date_created` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id`, `a`.`id_timaudit`, `a`.`id_user`, `a`.`posisi`, `a`.`is_active`, `a`.`date_created`, `a`.`date_updated`, `b`.`username`, `b`.`firstname`
+FROM `anggotatim` as `a`
+LEFT JOIN `users` as `b` ON `a`.`id_user` = `b`.`id`
+WHERE `a`.`id_timaudit` = :a.id_timaudit:
+ORDER BY `a`.`date_created` DESC', [...], false)
+ 5 APPPATH\Models\AnggotaTimModel.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\TataUsaha.php(178): App\Models\AnggotaTimModel->getByID('156')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tabAnggota()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 03:17:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:18:03 --> Current route: /cTim
+INFO - 2025-04-21 03:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:18:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:18:09 --> Current route: /cTim
+INFO - 2025-04-21 03:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:18:57 --> Current route: /cTim
+INFO - 2025-04-21 03:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:19:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:19:04 --> Current route: /cTim
+INFO - 2025-04-21 03:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:19:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:21:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 03:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 04:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 04:00:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 04:02:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 04:20:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 04:23:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 04:26:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 04:28:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:20:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:20:13 --> Current route: /cTim
+INFO - 2025-04-21 06:20:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:20:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:20:26 --> Current route: /cTim
+INFO - 2025-04-21 06:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:20:59 --> Current route: /cTim
+INFO - 2025-04-21 06:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-21 06:27:51 --> ErrorException: Undefined array key "id_timautdit"
+[Method: POST, Route: subTim]
+in APPPATH\Controllers\TataUsaha.php on line 202.
+ 1 APPPATH\Controllers\TataUsaha.php(202): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_timautdit"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\TataUsaha.php', 202)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->subTim()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 06:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:28:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-21 06:29:00 --> ErrorException: Undefined array key "id_timautdit"
+[Method: POST, Route: subTim]
+in APPPATH\Controllers\TataUsaha.php on line 202.
+ 1 APPPATH\Controllers\TataUsaha.php(202): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_timautdit"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\TataUsaha.php', 202)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->subTim()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 06:29:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:36:25 --> Current route: /cTim
+INFO - 2025-04-21 06:36:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:40:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:40:06 --> Current route: /cTim
+INFO - 2025-04-21 06:40:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:40:12 --> Current route: /cTim
+INFO - 2025-04-21 06:40:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:40:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:47:08 --> Current route: /cTim
+INFO - 2025-04-21 06:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:48:22 --> Current route: /cTim
+INFO - 2025-04-21 06:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:48:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:48:30 --> Current route: /cTim
+INFO - 2025-04-21 06:48:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:48:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:48:43 --> Current route: /cTim
+INFO - 2025-04-21 06:48:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:50:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-21 06:50:57 --> ErrorException: Undefined variable $data
+[Method: GET, Route: tAnggota]
+in APPPATH\Views\tataUsaha\anggota.php on line 11.
+ 1 APPPATH\Views\tataUsaha\anggota.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\tataUsaha\\anggota.php', 11)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\tataUsaha\\anggota.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/tatausaha/anggota', [], true)
+ 5 APPPATH\Controllers\TataUsaha.php(78): view('/tatausaha/anggota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->tambahAnggota()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 06:52:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:54:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:54:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:54:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:56:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:56:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:56:35 --> Current route: /cTim
+INFO - 2025-04-21 06:56:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:57:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:57:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:57:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 06:57:37 --> Current route: /cTim
+INFO - 2025-04-21 06:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:03:13 --> Current route: /cTim
+INFO - 2025-04-21 07:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:03:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:03:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:03:19 --> Current route: /cTim
+INFO - 2025-04-21 07:03:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:03:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:03:25 --> Current route: /cTim
+INFO - 2025-04-21 07:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:04:15 --> Current route: /cTim
+INFO - 2025-04-21 07:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:04:38 --> Current route: /cTim
+INFO - 2025-04-21 07:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:04:53 --> Current route: /cTim
+INFO - 2025-04-21 07:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:05:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:05:10 --> Current route: /cTim
+INFO - 2025-04-21 07:05:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:06:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:07:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:07:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:07:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:07:05 --> Current route: /tu
+INFO - 2025-04-21 07:07:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:07:08 --> Current route: /cTim
+INFO - 2025-04-21 07:07:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:08:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:08:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:08:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:08:18 --> Current route: /tu
+INFO - 2025-04-21 07:08:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:08:20 --> Current route: /cTim
+INFO - 2025-04-21 07:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:09:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:09:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:09:36 --> Current route: /cTim
+INFO - 2025-04-21 07:09:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:42:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:42:56 --> Current route: /cTim
+INFO - 2025-04-21 07:42:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:43:21 --> Current route: /cTim
+INFO - 2025-04-21 07:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-21 07:43:24 --> ErrorException: Undefined array key "idTimaudit"
+[Method: GET, Route: disTim]
+in APPPATH\Controllers\TataUsaha.php on line 210.
+ 1 APPPATH\Controllers\TataUsaha.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idTimaudit"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\TataUsaha.php', 210)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->displayTim()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 07:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:43:40 --> Current route: /cTim
+INFO - 2025-04-21 07:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-21 07:43:42 --> ErrorException: Trying to access array offset on value of type int
+[Method: GET, Route: disTim]
+in APPPATH\Controllers\TataUsaha.php on line 211.
+ 1 APPPATH\Controllers\TataUsaha.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\TataUsaha.php', 211)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->displayTim()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 07:43:57 --> ErrorException: Trying to access array offset on value of type int
+[Method: GET, Route: disTim]
+in APPPATH\Controllers\TataUsaha.php on line 211.
+ 1 APPPATH\Controllers\TataUsaha.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\TataUsaha.php', 211)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->displayTim()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 07:50:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:50:10 --> Current route: /cTim
+INFO - 2025-04-21 07:50:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-21 07:50:13 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: disTim]
+in APPPATH\Controllers\TataUsaha.php on line 210.
+ 1 APPPATH\Controllers\TataUsaha.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\TataUsaha.php', 210)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->displayTim()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 07:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:50:55 --> Current route: /cTim
+INFO - 2025-04-21 07:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-21 07:50:58 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: disTim]
+in APPPATH\Controllers\TataUsaha.php on line 210.
+ 1 APPPATH\Controllers\TataUsaha.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\TataUsaha.php', 210)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->displayTim()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 07:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:52:36 --> Current route: /cTim
+INFO - 2025-04-21 07:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-21 07:52:38 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: disTim]
+in APPPATH\Controllers\TataUsaha.php on line 210.
+ 1 APPPATH\Controllers\TataUsaha.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\TataUsaha.php', 210)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->displayTim()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 07:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:53:17 --> Current route: /cTim
+INFO - 2025-04-21 07:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:54:48 --> Current route: /cTim
+INFO - 2025-04-21 07:54:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-21 07:54:50 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: disTim]
+in APPPATH\Controllers\TataUsaha.php on line 210.
+ 1 APPPATH\Controllers\TataUsaha.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\TataUsaha.php', 210)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->displayTim()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-04-21 07:55:10 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: disTim]
+in APPPATH\Controllers\TataUsaha.php on line 210.
+ 1 APPPATH\Controllers\TataUsaha.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\TataUsaha.php', 210)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->displayTim()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 07:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:56:00 --> Current route: /cTim
+INFO - 2025-04-21 07:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-21 07:56:03 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: disTim]
+in APPPATH\Controllers\TataUsaha.php on line 210.
+ 1 APPPATH\Controllers\TataUsaha.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\TataUsaha.php', 210)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->displayTim()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 07:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:56:50 --> Current route: /cTim
+INFO - 2025-04-21 07:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-04-21 07:56:53 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: disTim]
+in APPPATH\Controllers\TataUsaha.php on line 210.
+ 1 APPPATH\Controllers\TataUsaha.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\TataUsaha.php', 210)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TataUsaha->displayTim()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TataUsaha))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-04-21 07:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:57:32 --> Current route: /cTim
+INFO - 2025-04-21 07:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:58:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 07:58:06 --> Current route: /cTim
+INFO - 2025-04-21 07:58:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 08:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 08:03:44 --> Current route: /cTim
+INFO - 2025-04-21 08:03:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 08:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 08:04:18 --> Current route: /cTim
+INFO - 2025-04-21 08:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 08:14:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-21 08:14:52 --> Current route: /cTim
+INFO - 2025-04-21 08:14:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

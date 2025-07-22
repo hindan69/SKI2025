@@ -1,0 +1,361 @@
+INFO - 2025-07-11 03:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 03:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 03:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 03:22:31 --> Current route: /tu
+INFO - 2025-07-11 03:22:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 03:22:45 --> Current route: /cTim
+INFO - 2025-07-11 03:22:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 03:22:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 03:23:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 03:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 03:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 03:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 03:23:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 03:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:18:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:18:22 --> Current route: /pm
+INFO - 2025-07-11 04:18:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:18:26 --> Current route: /dash_pm
+INFO - 2025-07-11 04:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:19:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:20:25 --> Current route: /
+INFO - 2025-07-11 04:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:22:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:22:36 --> Current route: /pm
+INFO - 2025-07-11 04:22:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:22:40 --> Current route: /dash_pm
+INFO - 2025-07-11 04:27:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:27:47 --> Current route: /pm
+INFO - 2025-07-11 04:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:30:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:33:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-11 04:33:08 --> ErrorException: Undefined variable $btnClass
+[Method: GET, Route: dash_pk]
+in APPPATH\Views\tbl_pk.php on line 13.
+ 1 APPPATH\Views\tbl_pk.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $btnClass', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\tbl_pk.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\tbl_pk.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('tbl_pk', [], true)
+ 5 APPPATH\Controllers\Auditor.php(86): view('tbl_pk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->dash()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-07-11 04:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:33:58 --> Current route: /pm
+INFO - 2025-07-11 04:34:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:34:00 --> Current route: /dash_pm
+INFO - 2025-07-11 04:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:35:27 --> Current route: /soal_pengungkit
+INFO - 2025-07-11 04:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:36:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 04:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 07:03:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 07:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 07:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 07:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 07:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 07:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 07:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-11 07:39:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND `n_pm`.`thn_dipa` = 2025
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_...' at line 15 in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id_...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id_...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id_...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id_...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\NilaiPMModel.php(90): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\Auditor.php(70): App\Models\NilaiPMModel->precentage(NULL, '2025')
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\Auditor->dash()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2025-07-11 07:39:25 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND `n_pm`.`thn_dipa` = 2025
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_...' at line 15
+[Method: GET, Route: dash_pk]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id_unsur`, COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker, COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pm, COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pk, COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_lvl
+FROM `pm_satker` as `a`
+LEFT JOIN `nilai_pm` as `n_pm` ON `n_pm`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pm`.`id_satker` =  AND `n_pm`.`thn_dipa` = 2025
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pk`.`id_satker` =  AND `n_pk`.`thn_dipa` = 2025
+LEFT JOIN `nilai_level` as `n_lvl` ON `n_lvl`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_lvl`.`id_satker` =  AND `n_lvl`.`thn_dipa` = 2025
+GROUP BY `a`.`id_unsur`', [], false)
+ 2 APPPATH\Models\NilaiPMModel.php(90): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Auditor.php(70): App\Models\NilaiPMModel->precentage(null, '2025')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->dash()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-07-11 07:39:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND `n_pm`.`thn_dipa` = 2025
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_...' at line 15
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id_unsur`, COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker, COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pm, COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pk, COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_lvl
+FROM `pm_satker` as `a`
+LEFT JOIN `nilai_pm` as `n_pm` ON `n_pm`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pm`.`id_satker` =  AND `n_pm`.`thn_dipa` = 2025
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pk`.`id_satker` =  AND `n_pk`.`thn_dipa` = 2025
+LEFT JOIN `nilai_level` as `n_lvl` ON `n_lvl`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_lvl`.`id_satker` =  AND `n_lvl`.`thn_dipa` = 2025
+GROUP BY `a`.`id_unsur`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id_unsur`, COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker, COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pm, COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pk, COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_lvl
+FROM `pm_satker` as `a`
+LEFT JOIN `nilai_pm` as `n_pm` ON `n_pm`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pm`.`id_satker` =  AND `n_pm`.`thn_dipa` = 2025
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pk`.`id_satker` =  AND `n_pk`.`thn_dipa` = 2025
+LEFT JOIN `nilai_level` as `n_lvl` ON `n_lvl`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_lvl`.`id_satker` =  AND `n_lvl`.`thn_dipa` = 2025
+GROUP BY `a`.`id_unsur`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id_unsur`, COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker, COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pm, COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pk, COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_lvl
+FROM `pm_satker` as `a`
+LEFT JOIN `nilai_pm` as `n_pm` ON `n_pm`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pm`.`id_satker` =  AND `n_pm`.`thn_dipa` = 2025
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pk`.`id_satker` =  AND `n_pk`.`thn_dipa` = 2025
+LEFT JOIN `nilai_level` as `n_lvl` ON `n_lvl`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_lvl`.`id_satker` =  AND `n_lvl`.`thn_dipa` = 2025
+GROUP BY `a`.`id_unsur`', [], false)
+ 4 APPPATH\Models\NilaiPMModel.php(90): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Auditor.php(70): App\Models\NilaiPMModel->precentage(null, '2025')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->dash()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-07-11 07:39:25 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AND `n_pm`.`thn_dipa` = 2025
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_...' at line 15
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `a`.`id_unsur`, COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker, COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pm, COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pk, COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_lvl
+FROM `pm_satker` as `a`
+LEFT JOIN `nilai_pm` as `n_pm` ON `n_pm`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pm`.`id_satker` =  AND `n_pm`.`thn_dipa` = 2025
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pk`.`id_satker` =  AND `n_pk`.`thn_dipa` = 2025
+LEFT JOIN `nilai_level` as `n_lvl` ON `n_lvl`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_lvl`.`id_satker` =  AND `n_lvl`.`thn_dipa` = 2025
+GROUP BY `a`.`id_unsur`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`id_unsur`, COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker, COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pm, COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pk, COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_lvl
+FROM `pm_satker` as `a`
+LEFT JOIN `nilai_pm` as `n_pm` ON `n_pm`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pm`.`id_satker` =  AND `n_pm`.`thn_dipa` = 2025
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pk`.`id_satker` =  AND `n_pk`.`thn_dipa` = 2025
+LEFT JOIN `nilai_level` as `n_lvl` ON `n_lvl`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_lvl`.`id_satker` =  AND `n_lvl`.`thn_dipa` = 2025
+GROUP BY `a`.`id_unsur`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`id_unsur`, COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker, COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pm, COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pk, COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_lvl
+FROM `pm_satker` as `a`
+LEFT JOIN `nilai_pm` as `n_pm` ON `n_pm`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pm`.`id_satker` =  AND `n_pm`.`thn_dipa` = 2025
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pk`.`id_satker` =  AND `n_pk`.`thn_dipa` = 2025
+LEFT JOIN `nilai_level` as `n_lvl` ON `n_lvl`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_lvl`.`id_satker` =  AND `n_lvl`.`thn_dipa` = 2025
+GROUP BY `a`.`id_unsur`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id_unsur`, COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker, COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pm, COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pk, COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_lvl
+FROM `pm_satker` as `a`
+LEFT JOIN `nilai_pm` as `n_pm` ON `n_pm`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pm`.`id_satker` =  AND `n_pm`.`thn_dipa` = 2025
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pk`.`id_satker` =  AND `n_pk`.`thn_dipa` = 2025
+LEFT JOIN `nilai_level` as `n_lvl` ON `n_lvl`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_lvl`.`id_satker` =  AND `n_lvl`.`thn_dipa` = 2025
+GROUP BY `a`.`id_unsur`', [], false)
+ 5 APPPATH\Models\NilaiPMModel.php(90): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Auditor.php(70): App\Models\NilaiPMModel->precentage(null, '2025')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->dash()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-07-11 07:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 07:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-11 07:40:29 --> ErrorException: Undefined variable $x
+[Method: GET, Route: dash_pk]
+in APPPATH\Views\tbl_pk.php on line 48.
+ 1 APPPATH\Views\tbl_pk.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $x', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\tbl_pk.php', 48)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\tbl_pk.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('tbl_pk', [], true)
+ 5 APPPATH\Controllers\Auditor.php(91): view('tbl_pk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->dash()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-07-11 07:40:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 07:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-11 07:45:28 --> ErrorException: Attempt to read property "nama_satker" on string
+[Method: GET, Route: dash_pk]
+in APPPATH\Views\tbl_pk.php on line 66.
+ 1 APPPATH\Views\tbl_pk.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_satker" on string', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\tbl_pk.php', 66)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\tbl_pk.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('tbl_pk', [], true)
+ 5 APPPATH\Controllers\Auditor.php(90): view('tbl_pk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->dash()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-07-11 07:45:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-11 07:45:47 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: dash_pk]
+in APPPATH\Views\tbl_pk.php on line 66.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('tbl_pk', [], true)
+ 4 APPPATH\Controllers\Auditor.php(90): view('tbl_pk', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->dash()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-07-11 07:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-11 07:46:14 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: dash_pk]
+in APPPATH\Views\tbl_pk.php on line 66.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('tbl_pk', [], true)
+ 4 APPPATH\Controllers\Auditor.php(90): view('tbl_pk', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->dash()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-07-11 07:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 07:47:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 07:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-11 07:47:08 --> TypeError: Cannot access offset of type string on string
+[Method: GET, Route: dash_pk]
+in APPPATH\Views\tbl_pk.php on line 66.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('tbl_pk', [], true)
+ 4 APPPATH\Controllers\Auditor.php(90): view('tbl_pk', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->dash()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-07-11 07:48:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 07:48:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 07:48:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 07:48:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 07:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-11 07:48:48 --> Current route: /soal_pengungkit

@@ -1,0 +1,27 @@
+CRITICAL - 2024-12-09 02:35:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "template/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('template/index.php')
+ 2 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template/index', [], true)
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('dashboard_table', [], true)
+ 4 APPPATH\Controllers\Otentikasi.php(12): view('dashboard_table')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Otentikasi->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Otentikasi))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-09 07:33:30 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: ".php"
+[Method: GET, Route: pm]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('', [], true)
+ 3 APPPATH\Controllers\PenilaianMandiri.php(12): view('')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')

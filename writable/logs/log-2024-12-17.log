@@ -1,0 +1,99 @@
+CRITICAL - 2024-12-17 07:08:29 --> ErrorException: Undefined property: stdClass::$nama_sub_unsur
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 66.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_sub_unsur', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 66)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-17 07:19:44 --> ErrorException: Undefined array key "id_indikator"
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 48.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_indikator"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-17 07:24:57 --> ErrorException: Undefined array key "id_indikator"
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 48.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_indikator"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-17 07:25:52 --> ErrorException: Undefined array key "id_indikator"
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 48.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_indikator"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-17 07:25:53 --> ErrorException: Undefined array key "id_indikator"
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 48.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_indikator"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-17 07:26:08 --> ErrorException: Undefined array key "id_indikator"
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 48.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_indikator"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-17 07:26:09 --> ErrorException: Undefined array key "id_indikator"
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 48.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_indikator"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-17 07:40:37 --> ErrorException: Undefined array key "id_indikator"
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 47.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_indikator"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2024-12-17 07:45:38 --> ErrorException: Undefined array key "id_indikator"
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 48.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_indikator"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 48)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')

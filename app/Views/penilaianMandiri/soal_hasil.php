@@ -1,0 +1,616 @@
+<?= $this->extend('layout/index'); ?>
+<?= $this->section('page_content'); ?>
+
+<?= d($syncedData) ?>
+
+<div class="row">
+
+    <div class="demo-vertical-spacing mb-4">
+        <div class="progress">
+            <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 25%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100">
+                25% PM
+            </div>
+        </div>
+        <!-- <div class="progress">
+            <div
+                class="progress-bar bg-info"
+                role="progressbar"
+                style="width: 50%"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100">
+                50% PK
+            </div>
+        </div> -->
+        <!-- <div class="progress">
+            <div
+                class="progress-bar bg-success"
+                role="progressbar"
+                style="width: 75%"
+                aria-valuenow="75"
+                aria-valuemin="0"
+                aria-valuemax="100">
+                75% Level
+            </div>
+        </div> -->
+    </div>
+    <div class="col-lg-12 order-0 mb-2"> <!-- Mengurangi margin bawah -->
+        <div class="card"> <!-- Menghapus efek bayangan untuk tampilan yang lebih sederhana -->
+            <div class="d-flex align-items-center row"> <!-- Tetap menggunakan align-items-center -->
+                <div class="col-sm-12"> <!-- Ukuran kolom tetap sama -->
+                    <div class="card-body p-2"> <!-- Mengurangi padding untuk tampilan yang lebih kompak -->
+                        <h5 class="card-title text-primary mt-1">B. KOMPONEN HASIL</h5> <!-- Mengurangi margin atas pada judul -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 order-0 mt-2">
+        <?php
+        $displayedUnsur = []; // Array untuk menyimpan nama_unsur yang sudah ditampilkan
+        $defaultData = []; // Array untuk menyimpan data berdasarkan id_unsur
+        $firstUnsurId = null; // Menyimpan id_unsur pertama untuk auto-click
+
+        // Proses data untuk menampilkan tombol dan menyimpan data default
+        foreach ($syncedData as $index => $row) :
+            if (!in_array($row['nama_unsur'], $displayedUnsur)) :
+                if ($firstUnsurId === null) {
+                    $firstUnsurId = $row['id_unsur']; // Simpan id_unsur pertama untuk auto-click
+                }
+        ?>
+                <!-- Tombol berdasarkan nama_unsur yang unik -->
+                <button class="btn btn-dark mb-2 unsur-btn" data-id="<?= $row['id_unsur']; ?>" onclick="handleUnsurClick('<?= $row['id_unsur']; ?>')">
+                    <?= $row['nama_unsur']; ?>
+                </button>
+        <?php
+                $displayedUnsur[] = $row['nama_unsur'];
+            endif;
+
+            // Menyimpan indikator yang terkait dengan id_unsur = 1 sebagai default
+            if ($row['id_unsur'] == 1) {
+                $defaultData[] = [
+                    'name_sub_unsur' => $row['name_sub_unsur'],
+                    'id_indikator' => $row['id_indikator'],
+                    'nama_indikator' => $row['nama_indikator'],
+                    'nilai_pm' => $row['nilai_pm'],
+                    'nilai_pk' => $row['nilai_pk'],
+                    'nilai_lvl' => $row['nilai_lvl'],
+                    'jawaban' => $row['jawaban']
+                ];
+            }
+        endforeach;
+        ?>
+
+
+    </div>
+    <div id="filteredData" class="col-lg-12 mt-4">
+        <!-- Data default yang akan ditampilkan pertama kali -->
+        <?php if (!empty($defaultData)) : ?>
+            <?php $displayedSubUnsur = []; ?>
+            <?php foreach ($defaultData as $index => $indikator) : ?>
+                <!-- Cek apakah name_sub_unsur sudah ditampilkan sebelumnya -->
+                <div class="card accordion-item mb-2">
+                    <?php if (!in_array($indikator['name_sub_unsur'], $displayedSubUnsur)) : ?>
+                        <div class="card-header bg-secondary">
+                            <h5 class="mb-0  text-white"><?= $indikator['name_sub_unsur']; ?></h5>
+                        </div>
+                        <?php $displayedSubUnsur[] = $indikator['name_sub_unsur']; // Tandai bahwa name_sub_unsur sudah ditampilkan 
+                        ?>
+                    <?php endif; ?>
+                    <h2 class="accordion-header" id="heading<?= $index; ?>">
+                        <button type="button" class="accordion-button <?= $index === 0 ? '' : 'collapsed'; ?>"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#accordion<?= $index; ?>"
+                            aria-expanded="<?= $index === 0 ? 'true' : 'false'; ?>"
+                            aria-controls="accordion<?= $index; ?>">
+                            <?= $indikator['nama_indikator']; ?>
+                        </button>
+                    </h2>
+                    <div id="accordion<?= $index; ?>"
+                        class="accordion-collapse collapse <?= $index === 0 ? 'show' : ''; ?>"
+                        aria-labelledby="heading<?= $index; ?>"
+                        data-bs-parent="#accordionExample<?= $index; ?>">
+                        <div class="accordion-body">
+                            <!-- Ambil data nilai_pm jika ada -->
+                            <?php $n_pm = !empty($indikator['nilai_pm']) ? reset($indikator['nilai_pm']) : null; ?>
+
+
+                            <!-- Input Link Dakung -->
+                            <label for="linkDakung<?= $index; ?>" class="form-label">Link Dakung:</label>
+                            <div class="input-group">
+                                <?php if (!empty($n_pm['link_dakung'])) : ?>
+                                    <a href="<?= $n_pm['link_dakung']; ?>"
+                                        class="input-group-text"
+                                        id="basic-addon<?= $index; ?>"
+                                        target="_blank">
+                                        <i class="bx bxs-file-pdf text-danger fs-2"></i>
+                                    </a>
+                                    <input type="text"
+                                        class="form-control"
+                                        placeholder="URL"
+                                        id="linkDakung<?= $index; ?>"
+                                        aria-describedby="basic-addon<?= $index; ?>"
+                                        value="<?= $n_pm['link_dakung']; ?>" />
+                                <?php else : ?>
+                                    <span class="input-group-text"
+                                        id="basic-addon<?= $index; ?>">https://drive.google.com/drive/</span>
+                                    <input type="text"
+                                        class="form-control"
+                                        placeholder="URL"
+                                        id="linkDakung<?= $index; ?>"
+                                        aria-describedby="basic-addon<?= $index; ?>"
+                                        value="" />
+                                <?php endif; ?>
+                            </div>
+
+                            <!-- Select Nilai -->
+                            <div>
+                                <label for="nilaiSelect<?= $index; ?>" class="form-label">Nilai:</label>
+                                <select id="nilaiSelect<?= $index; ?>" class="form-select form-select-sm">
+                                    <option value="" selected disabled>Pilih Nilai</option>
+                                    <?php foreach ($indikator['jawaban'] as $jawab): ?>
+                                        <option value="<?= $jawab['id']; ?>"
+                                            <?= $n_pm && $jawab['id'] == $n_pm['nilai'] ? 'selected' : ''; ?>>
+                                            <?= $jawab['desc']; ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+
+                            <!-- Tombol Simpan -->
+                            <a href="javascript:void(0);" class="btn btn-sm btn-primary btn-info mt-2"
+                                onclick="<?= ($role == 4) ? "handleSave($index, '{$indikator['id_indikator']}')" : 'return false;'; ?>" <?= $role != 4 ? 'hidden' : ''; ?>>
+                                Simpan
+                            </a>
+                        </div>
+
+                        <div class="accordion-body" <?= ($role != 11 && $role != 10) ? 'hidden' : ''; ?>>
+                            <!-- Ambil data nilai_pk jika ada -->
+                            <?php $n_pk = !empty($indikator['nilai_pk']) ? reset($indikator['nilai_pk']) : null; ?>
+
+                            <div>
+                                <label for="nilaiSelectPK<?= $index; ?>" class="form-label">Nilai PK:</label>
+                                <select id="nilaiSelectPK<?= $index; ?>" class="form-select form-select-sm">
+                                    <option value="" selected disabled>Pilih Nilai</option>
+                                    <?php foreach ($row['jawaban'] as $jawab): ?>
+                                        <option value="<?= $jawab['id']; ?>"
+                                            <?= $n_pk && $jawab['id'] == $n_pk['nilai'] ? 'selected' : ''; ?>>
+                                            <?= $jawab['desc']; ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="komentarPK<?= $index; ?>" class="form-label">Komentar</label>
+                                <textarea class="form-control" id="komentarPK<?= $index; ?>" rows="3" style="resize: none;"><?= $n_pk['komenpk'] ?? ''; ?></textarea>
+                            </div>
+                            <div>
+                                <label for="rekomendasiPK<?= $index; ?>" class="form-label">Rekomendasi</label>
+                                <textarea class="form-control" id="rekomendasiPK<?= $index; ?>" rows="3" style="resize: none;"><?= $n_pk['rekomendasi'] ?? ''; ?></textarea>
+                            </div>
+                            <!-- Tombol Simpan -->
+                            <a href="javascript:void(0);" class="btn btn-sm btn-primary btn-info mt-2" onclick="<?= ($role == 11 || $role == 11) ? "handleSave($index, '{$indikator['id_indikator']}')" : 'return false;'; ?>" <?= !($role == 11 || $role == 11) ? 'hidden' : ''; ?>>Simpan</a>
+                        </div>
+
+                        <div class="accordion-body" <?= ($role === 10 || $role === 11 || $role === 12 || $role === 13) ? '' : 'hidden'; ?>>
+                            <!-- Mengambil data nilai_lvl jika ada -->
+                            <?php $n_lvl = !empty($indikator['nilai_lvl']) ? reset($indikator['nilai_lvl']) : null; ?>
+
+                            <div>
+                                <label for="nilaiSelectlvl<?= $index; ?>" class="form-label">Nilai Leveling:</label>
+                                <select id="nilaiSelectlvl<?= $index; ?>" class="form-select form-select-sm">
+                                    <option value="" selected disabled>Pilih Nilai</option>
+                                    <?php foreach ($row['jawaban'] as $jawab): ?>
+                                        <option value="<?= $jawab['id']; ?>"
+                                            <?= $n_lvl && $jawab['id'] == $n_lvl['nilai'] ? 'selected' : ''; ?>>
+                                            <?= $jawab['desc']; ?>
+                                        </option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="komentarLvl<?= $index; ?>" class="form-label">Komentar</label>
+                                <textarea class="form-control" id="komentarlvl<?= $index; ?>" rows="3" style="resize: none;"><?= $n_lvl['komenlvl'] ?? ''; ?></textarea>
+                            </div>
+                            <div>
+                                <label for="rekomendasiLvl<?= $index; ?>" class="form-label">Rekomendasi</label>
+                                <textarea class="form-control" id="rekomendasilvl<?= $index; ?>" rows="3" style="resize: none;"><?= $n_lvl['rekomendasi'] ?? ''; ?></textarea>
+                            </div>
+                            <!-- Tombol Simpan -->
+                            <a href="javascript:void(0);" class="btn btn-sm btn-primary btn-info mt-2" onclick="<?= ($role == 13 || $role == 13) ? "handleSave($index, '{$indikator['id_indikator']}')" : 'return false;'; ?>" <?= !($role == 13 || $role == 13) ? 'hidden' : ''; ?>>Simpan</a>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </div>
+</div>
+
+
+
+
+<div class="d-flex justify-content-between mt-3">
+    <a href="javascript:void(0);" class="btn btn-secondary disabled">Sebelumnya</a>
+    <a href="javascript:void(0);" class="btn btn-secondary" onclick="handleNextClick()">Selanjutnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+    function handleSave(index, idPmSatker) {
+        const linkDakung = document.getElementById('linkDakung' + index);
+        const nilaiSelect = document.getElementById('nilaiSelect' + index);
+        const userId = <?= json_encode(session()->get('id')); ?>;
+        const satkerId = <?= json_encode(session()->get('id_satker')); ?>;
+        const tahun = <?= json_encode($tahun); ?>;
+
+        // Cek jika elemen tidak ada
+        if (!linkDakung || !nilaiSelect) {
+            console.error('Elemen tidak ditemukan untuk index:', index);
+            alert('Terjadi kesalahan, elemen tidak ditemukan!');
+            return;
+        }
+
+        const linkDakungValue = linkDakung.value;
+        const nilaiSelectValue = nilaiSelect.value;
+
+        // Cek jika linkDakung kosong
+        if (!linkDakungValue) {
+            alert('Link Dakung tidak boleh kosong!');
+            return;
+        }
+
+        // Cek jika nilaiSelect tidak dipilih
+        if (!nilaiSelectValue) {
+            alert('Silakan pilih nilai!');
+            return;
+        }
+
+        // Kirim data ke server (gunakan AJAX atau metode lain)
+        console.log('Link Dakung:', linkDakungValue);
+        console.log('Nilai:', nilaiSelectValue);
+        console.log('ID:', userId);
+        console.log('ID Satker:', satkerId);
+        console.log('tahun:', tahun);
+        console.log('ID PM Satker:', idPmSatker);
+
+        // Lakukan pengiriman data ke server di sini        
+        $.ajax({
+            url: '<?= base_url('/soal/save') ?>', // URL endpoint untuk menyimpan data
+            type: 'POST',
+            data: {
+                linkDakung: linkDakungValue,
+                nilaiSelect: nilaiSelectValue,
+                id: userId,
+                satkerId: satkerId,
+                tahun: tahun,
+                idPmSatker: idPmSatker
+            },
+            success: function(response) {
+                console.log('Response dari server:', response);
+                if (response.status === 'success') {
+                    alert(response.message);
+                    // Lakukan tindakan lain jika diperlukan, seperti memperbarui UI
+                    $(`#basic-addon${index}`).replaceWith(`
+                    <a href="${linkDakungValue}" 
+                        class="input-group-text"
+                        id="basic-addon${index}" 
+                        target="_blank">
+                        <i class="bx bxs-file-pdf text-danger fs-2"></i>
+                    </a>
+                    `);
+                    linkDakung.value = linkDakungValue; // Set ulang nilai input
+                } else {
+                    alert('Gagal menyimpan data: ' + response.message);
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error:', status, error);
+                alert('Terjadi kesalahan saat mengirim data!');
+            }
+        });
+    }
+
+    function handleSavePK(index, idPmSatker) {
+        const nilaiSelectPK = document.getElementById('nilaiSelectPK' + index);
+        const komentarPK = document.getElementById('komentarPK' + index);
+        const rekomenPK = document.getElementById('rekomendasiPK' + index).value;
+        const tahun = '2024';
+        const userId = <?= json_encode(session()->get('id')); ?>;
+        const satkerId = <?= json_encode(session()->get('id_satker')); ?>;
+
+        // Cek jika elemen tidak ada
+        if (!nilaiSelectPK) {
+            console.error('Elemen tidak ditemukan untuk index:', index);
+            alert('Terjadi kesalahan, elemen tidak ditemukan!');
+            return;
+        }
+
+        const nilaiSelectPKValue = nilaiSelectPK.value;
+        const komentarPKValue = komentarPK.value;
+
+        // Cek jika nilaiSelectPK tidak dipilih
+        if (!nilaiSelectPKValue) {
+            alert('Silakan pilih nilai!');
+            return;
+        }
+
+        // Kirim data ke server (gunakan AJAX atau metode lain)
+        $.ajax({
+            url: '<?= base_url('/soal/savePK') ?>', // URL endpoint untuk menyimpan data
+            type: 'POST',
+            data: {
+                nilaiSelectPK: nilaiSelectPKValue,
+                komentarPK: komentarPKValue,
+                rekomenPK: rekomenPK,
+                id: userId,
+                satkerId: satkerId,
+                tahun: tahun,
+                idPmSatker: idPmSatker
+            },
+            success: function(response) {
+                if (response.status === 'success') {
+                    alert(response.message);
+                } else {
+                    alert('Gagal menyimpan data: ' + response.message);
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error:', status, error);
+                alert('Terjadi kesalahan saat mengirim data!');
+            }
+        });
+    }
+
+    function handleSavelvl(index, idPmSatker) {
+        const nilaiSelectlvl = document.getElementById('nilaiSelectlvl' + index).value; // Ambil nilai
+        const komentarlvl = document.getElementById('komentarlvl' + index).value; // Ambil nilai komentar
+        const rekomenlvl = document.getElementById('rekomendasilvl' + index).value; // Ambil nilai rekomendasi
+        const tahun = '2024';
+        const userId = <?= json_encode(session()->get('id')); ?>;
+        const satkerId = <?= json_encode(session()->get('id_satker')); ?>;
+
+        // Cek jika nilaiSelectlvl tidak dipilih
+        if (!nilaiSelectlvl) {
+            alert('Silakan pilih nilai level !');
+            return;
+        }
+
+        // Debugging: Cek nilai yang diambil
+        // console.log('Nilai Select Level:', nilaiSelectlvl);
+        // console.log('Komentar Level:', komentarlvl);
+        // console.log('Rekomendasi Level:', rekomenlvl);
+
+        $.ajax({
+            url: '<?= base_url('/soal/savelvl') ?>', // URL endpoint untuk menyimpan data
+            type: 'POST',
+            data: {
+                nilaiSelectlvl: nilaiSelectlvl,
+                komentarlvl: komentarlvl,
+                rekomenlvl: rekomenlvl,
+                id: userId,
+                satkerId: satkerId,
+                tahun: tahun,
+                idPmSatker: idPmSatker
+            },
+            success: function(response) {
+                if (response.status === 'success') {
+                    alert(response.message);
+                } else {
+                    alert('Gagal menyimpan data: ' + response.message);
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error:', status, error);
+                alert('Terjadi kesalahan saat mengirim data!');
+            }
+        });
+    }
+
+    function handleUnsurClick(idUnsure) {
+        // Ambil data dari PHP
+        const syncedData = <?= json_encode($syncedData); ?>;
+        const role = <?= json_encode($role); ?>;
+        const filteredData = syncedData.filter(row => row.id_unsur === idUnsure);
+        console.log(filteredData);
+
+        // Kosongkan kontainer sebelum menampilkan data baru
+        const filteredDataContainer = document.getElementById('filteredData');
+        filteredDataContainer.innerHTML = '';
+
+        let lastSubUnsur = null; // Simpan sub-unsur sebelumnya
+
+        filteredData.forEach((row, index) => {
+            // Ambil nilai_pk jika tersedia
+            const n_pk = row.nilai_pk && row.nilai_pk.length > 0 ? row.nilai_pk[0] : null;
+            const n_lvl = row.nilai_lvl && row.nilai_lvl.length > 0 ? row.nilai_lvl[0] : null;
+
+            // Buat elemen card
+            const card = document.createElement('div');
+            card.className = 'card mb-2';
+
+            // Jika name_sub_unsur baru, tambahkan judul sebelum h2
+            let subUnsurHeader = '';
+            if (row.name_sub_unsur !== lastSubUnsur) {
+                subUnsurHeader = `
+                <div class="card-header bg-secondary">
+                    <h5 class="mb-0  text-white">${row.name_sub_unsur}</h5>
+                </div>
+            `;
+                lastSubUnsur = row.name_sub_unsur; // Update last sub-unsur
+            }
+
+            card.innerHTML = `
+            ${subUnsurHeader} 
+            <h2 class="accordion-header" id="heading${index}">
+                <button type="button" class="accordion-button ${index === 0 ? '' : 'collapsed'}"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#accordion${index}"
+                    aria-expanded="${index === 0 ? 'true' : 'false'}"
+                    aria-controls="accordion${index}">
+                    ${row.nama_indikator}
+                </button>
+            </h2>       
+            <div id="accordion${index}"
+                class="accordion-collapse collapse ${index === 0 ? 'show' : ''}"
+                aria-labelledby="heading${index}"
+                data-bs-parent="#accordionExample${index}">
+
+                <!-- Bagian Pertama -->
+                <div class="accordion-body">
+                    <label for="linkDakung${index}" class="form-label">Link Dakung:</label>
+                    <div class="input-group">
+                        ${row.nilai_pm?.[0]?.link_dakung ? `
+                            <a href="${row.nilai_pm[0].link_dakung}"
+                                class="input-group-text"
+                                id="basic-addon${index}"
+                                target="_blank">
+                                <i class="bx bxs-file-pdf text-danger fs-2"></i>
+                            </a>
+                            <input type="text"
+                                class="form-control"
+                                placeholder="URL"
+                                id="linkDakung${index}"
+                                aria-describedby="basic-addon${index}"
+                                value="${row.nilai_pm[0].link_dakung}" />
+                        ` : `
+                            <span class="input-group-text"
+                                id="basic-addon${index}">https://drive.google.com/drive/</span>
+                            <input type="text"
+                                class="form-control"
+                                placeholder="URL"
+                                id="linkDakung${index}"
+                                aria-describedby="basic-addon${index}"
+                                value="" />
+                        `}
+                    </div>
+
+                    <!-- Select Nilai -->
+                    <div>
+                        <label for="nilaiSelect${index}" class="form-label">Nilai:</label>
+                        <select id="nilaiSelect${index}" class="form-select form-select-sm">
+                            <option value="" selected disabled>Pilih Nilai</option>
+                            ${row.jawaban.map(jawab => `
+                                <option value="${jawab.id}" 
+                                    ${row.nilai_pm?.[0]?.nilai == jawab.id ? 'selected' : ''}>
+                                    ${jawab.desc}
+                                </option>
+                            `).join('')}
+                        </select>
+                    </div>
+
+                    <!-- Tombol Simpan -->
+                    <a href="javascript:void(0);" 
+                        class="btn btn-sm btn-primary btn-info mt-2 save-btn" 
+                        data-index="${index}" 
+                        data-id="${row.id_indikator}"
+                        ${role != 4 ? 'hidden' : ''}>
+                        Simpan
+                    </a>
+                </div>   
+                
+                <!-- Bagian Kedua -->
+                <div class="accordion-body" style="${role !== 11 && role !== 10 ? 'display: none;' : ''}">
+                    
+                    <!-- Select Nilai PK -->
+                    <div>
+                        <label for="nilaiSelectPK${index}" class="form-label">Nilai PK:</label>
+                        <select id="nilaiSelectPK${index}" class="form-select form-select-sm">
+                            <option value="" selected disabled>Pilih Nilai</option>
+                            ${row.jawaban.map(jawab => `
+                                <option value="${jawab.id}" ${n_pk && jawab.id == n_pk.nilai ? 'selected' : ''}>
+                                    ${jawab.desc}
+                                </option>
+                            `).join('')}
+                        </select>
+                    </div>
+
+                    <!-- Komentar -->
+                    <div>
+                        <label for="komentarPK${index}" class="form-label">Komentar</label>
+                        <textarea class="form-control" id="komentarPK${index}" rows="3" style="resize: none;">${n_pk ? n_pk.komenpk.trim() : ''}</textarea>
+                    </div>
+
+                    <!-- Rekomendasi -->
+                    <div>
+                        <label for="rekomendasiPK${index}" class="form-label">Rekomendasi</label>
+                        <textarea class="form-control" id="rekomendasiPK${index}" rows="3" style="resize: none;">${n_pk ? n_pk.rekomendasi.trim() : ''}</textarea>
+                    </div>
+
+                    <!-- Tombol Simpan -->
+                    <a href="javascript:void(0);" 
+                        class="btn btn-sm btn-primary btn-info mt-2 save-btn" 
+                        data-index="${index}" 
+                        data-id="${row.id_indikator}"
+                        ${!(role == 11 || role == 10) ? 'hidden' : ''}>
+                        Simpan
+                    </a>
+                </div> 
+
+                <!-- Bagian Ketiga -->
+                <div class="accordion-body" style="${role !== 11 && role !== 10 ? 'display: none;' : ''}">
+                    
+                    <!-- Select Nilai Level -->
+                    <div>
+                        <label for="nilaiSelectLevel${index}" class="form-label">Nilai Level:</label>
+                        <select id="nilaiSelectLevel${index}" class="form-select form-select-sm">
+                            <option value="" selected disabled>Pilih Nilai</option>
+                            ${row.jawaban.map(jawab => `
+                                <option value="${jawab.id}" ${n_lvl && jawab.id == n_lvl.nilai ? 'selected' : ''}>
+                                    ${jawab.desc}
+                                </option>
+                            `).join('')}
+                        </select>
+                    </div>
+
+                    <!-- Komentar -->
+                    <div>
+                        <label for="komentarLevel${index}" class="form-label">Komentar</label>
+                        <textarea class="form-control" id="komentarLevel${index}" rows="3" style="resize: none;">${n_lvl ? n_lvl.komenlvl.trim() : ''}</textarea>
+                    </div>
+
+                    <!-- Rekomendasi -->
+                    <div>
+                        <label for="rekomendasiLevel${index}" class="form-label">Rekomendasi</label>
+                        <textarea class="form-control" id="rekomendasiLevel${index}" rows="3" style="resize: none;">${n_lvl ? n_lvl.rekomendasi.trim() : ''}</textarea>
+                    </div>
+
+                    <!-- Tombol Simpan -->
+                    <a href="javascript:void(0);" 
+                        class="btn btn-sm btn-primary btn-info mt-2 save-btn" 
+                        data-index="${index}" 
+                        data-id="${row.id_indikator}"
+                        ${!(role == 11 || role == 10) ? 'hidden' : ''}>
+                        Simpan
+                    </a>
+                </div>
+                
+            </div>       
+        `;
+
+            // Masukkan elemen card ke dalam container
+            filteredDataContainer.appendChild(card);
+        });
+
+        // Tambahkan event listener ke semua tombol Simpan
+        document.querySelectorAll('.save-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const idx = this.getAttribute('data-index');
+                const idIndikator = this.getAttribute('data-id');
+                handleSave(idx, idIndikator);
+            });
+        });
+    }
+</script>
+
+<?= $this->endSection(); ?>

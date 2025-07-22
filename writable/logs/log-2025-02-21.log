@@ -1,0 +1,55 @@
+INFO - 2025-02-21 01:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 01:19:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 01:19:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 01:19:51 --> Current route: /pm
+INFO - 2025-02-21 01:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 01:19:54 --> Current route: /soal_pengungkit
+INFO - 2025-02-21 01:31:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 01:31:33 --> Current route: /soal_pengungkit
+INFO - 2025-02-21 02:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 02:19:39 --> Current route: /soal_pengungkit
+INFO - 2025-02-21 02:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 02:20:43 --> Current route: /soal_pengungkit
+INFO - 2025-02-21 02:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 02:21:40 --> Current route: /soal_pengungkit
+INFO - 2025-02-21 02:28:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 02:28:26 --> Current route: /soal_pengungkit
+INFO - 2025-02-21 02:28:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 02:28:45 --> Current route: /soal_pengungkit
+INFO - 2025-02-21 02:31:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 02:31:02 --> Current route: /soal_pengungkit
+INFO - 2025-02-21 02:32:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 02:32:40 --> Current route: /soal_pengungkit
+INFO - 2025-02-21 02:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 02:37:47 --> Current route: /soal_hasil
+INFO - 2025-02-21 02:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 02:38:50 --> Current route: /soal_hasil
+CRITICAL - 2025-02-21 02:38:50 --> ErrorException: Undefined variable $persen
+[Method: GET, Route: soal_hasil]
+in APPPATH\Views\penilaianMandiri\soal_hasil_v1.php on line 4.
+ 1 APPPATH\Views\penilaianMandiri\soal_hasil_v1.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persen', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal_hasil_v1.php', 4)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal_hasil_v1.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal_hasil_v1', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(297): view('/penilaianMandiri/soal_hasil_v1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal_hasil()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-02-21 02:39:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 02:39:23 --> Current route: /soal_hasil
+INFO - 2025-02-21 02:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 02:40:23 --> Current route: /soal_hasil
+INFO - 2025-02-21 02:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 02:55:18 --> Current route: /soal_hasil
+INFO - 2025-02-21 02:55:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 02:55:30 --> Current route: /soal_pengungkit
+INFO - 2025-02-21 02:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 02:55:41 --> Current route: /soal_pengungkit
+INFO - 2025-02-21 03:16:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 03:16:18 --> Current route: /pm
+INFO - 2025-02-21 03:31:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-21 03:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

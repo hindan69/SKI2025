@@ -1,0 +1,71 @@
+CRITICAL - 2025-01-07 07:54:11 --> ErrorException: Undefined array key "nilai_pk"
+[Method: GET, Route: soal]
+in APPPATH\Views\penilaianMandiri\soal.php on line 4.
+ 1 APPPATH\Views\penilaianMandiri\soal.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nilai_pk"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php', 4)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(99): view('/penilaianMandiri/soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-01-07 07:54:25 --> ErrorException: Attempt to read property "nilai_pk" on array
+[Method: GET, Route: soal]
+in APPPATH\Views\penilaianMandiri\soal.php on line 4.
+ 1 APPPATH\Views\penilaianMandiri\soal.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nilai_pk" on array', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php', 4)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(99): view('/penilaianMandiri/soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-01-07 07:59:28 --> ErrorException: Undefined array key "jawaban_pk"
+[Method: GET, Route: soal]
+in APPPATH\Views\penilaianMandiri\soal.php on line 159.
+ 1 APPPATH\Views\penilaianMandiri\soal.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jawaban_pk"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php', 159)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(99): view('/penilaianMandiri/soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-01-07 08:02:47 --> ErrorException: Undefined array key "id_pk_satker"
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 60.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pk_satker"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 60)
+ 2 [internal function]: App\Controllers\PenilaianMandiri->App\Controllers\{closure}([...])
+ 3 APPPATH\Controllers\PenilaianMandiri.php(59): array_filter([...], Object(Closure))
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-01-07 08:03:24 --> ErrorException: Undefined array key "id_pk_satker"
+[Method: GET, Route: soal]
+in APPPATH\Controllers\PenilaianMandiri.php on line 78.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pk_satker"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 78)
+ 2 [internal function]: App\Controllers\PenilaianMandiri->App\Controllers\{closure}([...])
+ 3 APPPATH\Controllers\PenilaianMandiri.php(77): array_filter([...], Object(Closure))
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')

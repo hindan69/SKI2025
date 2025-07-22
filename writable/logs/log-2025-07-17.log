@@ -1,0 +1,187 @@
+INFO - 2025-07-17 02:35:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-17 02:35:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-17 02:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-17 02:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-17 02:35:51 --> Current route: /tu
+INFO - 2025-07-17 02:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-17 02:35:55 --> Current route: /cTim
+INFO - 2025-07-17 02:35:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-17 02:36:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-17 02:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-17 02:36:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-17 02:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-17 02:36:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-17 04:30:30 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ski_db', 3306, '', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id_...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\NilaiPMModel.php(90): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\Auditor.php(69): App\Models\NilaiPMModel->precentage('208', '2025')
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\Auditor->dash()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id_...', Array, false)
+#3 D:\DLL\IT\SKI\SKI2025\app\Models\NilaiPMModel.php(90): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\DLL\IT\SKI\SKI2025\app\Controllers\Auditor.php(69): App\Models\NilaiPMModel->precentage('208', '2025')
+#5 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\Auditor->dash()
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#12 {main}
+CRITICAL - 2025-07-17 04:30:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: dash_pk]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`id_unsur`, COUNT(DISTINCT a.id_indikator) AS jumlah_pm_satker, COUNT(DISTINCT n_pm.id_pm_satker) AS jumlah_nilai_pm, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pm.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pm.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pm, COUNT(DISTINCT n_pk.id_pm_satker) AS jumlah_nilai_pk, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_pk.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_pk.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_pk, COUNT(DISTINCT n_lvl.id_pm_satker) AS jumlah_nilai_lvl, CASE 
+            WHEN COUNT(DISTINCT a.id_indikator) = 0 THEN NULL  
+            WHEN COUNT(DISTINCT n_lvl.id_pm_satker) = 0 THEN 0  
+            ELSE (COUNT(DISTINCT n_lvl.id_pm_satker) * 100.0 / COUNT(DISTINCT a.id_indikator)) 
+        END AS presentase_lvl
+FROM `pm_satker` as `a`
+LEFT JOIN `nilai_pm` as `n_pm` ON `n_pm`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pm`.`id_satker` = 208 AND `n_pm`.`thn_dipa` = 2025
+LEFT JOIN `nilai_pk` as `n_pk` ON `n_pk`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_pk`.`id_satker` = 208 AND `n_pk`.`thn_dipa` = 2025
+LEFT JOIN `nilai_level` as `n_lvl` ON `n_lvl`.`id_pm_satker` = `a`.`id_pm_satker` AND `n_lvl`.`id_satker` = 208 AND `n_lvl`.`thn_dipa` = 2025
+GROUP BY `a`.`id_unsur`', [], false)
+ 3 APPPATH\Models\NilaiPMModel.php(90): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Auditor.php(69): App\Models\NilaiPMModel->precentage('208', '2025')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->dash()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-07-17 04:30:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-17 07:57:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-17 07:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-17 07:58:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-17 07:58:09 --> mysqli_sql_exception: Table 'ski_db.status_klvl' doesn't exist in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `sk`.`id...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sk`.`id...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sk`.`id...')
+#3 D:\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `sk`.`id...', Array, false)
+#4 D:\SKI\SKI2025\app\Models\SkSatkerModel.php(99): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SKI\SKI2025\app\Controllers\Auditor.php(46): App\Models\SkSatkerModel->resumeAll()
+#6 D:\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\Auditor->index()
+#7 D:\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+#8 D:\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\SKI\\SKI2025\\...')
+#13 {main}
+CRITICAL - 2025-07-17 07:58:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ski_db.status_klvl' doesn't exist
+[Method: GET, Route: prfl]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `sk`.`id_satker`, `sk`.`thn_anggaran`, `stkr`.`nama_satker`, `stkr`.`pembina`, COALESCE(spm.status, 0) AS status_pim, COALESCE(spk.status, 0) AS status_kpk, COALESCE(slvl.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `sk`
+LEFT JOIN `satker` AS `stkr` ON `stkr`.`id` = `sk`.`id_satker`
+LEFT JOIN `status_pim` AS `spm` ON `spm`.`id_satker` = `sk`.`id_satker` AND `spm`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_kpk` AS `spk` ON `spk`.`id_satker` = `sk`.`id_satker` AND `spk`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_klvl` AS `slvl` ON `slvl`.`id_satker` = `sk`.`id_satker` AND `slvl`.`thn_dipa` = `sk`.`thn_anggaran`
+ORDER BY `sk`.`thn_anggaran` DESC', [], false)
+ 2 APPPATH\Models\SkSatkerModel.php(99): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Auditor.php(46): App\Models\SkSatkerModel->resumeAll()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-07-17 07:58:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ski_db.status_klvl' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sk`.`id_satker`, `sk`.`thn_anggaran`, `stkr`.`nama_satker`, `stkr`.`pembina`, COALESCE(spm.status, 0) AS status_pim, COALESCE(spk.status, 0) AS status_kpk, COALESCE(slvl.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `sk`
+LEFT JOIN `satker` AS `stkr` ON `stkr`.`id` = `sk`.`id_satker`
+LEFT JOIN `status_pim` AS `spm` ON `spm`.`id_satker` = `sk`.`id_satker` AND `spm`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_kpk` AS `spk` ON `spk`.`id_satker` = `sk`.`id_satker` AND `spk`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_klvl` AS `slvl` ON `slvl`.`id_satker` = `sk`.`id_satker` AND `slvl`.`thn_dipa` = `sk`.`thn_anggaran`
+ORDER BY `sk`.`thn_anggaran` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sk`.`id_satker`, `sk`.`thn_anggaran`, `stkr`.`nama_satker`, `stkr`.`pembina`, COALESCE(spm.status, 0) AS status_pim, COALESCE(spk.status, 0) AS status_kpk, COALESCE(slvl.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `sk`
+LEFT JOIN `satker` AS `stkr` ON `stkr`.`id` = `sk`.`id_satker`
+LEFT JOIN `status_pim` AS `spm` ON `spm`.`id_satker` = `sk`.`id_satker` AND `spm`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_kpk` AS `spk` ON `spk`.`id_satker` = `sk`.`id_satker` AND `spk`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_klvl` AS `slvl` ON `slvl`.`id_satker` = `sk`.`id_satker` AND `slvl`.`thn_dipa` = `sk`.`thn_anggaran`
+ORDER BY `sk`.`thn_anggaran` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `sk`.`id_satker`, `sk`.`thn_anggaran`, `stkr`.`nama_satker`, `stkr`.`pembina`, COALESCE(spm.status, 0) AS status_pim, COALESCE(spk.status, 0) AS status_kpk, COALESCE(slvl.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `sk`
+LEFT JOIN `satker` AS `stkr` ON `stkr`.`id` = `sk`.`id_satker`
+LEFT JOIN `status_pim` AS `spm` ON `spm`.`id_satker` = `sk`.`id_satker` AND `spm`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_kpk` AS `spk` ON `spk`.`id_satker` = `sk`.`id_satker` AND `spk`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_klvl` AS `slvl` ON `slvl`.`id_satker` = `sk`.`id_satker` AND `slvl`.`thn_dipa` = `sk`.`thn_anggaran`
+ORDER BY `sk`.`thn_anggaran` DESC', [], false)
+ 4 APPPATH\Models\SkSatkerModel.php(99): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Auditor.php(46): App\Models\SkSatkerModel->resumeAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-07-17 07:58:09 --> [Caused by] mysqli_sql_exception: Table 'ski_db.status_klvl' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `sk`.`id_satker`, `sk`.`thn_anggaran`, `stkr`.`nama_satker`, `stkr`.`pembina`, COALESCE(spm.status, 0) AS status_pim, COALESCE(spk.status, 0) AS status_kpk, COALESCE(slvl.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `sk`
+LEFT JOIN `satker` AS `stkr` ON `stkr`.`id` = `sk`.`id_satker`
+LEFT JOIN `status_pim` AS `spm` ON `spm`.`id_satker` = `sk`.`id_satker` AND `spm`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_kpk` AS `spk` ON `spk`.`id_satker` = `sk`.`id_satker` AND `spk`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_klvl` AS `slvl` ON `slvl`.`id_satker` = `sk`.`id_satker` AND `slvl`.`thn_dipa` = `sk`.`thn_anggaran`
+ORDER BY `sk`.`thn_anggaran` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sk`.`id_satker`, `sk`.`thn_anggaran`, `stkr`.`nama_satker`, `stkr`.`pembina`, COALESCE(spm.status, 0) AS status_pim, COALESCE(spk.status, 0) AS status_kpk, COALESCE(slvl.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `sk`
+LEFT JOIN `satker` AS `stkr` ON `stkr`.`id` = `sk`.`id_satker`
+LEFT JOIN `status_pim` AS `spm` ON `spm`.`id_satker` = `sk`.`id_satker` AND `spm`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_kpk` AS `spk` ON `spk`.`id_satker` = `sk`.`id_satker` AND `spk`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_klvl` AS `slvl` ON `slvl`.`id_satker` = `sk`.`id_satker` AND `slvl`.`thn_dipa` = `sk`.`thn_anggaran`
+ORDER BY `sk`.`thn_anggaran` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sk`.`id_satker`, `sk`.`thn_anggaran`, `stkr`.`nama_satker`, `stkr`.`pembina`, COALESCE(spm.status, 0) AS status_pim, COALESCE(spk.status, 0) AS status_kpk, COALESCE(slvl.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `sk`
+LEFT JOIN `satker` AS `stkr` ON `stkr`.`id` = `sk`.`id_satker`
+LEFT JOIN `status_pim` AS `spm` ON `spm`.`id_satker` = `sk`.`id_satker` AND `spm`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_kpk` AS `spk` ON `spk`.`id_satker` = `sk`.`id_satker` AND `spk`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_klvl` AS `slvl` ON `slvl`.`id_satker` = `sk`.`id_satker` AND `slvl`.`thn_dipa` = `sk`.`thn_anggaran`
+ORDER BY `sk`.`thn_anggaran` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `sk`.`id_satker`, `sk`.`thn_anggaran`, `stkr`.`nama_satker`, `stkr`.`pembina`, COALESCE(spm.status, 0) AS status_pim, COALESCE(spk.status, 0) AS status_kpk, COALESCE(slvl.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `sk`
+LEFT JOIN `satker` AS `stkr` ON `stkr`.`id` = `sk`.`id_satker`
+LEFT JOIN `status_pim` AS `spm` ON `spm`.`id_satker` = `sk`.`id_satker` AND `spm`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_kpk` AS `spk` ON `spk`.`id_satker` = `sk`.`id_satker` AND `spk`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_klvl` AS `slvl` ON `slvl`.`id_satker` = `sk`.`id_satker` AND `slvl`.`thn_dipa` = `sk`.`thn_anggaran`
+ORDER BY `sk`.`thn_anggaran` DESC', [], false)
+ 5 APPPATH\Models\SkSatkerModel.php(99): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Auditor.php(46): App\Models\SkSatkerModel->resumeAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\SKI\\SKI2025\\public\\index.php')

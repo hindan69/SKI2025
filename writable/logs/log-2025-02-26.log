@@ -1,0 +1,438 @@
+INFO - 2025-02-26 02:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:34:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:34:15 --> Current route: /pm
+INFO - 2025-02-26 02:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:34:18 --> Current route: /dash_pm
+INFO - 2025-02-26 02:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:35:42 --> Current route: /dash_pm
+INFO - 2025-02-26 02:36:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:36:42 --> Current route: /dash_pm
+INFO - 2025-02-26 02:39:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:39:56 --> Current route: /dash_pm
+INFO - 2025-02-26 02:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:40:17 --> Current route: /dash_pm
+INFO - 2025-02-26 02:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:40:39 --> Current route: /soal_pengungkit
+INFO - 2025-02-26 02:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:45:30 --> Current route: /soal_hasil
+INFO - 2025-02-26 02:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:46:41 --> Current route: /dash_pm
+INFO - 2025-02-26 02:46:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:46:55 --> Current route: /soal_pengungkit
+INFO - 2025-02-26 02:47:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:47:58 --> Current route: /soal_pengungkit
+INFO - 2025-02-26 02:48:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:48:21 --> Current route: /soal_pengungkit
+INFO - 2025-02-26 02:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:48:56 --> Current route: /soal_pengungkit
+INFO - 2025-02-26 02:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:49:12 --> Current route: /soal_pengungkit
+INFO - 2025-02-26 02:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:50:05 --> Current route: /soal_pengungkit
+INFO - 2025-02-26 02:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:50:08 --> Current route: /soal_hasil
+INFO - 2025-02-26 02:50:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:50:16 --> Current route: /soal_pengungkit
+INFO - 2025-02-26 02:50:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:50:19 --> Current route: /soal_hasil
+INFO - 2025-02-26 02:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:50:22 --> Current route: /dash_pm
+INFO - 2025-02-26 02:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:51:11 --> Current route: /soal_pengungkit
+INFO - 2025-02-26 02:51:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:51:17 --> Current route: /soal_hasil
+INFO - 2025-02-26 02:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:51:22 --> Current route: /soal_pengungkit
+INFO - 2025-02-26 02:51:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:51:26 --> Current route: /soal_hasil
+INFO - 2025-02-26 02:51:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 02:51:28 --> Current route: /dash_pm
+INFO - 2025-02-26 03:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 03:37:36 --> Current route: /dash_pm
+ERROR - 2025-02-26 03:37:36 --> mysqli_sql_exception: Unknown column 'id_sub_unsur' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ks`.`id...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\NilaiPMModel.php(115): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(130): App\Models\NilaiPMModel->dashboard('213', '2024')
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->dash()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2025-02-26 03:37:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_sub_unsur' in 'field list'
+[Method: GET, Route: dash_pm]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `c`.`nama_komponen`, `ks`.`id_unsur`, `u`.`nama_unsur`, `ks`.`id_sub_unsur`, `su`.`name_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`, `p_nilai`.`nilai`
+FROM (`komponen_sub_unsur`, (SELECT id_komponen, `id_unsur`, `id_sub_unsur`, `id_indikator FROM komponen_sub_unsur UNION SELECT` `id_komponen`, `id_unsur`, "0" AS `id_sub_unsur`, id_indikator FROM komponen_unsur) AS ks)
+LEFT JOIN `indikator` `i` ON `ks`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `komponen` `c` ON `ks`.`id_komponen` = `c`.`id_komponen`
+LEFT JOIN `sub_unsur` `su` ON `ks`.`id_sub_unsur` = `su`.`id_sub_unsur`
+LEFT JOIN `unsur` `u` ON `ks`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `nilai_pm` `n_pm` ON `ks`.`id_indikator` = `n_pm`.`id_pm_satker`
+LEFT JOIN `pilih_nilai` `p_nilai` ON `n_pm`.`nilai` = `p_nilai`.`id`
+WHERE `n_pm`.`id_satker` = :n_pm.id_satker:
+AND `n_pm`.`thn_dipa` = :n_pm.thn_dipa:
+ORDER BY `ks`.`id_indikator` ASC', [...], false)
+ 2 APPPATH\Models\NilaiPMModel.php(115): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PenilaianMandiri.php(130): App\Models\NilaiPMModel->dashboard('213', '2024')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->dash()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-02-26 03:37:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_sub_unsur' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id_komponen`, `c`.`nama_komponen`, `ks`.`id_unsur`, `u`.`nama_unsur`, `ks`.`id_sub_unsur`, `su`.`name_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`, `p_nilai`.`nilai`
+FROM (`komponen_sub_unsur`, (SELECT id_komponen, `id_unsur`, `id_sub_unsur`, `id_indikator FROM komponen_sub_unsur UNION SELECT` `id_komponen`, `id_unsur`, "0" AS `id_sub_unsur`, id_indikator FROM komponen_unsur) AS ks)
+LEFT JOIN `indikator` `i` ON `ks`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `komponen` `c` ON `ks`.`id_komponen` = `c`.`id_komponen`
+LEFT JOIN `sub_unsur` `su` ON `ks`.`id_sub_unsur` = `su`.`id_sub_unsur`
+LEFT JOIN `unsur` `u` ON `ks`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `nilai_pm` `n_pm` ON `ks`.`id_indikator` = `n_pm`.`id_pm_satker`
+LEFT JOIN `pilih_nilai` `p_nilai` ON `n_pm`.`nilai` = `p_nilai`.`id`
+WHERE `n_pm`.`id_satker` = \'213\'
+AND `n_pm`.`thn_dipa` = \'2024\'
+ORDER BY `ks`.`id_indikator` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id_komponen`, `c`.`nama_komponen`, `ks`.`id_unsur`, `u`.`nama_unsur`, `ks`.`id_sub_unsur`, `su`.`name_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`, `p_nilai`.`nilai`
+FROM (`komponen_sub_unsur`, (SELECT id_komponen, `id_unsur`, `id_sub_unsur`, `id_indikator FROM komponen_sub_unsur UNION SELECT` `id_komponen`, `id_unsur`, "0" AS `id_sub_unsur`, id_indikator FROM komponen_unsur) AS ks)
+LEFT JOIN `indikator` `i` ON `ks`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `komponen` `c` ON `ks`.`id_komponen` = `c`.`id_komponen`
+LEFT JOIN `sub_unsur` `su` ON `ks`.`id_sub_unsur` = `su`.`id_sub_unsur`
+LEFT JOIN `unsur` `u` ON `ks`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `nilai_pm` `n_pm` ON `ks`.`id_indikator` = `n_pm`.`id_pm_satker`
+LEFT JOIN `pilih_nilai` `p_nilai` ON `n_pm`.`nilai` = `p_nilai`.`id`
+WHERE `n_pm`.`id_satker` = \'213\'
+AND `n_pm`.`thn_dipa` = \'2024\'
+ORDER BY `ks`.`id_indikator` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `c`.`nama_komponen`, `ks`.`id_unsur`, `u`.`nama_unsur`, `ks`.`id_sub_unsur`, `su`.`name_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`, `p_nilai`.`nilai`
+FROM (`komponen_sub_unsur`, (SELECT id_komponen, `id_unsur`, `id_sub_unsur`, `id_indikator FROM komponen_sub_unsur UNION SELECT` `id_komponen`, `id_unsur`, "0" AS `id_sub_unsur`, id_indikator FROM komponen_unsur) AS ks)
+LEFT JOIN `indikator` `i` ON `ks`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `komponen` `c` ON `ks`.`id_komponen` = `c`.`id_komponen`
+LEFT JOIN `sub_unsur` `su` ON `ks`.`id_sub_unsur` = `su`.`id_sub_unsur`
+LEFT JOIN `unsur` `u` ON `ks`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `nilai_pm` `n_pm` ON `ks`.`id_indikator` = `n_pm`.`id_pm_satker`
+LEFT JOIN `pilih_nilai` `p_nilai` ON `n_pm`.`nilai` = `p_nilai`.`id`
+WHERE `n_pm`.`id_satker` = :n_pm.id_satker:
+AND `n_pm`.`thn_dipa` = :n_pm.thn_dipa:
+ORDER BY `ks`.`id_indikator` ASC', [...], false)
+ 4 APPPATH\Models\NilaiPMModel.php(115): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PenilaianMandiri.php(130): App\Models\NilaiPMModel->dashboard('213', '2024')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->dash()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-02-26 03:37:36 --> [Caused by] mysqli_sql_exception: Unknown column 'id_sub_unsur' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ks`.`id_komponen`, `c`.`nama_komponen`, `ks`.`id_unsur`, `u`.`nama_unsur`, `ks`.`id_sub_unsur`, `su`.`name_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`, `p_nilai`.`nilai`
+FROM (`komponen_sub_unsur`, (SELECT id_komponen, `id_unsur`, `id_sub_unsur`, `id_indikator FROM komponen_sub_unsur UNION SELECT` `id_komponen`, `id_unsur`, "0" AS `id_sub_unsur`, id_indikator FROM komponen_unsur) AS ks)
+LEFT JOIN `indikator` `i` ON `ks`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `komponen` `c` ON `ks`.`id_komponen` = `c`.`id_komponen`
+LEFT JOIN `sub_unsur` `su` ON `ks`.`id_sub_unsur` = `su`.`id_sub_unsur`
+LEFT JOIN `unsur` `u` ON `ks`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `nilai_pm` `n_pm` ON `ks`.`id_indikator` = `n_pm`.`id_pm_satker`
+LEFT JOIN `pilih_nilai` `p_nilai` ON `n_pm`.`nilai` = `p_nilai`.`id`
+WHERE `n_pm`.`id_satker` = \'213\'
+AND `n_pm`.`thn_dipa` = \'2024\'
+ORDER BY `ks`.`id_indikator` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id_komponen`, `c`.`nama_komponen`, `ks`.`id_unsur`, `u`.`nama_unsur`, `ks`.`id_sub_unsur`, `su`.`name_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`, `p_nilai`.`nilai`
+FROM (`komponen_sub_unsur`, (SELECT id_komponen, `id_unsur`, `id_sub_unsur`, `id_indikator FROM komponen_sub_unsur UNION SELECT` `id_komponen`, `id_unsur`, "0" AS `id_sub_unsur`, id_indikator FROM komponen_unsur) AS ks)
+LEFT JOIN `indikator` `i` ON `ks`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `komponen` `c` ON `ks`.`id_komponen` = `c`.`id_komponen`
+LEFT JOIN `sub_unsur` `su` ON `ks`.`id_sub_unsur` = `su`.`id_sub_unsur`
+LEFT JOIN `unsur` `u` ON `ks`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `nilai_pm` `n_pm` ON `ks`.`id_indikator` = `n_pm`.`id_pm_satker`
+LEFT JOIN `pilih_nilai` `p_nilai` ON `n_pm`.`nilai` = `p_nilai`.`id`
+WHERE `n_pm`.`id_satker` = \'213\'
+AND `n_pm`.`thn_dipa` = \'2024\'
+ORDER BY `ks`.`id_indikator` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id_komponen`, `c`.`nama_komponen`, `ks`.`id_unsur`, `u`.`nama_unsur`, `ks`.`id_sub_unsur`, `su`.`name_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`, `p_nilai`.`nilai`
+FROM (`komponen_sub_unsur`, (SELECT id_komponen, `id_unsur`, `id_sub_unsur`, `id_indikator FROM komponen_sub_unsur UNION SELECT` `id_komponen`, `id_unsur`, "0" AS `id_sub_unsur`, id_indikator FROM komponen_unsur) AS ks)
+LEFT JOIN `indikator` `i` ON `ks`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `komponen` `c` ON `ks`.`id_komponen` = `c`.`id_komponen`
+LEFT JOIN `sub_unsur` `su` ON `ks`.`id_sub_unsur` = `su`.`id_sub_unsur`
+LEFT JOIN `unsur` `u` ON `ks`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `nilai_pm` `n_pm` ON `ks`.`id_indikator` = `n_pm`.`id_pm_satker`
+LEFT JOIN `pilih_nilai` `p_nilai` ON `n_pm`.`nilai` = `p_nilai`.`id`
+WHERE `n_pm`.`id_satker` = \'213\'
+AND `n_pm`.`thn_dipa` = \'2024\'
+ORDER BY `ks`.`id_indikator` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `c`.`nama_komponen`, `ks`.`id_unsur`, `u`.`nama_unsur`, `ks`.`id_sub_unsur`, `su`.`name_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`, `p_nilai`.`nilai`
+FROM (`komponen_sub_unsur`, (SELECT id_komponen, `id_unsur`, `id_sub_unsur`, `id_indikator FROM komponen_sub_unsur UNION SELECT` `id_komponen`, `id_unsur`, "0" AS `id_sub_unsur`, id_indikator FROM komponen_unsur) AS ks)
+LEFT JOIN `indikator` `i` ON `ks`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `komponen` `c` ON `ks`.`id_komponen` = `c`.`id_komponen`
+LEFT JOIN `sub_unsur` `su` ON `ks`.`id_sub_unsur` = `su`.`id_sub_unsur`
+LEFT JOIN `unsur` `u` ON `ks`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `nilai_pm` `n_pm` ON `ks`.`id_indikator` = `n_pm`.`id_pm_satker`
+LEFT JOIN `pilih_nilai` `p_nilai` ON `n_pm`.`nilai` = `p_nilai`.`id`
+WHERE `n_pm`.`id_satker` = :n_pm.id_satker:
+AND `n_pm`.`thn_dipa` = :n_pm.thn_dipa:
+ORDER BY `ks`.`id_indikator` ASC', [...], false)
+ 5 APPPATH\Models\NilaiPMModel.php(115): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PenilaianMandiri.php(130): App\Models\NilaiPMModel->dashboard('213', '2024')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->dash()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-02-26 03:44:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 03:44:06 --> Current route: /dash_pm
+ERROR - 2025-02-26 03:44:06 --> mysqli_sql_exception: Unknown column 'id_sub_unsur' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ks`.`id...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\NilaiPMModel.php(115): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(130): App\Models\NilaiPMModel->dashboard('213', '2024')
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->dash()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2025-02-26 03:44:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_sub_unsur' in 'field list'
+[Method: GET, Route: dash_pm]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `c`.`nama_komponen`, `ks`.`id_unsur`, `u`.`nama_unsur`, `ks`.`id_sub_unsur`, `su`.`name_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`, `p_nilai`.`nilai`
+FROM (`komponen_sub_unsur`, (SELECT id_komponen, `id_unsur`, `id_sub_unsur`, `id_indikator FROM komponen_sub_unsur UNION SELECT` `id_komponen`, `id_unsur`, "0" AS `id_sub_unsur`, id_indikator FROM komponen_unsur) AS ks)
+LEFT JOIN `indikator` `i` ON `ks`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `komponen` `c` ON `ks`.`id_komponen` = `c`.`id_komponen`
+LEFT JOIN `sub_unsur` `su` ON `ks`.`id_sub_unsur` = `su`.`id_sub_unsur`
+LEFT JOIN `unsur` `u` ON `ks`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `nilai_pm` `n_pm` ON `ks`.`id_indikator` = `n_pm`.`id_pm_satker`
+LEFT JOIN `pilih_nilai` `p_nilai` ON `n_pm`.`nilai` = `p_nilai`.`id`
+WHERE `n_pm`.`id_satker` = :n_pm.id_satker:
+AND `n_pm`.`thn_dipa` = :n_pm.thn_dipa:
+ORDER BY `ks`.`id_indikator` ASC', [...], false)
+ 2 APPPATH\Models\NilaiPMModel.php(115): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PenilaianMandiri.php(130): App\Models\NilaiPMModel->dashboard('213', '2024')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->dash()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-02-26 03:44:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id_sub_unsur' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id_komponen`, `c`.`nama_komponen`, `ks`.`id_unsur`, `u`.`nama_unsur`, `ks`.`id_sub_unsur`, `su`.`name_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`, `p_nilai`.`nilai`
+FROM (`komponen_sub_unsur`, (SELECT id_komponen, `id_unsur`, `id_sub_unsur`, `id_indikator FROM komponen_sub_unsur UNION SELECT` `id_komponen`, `id_unsur`, "0" AS `id_sub_unsur`, id_indikator FROM komponen_unsur) AS ks)
+LEFT JOIN `indikator` `i` ON `ks`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `komponen` `c` ON `ks`.`id_komponen` = `c`.`id_komponen`
+LEFT JOIN `sub_unsur` `su` ON `ks`.`id_sub_unsur` = `su`.`id_sub_unsur`
+LEFT JOIN `unsur` `u` ON `ks`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `nilai_pm` `n_pm` ON `ks`.`id_indikator` = `n_pm`.`id_pm_satker`
+LEFT JOIN `pilih_nilai` `p_nilai` ON `n_pm`.`nilai` = `p_nilai`.`id`
+WHERE `n_pm`.`id_satker` = \'213\'
+AND `n_pm`.`thn_dipa` = \'2024\'
+ORDER BY `ks`.`id_indikator` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id_komponen`, `c`.`nama_komponen`, `ks`.`id_unsur`, `u`.`nama_unsur`, `ks`.`id_sub_unsur`, `su`.`name_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`, `p_nilai`.`nilai`
+FROM (`komponen_sub_unsur`, (SELECT id_komponen, `id_unsur`, `id_sub_unsur`, `id_indikator FROM komponen_sub_unsur UNION SELECT` `id_komponen`, `id_unsur`, "0" AS `id_sub_unsur`, id_indikator FROM komponen_unsur) AS ks)
+LEFT JOIN `indikator` `i` ON `ks`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `komponen` `c` ON `ks`.`id_komponen` = `c`.`id_komponen`
+LEFT JOIN `sub_unsur` `su` ON `ks`.`id_sub_unsur` = `su`.`id_sub_unsur`
+LEFT JOIN `unsur` `u` ON `ks`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `nilai_pm` `n_pm` ON `ks`.`id_indikator` = `n_pm`.`id_pm_satker`
+LEFT JOIN `pilih_nilai` `p_nilai` ON `n_pm`.`nilai` = `p_nilai`.`id`
+WHERE `n_pm`.`id_satker` = \'213\'
+AND `n_pm`.`thn_dipa` = \'2024\'
+ORDER BY `ks`.`id_indikator` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `c`.`nama_komponen`, `ks`.`id_unsur`, `u`.`nama_unsur`, `ks`.`id_sub_unsur`, `su`.`name_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`, `p_nilai`.`nilai`
+FROM (`komponen_sub_unsur`, (SELECT id_komponen, `id_unsur`, `id_sub_unsur`, `id_indikator FROM komponen_sub_unsur UNION SELECT` `id_komponen`, `id_unsur`, "0" AS `id_sub_unsur`, id_indikator FROM komponen_unsur) AS ks)
+LEFT JOIN `indikator` `i` ON `ks`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `komponen` `c` ON `ks`.`id_komponen` = `c`.`id_komponen`
+LEFT JOIN `sub_unsur` `su` ON `ks`.`id_sub_unsur` = `su`.`id_sub_unsur`
+LEFT JOIN `unsur` `u` ON `ks`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `nilai_pm` `n_pm` ON `ks`.`id_indikator` = `n_pm`.`id_pm_satker`
+LEFT JOIN `pilih_nilai` `p_nilai` ON `n_pm`.`nilai` = `p_nilai`.`id`
+WHERE `n_pm`.`id_satker` = :n_pm.id_satker:
+AND `n_pm`.`thn_dipa` = :n_pm.thn_dipa:
+ORDER BY `ks`.`id_indikator` ASC', [...], false)
+ 4 APPPATH\Models\NilaiPMModel.php(115): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PenilaianMandiri.php(130): App\Models\NilaiPMModel->dashboard('213', '2024')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->dash()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-02-26 03:44:06 --> [Caused by] mysqli_sql_exception: Unknown column 'id_sub_unsur' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ks`.`id_komponen`, `c`.`nama_komponen`, `ks`.`id_unsur`, `u`.`nama_unsur`, `ks`.`id_sub_unsur`, `su`.`name_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`, `p_nilai`.`nilai`
+FROM (`komponen_sub_unsur`, (SELECT id_komponen, `id_unsur`, `id_sub_unsur`, `id_indikator FROM komponen_sub_unsur UNION SELECT` `id_komponen`, `id_unsur`, "0" AS `id_sub_unsur`, id_indikator FROM komponen_unsur) AS ks)
+LEFT JOIN `indikator` `i` ON `ks`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `komponen` `c` ON `ks`.`id_komponen` = `c`.`id_komponen`
+LEFT JOIN `sub_unsur` `su` ON `ks`.`id_sub_unsur` = `su`.`id_sub_unsur`
+LEFT JOIN `unsur` `u` ON `ks`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `nilai_pm` `n_pm` ON `ks`.`id_indikator` = `n_pm`.`id_pm_satker`
+LEFT JOIN `pilih_nilai` `p_nilai` ON `n_pm`.`nilai` = `p_nilai`.`id`
+WHERE `n_pm`.`id_satker` = \'213\'
+AND `n_pm`.`thn_dipa` = \'2024\'
+ORDER BY `ks`.`id_indikator` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ks`.`id_komponen`, `c`.`nama_komponen`, `ks`.`id_unsur`, `u`.`nama_unsur`, `ks`.`id_sub_unsur`, `su`.`name_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`, `p_nilai`.`nilai`
+FROM (`komponen_sub_unsur`, (SELECT id_komponen, `id_unsur`, `id_sub_unsur`, `id_indikator FROM komponen_sub_unsur UNION SELECT` `id_komponen`, `id_unsur`, "0" AS `id_sub_unsur`, id_indikator FROM komponen_unsur) AS ks)
+LEFT JOIN `indikator` `i` ON `ks`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `komponen` `c` ON `ks`.`id_komponen` = `c`.`id_komponen`
+LEFT JOIN `sub_unsur` `su` ON `ks`.`id_sub_unsur` = `su`.`id_sub_unsur`
+LEFT JOIN `unsur` `u` ON `ks`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `nilai_pm` `n_pm` ON `ks`.`id_indikator` = `n_pm`.`id_pm_satker`
+LEFT JOIN `pilih_nilai` `p_nilai` ON `n_pm`.`nilai` = `p_nilai`.`id`
+WHERE `n_pm`.`id_satker` = \'213\'
+AND `n_pm`.`thn_dipa` = \'2024\'
+ORDER BY `ks`.`id_indikator` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ks`.`id_komponen`, `c`.`nama_komponen`, `ks`.`id_unsur`, `u`.`nama_unsur`, `ks`.`id_sub_unsur`, `su`.`name_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`, `p_nilai`.`nilai`
+FROM (`komponen_sub_unsur`, (SELECT id_komponen, `id_unsur`, `id_sub_unsur`, `id_indikator FROM komponen_sub_unsur UNION SELECT` `id_komponen`, `id_unsur`, "0" AS `id_sub_unsur`, id_indikator FROM komponen_unsur) AS ks)
+LEFT JOIN `indikator` `i` ON `ks`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `komponen` `c` ON `ks`.`id_komponen` = `c`.`id_komponen`
+LEFT JOIN `sub_unsur` `su` ON `ks`.`id_sub_unsur` = `su`.`id_sub_unsur`
+LEFT JOIN `unsur` `u` ON `ks`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `nilai_pm` `n_pm` ON `ks`.`id_indikator` = `n_pm`.`id_pm_satker`
+LEFT JOIN `pilih_nilai` `p_nilai` ON `n_pm`.`nilai` = `p_nilai`.`id`
+WHERE `n_pm`.`id_satker` = \'213\'
+AND `n_pm`.`thn_dipa` = \'2024\'
+ORDER BY `ks`.`id_indikator` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `ks`.`id_komponen`, `c`.`nama_komponen`, `ks`.`id_unsur`, `u`.`nama_unsur`, `ks`.`id_sub_unsur`, `su`.`name_sub_unsur`, `ks`.`id_indikator`, `i`.`nama_indikator`, `i`.`bobot_indikator`, `p_nilai`.`nilai`
+FROM (`komponen_sub_unsur`, (SELECT id_komponen, `id_unsur`, `id_sub_unsur`, `id_indikator FROM komponen_sub_unsur UNION SELECT` `id_komponen`, `id_unsur`, "0" AS `id_sub_unsur`, id_indikator FROM komponen_unsur) AS ks)
+LEFT JOIN `indikator` `i` ON `ks`.`id_indikator` = `i`.`id_indikator`
+LEFT JOIN `komponen` `c` ON `ks`.`id_komponen` = `c`.`id_komponen`
+LEFT JOIN `sub_unsur` `su` ON `ks`.`id_sub_unsur` = `su`.`id_sub_unsur`
+LEFT JOIN `unsur` `u` ON `ks`.`id_unsur` = `u`.`id_unsur`
+LEFT JOIN `nilai_pm` `n_pm` ON `ks`.`id_indikator` = `n_pm`.`id_pm_satker`
+LEFT JOIN `pilih_nilai` `p_nilai` ON `n_pm`.`nilai` = `p_nilai`.`id`
+WHERE `n_pm`.`id_satker` = :n_pm.id_satker:
+AND `n_pm`.`thn_dipa` = :n_pm.thn_dipa:
+ORDER BY `ks`.`id_indikator` ASC', [...], false)
+ 5 APPPATH\Models\NilaiPMModel.php(115): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PenilaianMandiri.php(130): App\Models\NilaiPMModel->dashboard('213', '2024')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->dash()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-02-26 03:46:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 03:46:27 --> Current route: /dash_pm
+INFO - 2025-02-26 03:47:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 03:47:53 --> Current route: /dash_pm
+INFO - 2025-02-26 03:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 03:52:40 --> Current route: /dash_pm
+INFO - 2025-02-26 03:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 03:53:03 --> Current route: /dash_pm
+CRITICAL - 2025-02-26 03:53:03 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: dash_pm]
+in APPPATH\Views\penilaianMandiri\dashboard.php on line 37.
+ 1 APPPATH\Views\penilaianMandiri\dashboard.php(57): formatData([...])
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/dashboard', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(141): view('/penilaianMandiri/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->dash()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-02-26 03:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 03:53:39 --> Current route: /dash_pm
+INFO - 2025-02-26 03:54:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 03:54:17 --> Current route: /dash_pm
+CRITICAL - 2025-02-26 03:54:17 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: dash_pm]
+in APPPATH\Views\penilaianMandiri\dashboard.php on line 37.
+ 1 APPPATH\Views\penilaianMandiri\dashboard.php(57): formatData([...])
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/dashboard', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(141): view('/penilaianMandiri/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->dash()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-02-26 03:55:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 03:55:39 --> Current route: /dash_pm
+INFO - 2025-02-26 03:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 03:56:21 --> Current route: /dash_pm
+INFO - 2025-02-26 03:57:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 03:57:58 --> Current route: /dash_pm
+INFO - 2025-02-26 03:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 03:59:57 --> Current route: /dash_pm
+INFO - 2025-02-26 04:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:00:36 --> Current route: /dash_pm
+INFO - 2025-02-26 04:05:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:05:24 --> Current route: /dash_pm
+INFO - 2025-02-26 04:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:09:57 --> Current route: /dash_pm
+INFO - 2025-02-26 04:10:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:10:38 --> Current route: /dash_pm
+INFO - 2025-02-26 04:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:10:53 --> Current route: /dash_pm
+INFO - 2025-02-26 04:20:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:20:38 --> Current route: /dash_pm
+INFO - 2025-02-26 04:29:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:29:00 --> Current route: /dash_pm
+INFO - 2025-02-26 04:32:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:32:25 --> Current route: /dash_pm
+INFO - 2025-02-26 04:37:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:37:27 --> Current route: /dash_pm
+INFO - 2025-02-26 04:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:37:37 --> Current route: /dash_pm
+INFO - 2025-02-26 04:39:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:39:31 --> Current route: /dash_pm
+INFO - 2025-02-26 04:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:42:20 --> Current route: /dash_pm
+INFO - 2025-02-26 04:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:45:39 --> Current route: /dash_pm
+INFO - 2025-02-26 04:46:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:46:11 --> Current route: /dash_pm
+INFO - 2025-02-26 04:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:48:12 --> Current route: /dash_pm
+INFO - 2025-02-26 04:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:48:20 --> Current route: /dash_pm
+INFO - 2025-02-26 04:49:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:49:40 --> Current route: /dash_pm
+INFO - 2025-02-26 04:49:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:49:40 --> Current route: /dash_pm
+INFO - 2025-02-26 04:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:50:30 --> Current route: /dash_pm
+INFO - 2025-02-26 04:52:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:52:45 --> Current route: /dash_pm
+INFO - 2025-02-26 04:52:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:52:47 --> Current route: /dash_pm
+INFO - 2025-02-26 04:52:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:52:58 --> Current route: /dash_pm
+INFO - 2025-02-26 04:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:53:28 --> Current route: /dash_pm
+INFO - 2025-02-26 04:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:54:00 --> Current route: /dash_pm
+INFO - 2025-02-26 04:55:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:55:50 --> Current route: /dash_pm
+INFO - 2025-02-26 04:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:56:12 --> Current route: /dash_pm
+INFO - 2025-02-26 04:59:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 04:59:12 --> Current route: /dash_pm
+INFO - 2025-02-26 05:01:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 05:01:09 --> Current route: /dash_pm
+INFO - 2025-02-26 05:27:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-26 05:27:42 --> Current route: /dash_pm

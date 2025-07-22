@@ -1,0 +1,381 @@
+INFO - 2025-03-04 01:09:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:21:49 --> Current route: /pm
+INFO - 2025-03-04 01:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:21:51 --> Current route: /dash_pm
+INFO - 2025-03-04 01:21:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:21:56 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 01:23:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:23:11 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 01:23:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:23:13 --> Current route: /dash_pm
+INFO - 2025-03-04 01:23:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:23:34 --> Current route: /dash_pm
+INFO - 2025-03-04 01:23:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:23:38 --> Current route: /dash_pm
+INFO - 2025-03-04 01:31:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:31:44 --> Current route: /dash_pm
+INFO - 2025-03-04 01:32:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:32:04 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 01:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:40:02 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 01:40:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:40:04 --> Current route: /soal_hasil
+INFO - 2025-03-04 01:40:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:40:06 --> Current route: /soal_hasil
+INFO - 2025-03-04 01:41:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:41:27 --> Current route: /soal_hasil
+CRITICAL - 2025-03-04 01:41:27 --> ErrorException: Undefined variable $s_pm
+[Method: GET, Route: soal_hasil]
+in APPPATH\Views\penilaianMandiri\soal_hasil_v1.php on line 44.
+ 1 APPPATH\Views\penilaianMandiri\soal_hasil_v1.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $s_pm', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal_hasil_v1.php', 44)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal_hasil_v1.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal_hasil_v1', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(315): view('/penilaianMandiri/soal_hasil_v1', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal_hasil()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-03-04 01:41:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:41:56 --> Current route: /soal_hasil
+INFO - 2025-03-04 01:42:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:42:07 --> Current route: /soal_hasil
+INFO - 2025-03-04 01:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:42:27 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 01:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:42:55 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 01:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:43:20 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 01:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:43:28 --> Current route: /soal_hasil
+INFO - 2025-03-04 01:43:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:43:32 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 01:47:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:47:39 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 01:48:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:48:47 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 01:51:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:51:51 --> Current route: /soal_hasil
+INFO - 2025-03-04 01:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:51:52 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 01:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:51:53 --> Current route: /soal_hasil
+INFO - 2025-03-04 01:51:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:51:55 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 01:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:51:56 --> Current route: /dash_pm
+INFO - 2025-03-04 01:51:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:51:57 --> Current route: /pm
+INFO - 2025-03-04 01:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:53:13 --> Current route: /pm
+INFO - 2025-03-04 01:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:56:37 --> Current route: /pm
+INFO - 2025-03-04 01:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:56:39 --> Current route: /pm
+INFO - 2025-03-04 01:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:56:41 --> Current route: /dash_pm
+INFO - 2025-03-04 01:56:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:56:43 --> Current route: /pm
+INFO - 2025-03-04 01:56:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:56:46 --> Current route: /dash_pm
+INFO - 2025-03-04 01:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:56:49 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 01:56:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:56:55 --> Current route: /pm
+INFO - 2025-03-04 01:56:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:56:56 --> Current route: /dash_pm
+INFO - 2025-03-04 01:57:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:57:00 --> Current route: /pm
+INFO - 2025-03-04 01:57:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:57:02 --> Current route: /dash_pm
+INFO - 2025-03-04 01:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:57:04 --> Current route: /pm
+INFO - 2025-03-04 01:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:58:20 --> Current route: /pm
+INFO - 2025-03-04 01:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 01:58:22 --> Current route: /dash_pm
+INFO - 2025-03-04 03:13:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:13:05 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 03:16:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:16:54 --> Current route: /pm
+INFO - 2025-03-04 03:16:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:16:55 --> Current route: /dash_pm
+INFO - 2025-03-04 03:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:18:55 --> Current route: /dash_pm
+INFO - 2025-03-04 03:23:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:23:19 --> Current route: /dash_pm
+INFO - 2025-03-04 03:23:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:23:29 --> Current route: /dash_pm
+INFO - 2025-03-04 03:23:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:23:30 --> Current route: /dash_pm
+INFO - 2025-03-04 03:23:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:23:46 --> Current route: /dash_pm
+INFO - 2025-03-04 03:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:25:46 --> Current route: /dash_pm
+INFO - 2025-03-04 03:25:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:25:59 --> Current route: /dash_pm
+INFO - 2025-03-04 03:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:26:00 --> Current route: /dash_pm
+INFO - 2025-03-04 03:26:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:26:19 --> Current route: /dash_pm
+INFO - 2025-03-04 03:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:26:54 --> Current route: /dash_pm
+INFO - 2025-03-04 03:27:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:27:13 --> Current route: /dash_pm
+INFO - 2025-03-04 03:27:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:27:26 --> Current route: /pm
+INFO - 2025-03-04 03:27:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:27:29 --> Current route: /dash_pm
+INFO - 2025-03-04 03:28:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:28:17 --> Current route: /dash_pm
+INFO - 2025-03-04 03:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:28:19 --> Current route: /dash_pm
+INFO - 2025-03-04 03:29:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:29:12 --> Current route: /dash_pm
+INFO - 2025-03-04 03:29:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:29:19 --> Current route: /dash_pm
+INFO - 2025-03-04 03:31:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:31:24 --> Current route: /dash_pm
+INFO - 2025-03-04 03:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:31:32 --> Current route: /dash_pm
+INFO - 2025-03-04 03:36:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:36:31 --> Current route: /dash_pm
+INFO - 2025-03-04 03:36:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:36:57 --> Current route: /dash_pm
+INFO - 2025-03-04 03:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:37:47 --> Current route: /dash_pm
+INFO - 2025-03-04 03:38:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:38:52 --> Current route: /dash_pm
+INFO - 2025-03-04 03:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:39:37 --> Current route: /dash_pm
+INFO - 2025-03-04 03:40:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:40:04 --> Current route: /dash_pm
+INFO - 2025-03-04 03:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:43:02 --> Current route: /dash_pm
+INFO - 2025-03-04 03:44:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:44:32 --> Current route: /dash_pm
+INFO - 2025-03-04 03:44:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:44:53 --> Current route: /dash_pm
+INFO - 2025-03-04 03:44:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:44:54 --> Current route: /dash_pm
+INFO - 2025-03-04 03:45:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:45:32 --> Current route: /dash_pm
+INFO - 2025-03-04 03:45:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:45:33 --> Current route: /dash_pm
+INFO - 2025-03-04 03:45:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:45:33 --> Current route: /dash_pm
+INFO - 2025-03-04 03:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:45:49 --> Current route: /dash_pm
+INFO - 2025-03-04 03:45:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:45:50 --> Current route: /dash_pm
+INFO - 2025-03-04 03:45:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:45:59 --> Current route: /dash_pm
+INFO - 2025-03-04 03:46:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:46:00 --> Current route: /dash_pm
+INFO - 2025-03-04 03:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:46:34 --> Current route: /dash_pm
+INFO - 2025-03-04 03:47:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:47:17 --> Current route: /dash_pm
+INFO - 2025-03-04 03:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:47:52 --> Current route: /dash_pm
+INFO - 2025-03-04 03:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:48:00 --> Current route: /dash_pm
+INFO - 2025-03-04 03:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:52:37 --> Current route: /dash_pm
+INFO - 2025-03-04 03:53:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:53:09 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 03:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:53:27 --> Current route: /dash_pm
+INFO - 2025-03-04 03:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:53:58 --> Current route: /dash_pm
+INFO - 2025-03-04 03:54:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 03:54:09 --> Current route: /dash_pm
+INFO - 2025-03-04 06:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:12:33 --> Current route: /pm
+INFO - 2025-03-04 06:12:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:12:35 --> Current route: /dash_pm
+INFO - 2025-03-04 06:13:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:13:51 --> Current route: /dash_pm
+INFO - 2025-03-04 06:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:14:14 --> Current route: /dash_pm
+INFO - 2025-03-04 06:15:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:15:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:15:31 --> Current route: /pm
+INFO - 2025-03-04 06:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:15:35 --> Current route: /dash_pm
+INFO - 2025-03-04 06:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:15:37 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 06:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:16:09 --> Current route: /pm
+INFO - 2025-03-04 06:16:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:16:11 --> Current route: /dash_pm
+INFO - 2025-03-04 06:17:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:17:09 --> Current route: /dash_pm
+INFO - 2025-03-04 06:17:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:17:10 --> Current route: /dash_pm
+INFO - 2025-03-04 06:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:19:23 --> Current route: /dash_pm
+INFO - 2025-03-04 06:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:19:29 --> Current route: /soal_pengungkit
+CRITICAL - 2025-03-04 06:19:29 --> ErrorException: Undefined variable $persen
+[Method: GET, Route: soal_pengungkit]
+in APPPATH\Views\penilaianMandiri\soal_pengungkit_v2.php on line 43.
+ 1 APPPATH\Views\penilaianMandiri\soal_pengungkit_v2.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $persen', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal_pengungkit_v2.php', 43)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal_pengungkit_v2.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal_pengungkit_V2', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(236): view('/penilaianMandiri/soal_pengungkit_V2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal_pengungkit()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-03-04 06:19:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:19:41 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 06:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:19:52 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 06:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:19:58 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 06:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:25:19 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 06:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:25:26 --> Current route: /soal_hasil
+INFO - 2025-03-04 06:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:29:34 --> Current route: /dash_pm
+INFO - 2025-03-04 06:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:40:05 --> Current route: /dash_pm
+INFO - 2025-03-04 06:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:41:04 --> Current route: /dash_pm
+CRITICAL - 2025-03-04 06:41:06 --> ErrorException: Undefined array key "id_satker"
+[Method: DELETE, Route: reverse_pm]
+in APPPATH\Controllers\PenilaianMandiri.php on line 564.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(564): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_satker"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 564)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->reverse_pm()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-03-04 06:41:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:41:29 --> Current route: /dash_pm
+INFO - 2025-03-04 06:42:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:42:32 --> Current route: /dash_pm
+INFO - 2025-03-04 06:42:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:42:38 --> Current route: /dash_pm
+INFO - 2025-03-04 06:46:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:46:48 --> Current route: /dash_pm
+INFO - 2025-03-04 06:46:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:46:54 --> Current route: /pm
+INFO - 2025-03-04 06:46:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:46:56 --> Current route: /dash_pm
+INFO - 2025-03-04 06:46:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:46:58 --> Current route: /dash_pm
+ERROR - 2025-03-04 06:47:06 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `st...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `st...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `st...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(2843): CodeIgniter\Database\BaseConnection->query('DELETE FROM `st...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\DLL\IT\SKI\SKI2025\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(574): CodeIgniter\BaseModel->delete(Array)
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->reverse_pm()
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#9 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#14 {main}
+CRITICAL - 2025-03-04 06:47:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: POST, Route: reverse_pm]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2843): CodeIgniter\Database\BaseConnection->query('DELETE FROM `status_pm`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\PenilaianMandiri.php(574): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->reverse_pm()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-03-04 06:47:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `status_pm`
+WHERE `id` IN (\'213\',\'2024\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `status_pm`
+WHERE `id` IN (\'213\',\'2024\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2843): CodeIgniter\Database\BaseConnection->query('DELETE FROM `status_pm`
+WHERE `id` IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\PenilaianMandiri.php(574): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->reverse_pm()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-03-04 06:47:06 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `status_pm`
+WHERE `id` IN (\'213\',\'2024\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `status_pm`
+WHERE `id` IN (\'213\',\'2024\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `status_pm`
+WHERE `id` IN (\'213\',\'2024\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2843): CodeIgniter\Database\BaseConnection->query('DELETE FROM `status_pm`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\PenilaianMandiri.php(574): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->reverse_pm()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-03-04 06:49:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:49:57 --> Current route: /dash_pm
+INFO - 2025-03-04 06:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:50:04 --> Current route: /dash_pm
+INFO - 2025-03-04 06:50:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:50:10 --> Current route: /dash_pm
+INFO - 2025-03-04 06:50:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:50:12 --> Current route: /soal_pengungkit
+INFO - 2025-03-04 06:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:50:22 --> Current route: /pm
+INFO - 2025-03-04 06:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:50:29 --> Current route: /dash_pm
+INFO - 2025-03-04 06:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:50:40 --> Current route: /dash_pm
+INFO - 2025-03-04 06:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 06:51:06 --> Current route: /pm
+INFO - 2025-03-04 07:04:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 07:04:15 --> Current route: /pm
+INFO - 2025-03-04 07:07:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 07:07:08 --> Current route: /pm
+INFO - 2025-03-04 07:07:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 07:07:18 --> Current route: /dash_pm
+INFO - 2025-03-04 07:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-04 07:07:21 --> Current route: /pm

@@ -1,0 +1,423 @@
+INFO - 2025-01-14 06:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 06:23:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 06:23:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 06:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 06:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 06:33:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 06:34:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 06:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 06:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 06:41:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 06:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:05:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:05:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:14:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:14:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 07:16:09 --> ErrorException: Undefined array key "nilaiSelectPK"
+[Method: POST, Route: soal/savePK]
+in APPPATH\Controllers\PenilaianMandiri.php on line 164.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(164): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nilaiSelectPK"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 164)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savePK()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-01-14 07:20:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:20:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:21:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:21:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:21:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:22:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:22:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:23:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:23:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:43:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:44:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:45:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:46:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 07:46:56 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\NilailvlModel"
+[Method: POST, Route: soal/savelvl]
+in SYSTEMPATH\Model.php on line 824.
+ 1 SYSTEMPATH\Model.php(824): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\NilailvlModel')
+ 2 SYSTEMPATH\BaseModel.php(821): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 4 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(215): CodeIgniter\BaseModel->save([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-01-14 07:48:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 07:48:12 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\NilailvlModel"
+[Method: POST, Route: soal/savelvl]
+in SYSTEMPATH\Model.php on line 824.
+ 1 SYSTEMPATH\Model.php(824): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\NilailvlModel')
+ 2 SYSTEMPATH\BaseModel.php(821): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 4 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(215): CodeIgniter\BaseModel->save([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-01-14 07:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 07:48:25 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\NilailvlModel"
+[Method: POST, Route: soal/savelvl]
+in SYSTEMPATH\Model.php on line 824.
+ 1 SYSTEMPATH\Model.php(824): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\NilailvlModel')
+ 2 SYSTEMPATH\BaseModel.php(821): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 4 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(215): CodeIgniter\BaseModel->save([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-01-14 07:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 07:49:33 --> ErrorException: Undefined array key "nilaiSelectlvl"
+[Method: POST, Route: soal/savelvl]
+in APPPATH\Controllers\PenilaianMandiri.php on line 211.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nilaiSelectlvl"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 211)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-01-14 07:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 07:49:42 --> ErrorException: Undefined array key "nilaiSelectlvl"
+[Method: POST, Route: soal/savelvl]
+in APPPATH\Controllers\PenilaianMandiri.php on line 211.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(211): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nilaiSelectlvl"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 211)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-01-14 07:50:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 07:50:26 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\NilailvlModel"
+[Method: POST, Route: soal/savelvl]
+in SYSTEMPATH\Model.php on line 824.
+ 1 SYSTEMPATH\Model.php(824): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\NilailvlModel')
+ 2 SYSTEMPATH\BaseModel.php(821): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 4 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(215): CodeIgniter\BaseModel->save([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-01-14 07:53:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 07:53:38 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\NilailvlModel"
+[Method: POST, Route: soal/savelvl]
+in SYSTEMPATH\Model.php on line 824.
+ 1 SYSTEMPATH\Model.php(824): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\NilailvlModel')
+ 2 SYSTEMPATH\BaseModel.php(821): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 4 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(215): CodeIgniter\BaseModel->save([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-01-14 07:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 07:53:46 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\NilailvlModel"
+[Method: POST, Route: soal/savelvl]
+in SYSTEMPATH\Model.php on line 824.
+ 1 SYSTEMPATH\Model.php(824): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\NilailvlModel')
+ 2 SYSTEMPATH\BaseModel.php(821): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 4 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(215): CodeIgniter\BaseModel->save([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-01-14 07:54:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:54:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 07:54:56 --> ErrorException: Undefined array key "komentarlvl"
+[Method: POST, Route: soal/savelvl]
+in APPPATH\Controllers\PenilaianMandiri.php on line 212.
+ 1 APPPATH\Controllers\PenilaianMandiri.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "komentarlvl"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Controllers\\PenilaianMandiri.php', 212)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-01-14 07:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 07:56:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 07:56:20 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\NilailvlModel"
+[Method: POST, Route: soal/savelvl]
+in SYSTEMPATH\Model.php on line 824.
+ 1 SYSTEMPATH\Model.php(824): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\NilailvlModel')
+ 2 SYSTEMPATH\BaseModel.php(821): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 4 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(215): CodeIgniter\BaseModel->save([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-01-14 08:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 08:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 08:02:21 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\NilailvlModel"
+[Method: POST, Route: soal/savelvl]
+in SYSTEMPATH\Model.php on line 824.
+ 1 SYSTEMPATH\Model.php(824): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\NilailvlModel')
+ 2 SYSTEMPATH\BaseModel.php(821): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 4 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(215): CodeIgniter\BaseModel->save([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-01-14 08:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-01-14 08:02:33 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\NilailvlModel"
+[Method: POST, Route: soal/savelvl]
+in SYSTEMPATH\Model.php on line 824.
+ 1 SYSTEMPATH\Model.php(824): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\NilailvlModel')
+ 2 SYSTEMPATH\BaseModel.php(821): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 4 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(215): CodeIgniter\BaseModel->save([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-01-14 08:03:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 08:03:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 08:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 08:03:54 --> mysqli_sql_exception: Unknown column 'komenlvl' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `nilai_p...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `nilai_p...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `nilai_p...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `nilai_p...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\NilailvlModel.php(50): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(203): App\Models\NilailvlModel->edit(Array)
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2025-01-14 08:03:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'komenlvl' in 'field list'
+[Method: POST, Route: soal/savelvl]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `nilai_pk` SET `id_user` = :id_user:, `id_satker` = :id_satker.1:, `id_pm_satker` = :id_pm_satker.1:, `thn_dipa` = :thn_dipa.1:, `nilai` = :nilai:, `komenlvl` = :komenlvl:, `rekomendasi` = :rekomendasi:
+WHERE `id_satker` = :id_satker:
+AND `id_pm_satker` = :id_pm_satker:
+AND `thn_dipa` = :thn_dipa:', [...], false)
+ 2 APPPATH\Models\NilailvlModel.php(50): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\PenilaianMandiri.php(203): App\Models\NilailvlModel->edit([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-01-14 08:03:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'komenlvl' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `nilai_pk` SET `id_user` = \'269\', `id_satker` = \'213\', `id_pm_satker` = \'1\', `thn_dipa` = \'2024\', `nilai` = \'2\', `komenlvl` = \'wkwk\', `rekomendasi` = \'\'
+WHERE `id_satker` = \'213\'
+AND `id_pm_satker` = \'1\'
+AND `thn_dipa` = \'2024\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `nilai_pk` SET `id_user` = \'269\', `id_satker` = \'213\', `id_pm_satker` = \'1\', `thn_dipa` = \'2024\', `nilai` = \'2\', `komenlvl` = \'wkwk\', `rekomendasi` = \'\'
+WHERE `id_satker` = \'213\'
+AND `id_pm_satker` = \'1\'
+AND `thn_dipa` = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `nilai_pk` SET `id_user` = :id_user:, `id_satker` = :id_satker.1:, `id_pm_satker` = :id_pm_satker.1:, `thn_dipa` = :thn_dipa.1:, `nilai` = :nilai:, `komenlvl` = :komenlvl:, `rekomendasi` = :rekomendasi:
+WHERE `id_satker` = :id_satker:
+AND `id_pm_satker` = :id_pm_satker:
+AND `thn_dipa` = :thn_dipa:', [...], false)
+ 4 APPPATH\Models\NilailvlModel.php(50): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\PenilaianMandiri.php(203): App\Models\NilailvlModel->edit([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-01-14 08:03:54 --> [Caused by] mysqli_sql_exception: Unknown column 'komenlvl' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `nilai_pk` SET `id_user` = \'269\', `id_satker` = \'213\', `id_pm_satker` = \'1\', `thn_dipa` = \'2024\', `nilai` = \'2\', `komenlvl` = \'wkwk\', `rekomendasi` = \'\'
+WHERE `id_satker` = \'213\'
+AND `id_pm_satker` = \'1\'
+AND `thn_dipa` = \'2024\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `nilai_pk` SET `id_user` = \'269\', `id_satker` = \'213\', `id_pm_satker` = \'1\', `thn_dipa` = \'2024\', `nilai` = \'2\', `komenlvl` = \'wkwk\', `rekomendasi` = \'\'
+WHERE `id_satker` = \'213\'
+AND `id_pm_satker` = \'1\'
+AND `thn_dipa` = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `nilai_pk` SET `id_user` = \'269\', `id_satker` = \'213\', `id_pm_satker` = \'1\', `thn_dipa` = \'2024\', `nilai` = \'2\', `komenlvl` = \'wkwk\', `rekomendasi` = \'\'
+WHERE `id_satker` = \'213\'
+AND `id_pm_satker` = \'1\'
+AND `thn_dipa` = \'2024\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `nilai_pk` SET `id_user` = :id_user:, `id_satker` = :id_satker.1:, `id_pm_satker` = :id_pm_satker.1:, `thn_dipa` = :thn_dipa.1:, `nilai` = :nilai:, `komenlvl` = :komenlvl:, `rekomendasi` = :rekomendasi:
+WHERE `id_satker` = :id_satker:
+AND `id_pm_satker` = :id_pm_satker:
+AND `thn_dipa` = :thn_dipa:', [...], false)
+ 5 APPPATH\Models\NilailvlModel.php(50): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\PenilaianMandiri.php(203): App\Models\NilailvlModel->edit([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-01-14 08:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 08:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-14 08:04:17 --> mysqli_sql_exception: Table 'ski_db.nilai_lvl' doesn't exist in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `nilai_l...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `nilai_l...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `nilai_l...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `nilai_l...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\NilailvlModel.php(50): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(203): App\Models\NilailvlModel->edit(Array)
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2025-01-14 08:04:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ski_db.nilai_lvl' doesn't exist
+[Method: POST, Route: soal/savelvl]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `nilai_lvl` SET `id_user` = :id_user:, `id_satker` = :id_satker.1:, `id_pm_satker` = :id_pm_satker.1:, `thn_dipa` = :thn_dipa.1:, `nilai` = :nilai:, `komenlvl` = :komenlvl:, `rekomendasi` = :rekomendasi:
+WHERE `id_satker` = :id_satker:
+AND `id_pm_satker` = :id_pm_satker:
+AND `thn_dipa` = :thn_dipa:', [...], false)
+ 2 APPPATH\Models\NilailvlModel.php(50): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\PenilaianMandiri.php(203): App\Models\NilailvlModel->edit([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-01-14 08:04:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ski_db.nilai_lvl' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `nilai_lvl` SET `id_user` = \'269\', `id_satker` = \'213\', `id_pm_satker` = \'1\', `thn_dipa` = \'2024\', `nilai` = \'2\', `komenlvl` = \'wkwk\', `rekomendasi` = \'\'
+WHERE `id_satker` = \'213\'
+AND `id_pm_satker` = \'1\'
+AND `thn_dipa` = \'2024\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `nilai_lvl` SET `id_user` = \'269\', `id_satker` = \'213\', `id_pm_satker` = \'1\', `thn_dipa` = \'2024\', `nilai` = \'2\', `komenlvl` = \'wkwk\', `rekomendasi` = \'\'
+WHERE `id_satker` = \'213\'
+AND `id_pm_satker` = \'1\'
+AND `thn_dipa` = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `nilai_lvl` SET `id_user` = :id_user:, `id_satker` = :id_satker.1:, `id_pm_satker` = :id_pm_satker.1:, `thn_dipa` = :thn_dipa.1:, `nilai` = :nilai:, `komenlvl` = :komenlvl:, `rekomendasi` = :rekomendasi:
+WHERE `id_satker` = :id_satker:
+AND `id_pm_satker` = :id_pm_satker:
+AND `thn_dipa` = :thn_dipa:', [...], false)
+ 4 APPPATH\Models\NilailvlModel.php(50): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\PenilaianMandiri.php(203): App\Models\NilailvlModel->edit([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-01-14 08:04:17 --> [Caused by] mysqli_sql_exception: Table 'ski_db.nilai_lvl' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `nilai_lvl` SET `id_user` = \'269\', `id_satker` = \'213\', `id_pm_satker` = \'1\', `thn_dipa` = \'2024\', `nilai` = \'2\', `komenlvl` = \'wkwk\', `rekomendasi` = \'\'
+WHERE `id_satker` = \'213\'
+AND `id_pm_satker` = \'1\'
+AND `thn_dipa` = \'2024\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `nilai_lvl` SET `id_user` = \'269\', `id_satker` = \'213\', `id_pm_satker` = \'1\', `thn_dipa` = \'2024\', `nilai` = \'2\', `komenlvl` = \'wkwk\', `rekomendasi` = \'\'
+WHERE `id_satker` = \'213\'
+AND `id_pm_satker` = \'1\'
+AND `thn_dipa` = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `nilai_lvl` SET `id_user` = \'269\', `id_satker` = \'213\', `id_pm_satker` = \'1\', `thn_dipa` = \'2024\', `nilai` = \'2\', `komenlvl` = \'wkwk\', `rekomendasi` = \'\'
+WHERE `id_satker` = \'213\'
+AND `id_pm_satker` = \'1\'
+AND `thn_dipa` = \'2024\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `nilai_lvl` SET `id_user` = :id_user:, `id_satker` = :id_satker.1:, `id_pm_satker` = :id_pm_satker.1:, `thn_dipa` = :thn_dipa.1:, `nilai` = :nilai:, `komenlvl` = :komenlvl:, `rekomendasi` = :rekomendasi:
+WHERE `id_satker` = :id_satker:
+AND `id_pm_satker` = :id_pm_satker:
+AND `thn_dipa` = :thn_dipa:', [...], false)
+ 5 APPPATH\Models\NilailvlModel.php(50): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\PenilaianMandiri.php(203): App\Models\NilailvlModel->edit([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->savelvl()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-01-14 08:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 08:04:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 08:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 08:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 08:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 08:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 08:17:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 08:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 08:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 08:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:00:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:01:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:01:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:06:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:06:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-14 09:07:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

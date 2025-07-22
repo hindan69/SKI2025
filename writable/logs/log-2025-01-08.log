@@ -1,0 +1,127 @@
+ERROR - 2025-01-08 03:06:50 --> mysqli_sql_exception: Unknown column 'komenpk' in 'field list' in D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\DLL\IT\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `idx`, `...', 0)
+#1 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idx`, `...')
+#2 D:\DLL\IT\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idx`, `...')
+#3 D:\DLL\IT\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `idx`, `...', Array, false)
+#4 D:\DLL\IT\SKI\SKI2025\app\Models\NilailvlModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\DLL\IT\SKI\SKI2025\app\Controllers\PenilaianMandiri.php(47): App\Models\NilailvlModel->filter('159', '2024')
+#6 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+#7 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+#8 D:\DLL\IT\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\DLL\IT\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\DLL\IT\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\DLL\IT\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\DLL\IT\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\S...')
+#13 {main}
+CRITICAL - 2025-01-08 03:06:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'komenpk' in 'field list'
+[Method: GET, Route: soal]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `idx`, `id_user`, `id_satker`, `id_pm_satker`, `nilai`, `komenpk`, `rekomendasi`, `thn_dipa`, `date_created`
+FROM `nilai_level`
+WHERE `id_satker` = :id_satker:
+AND `thn_dipa` = :thn_dipa:', [...], false)
+ 2 APPPATH\Models\NilailvlModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\PenilaianMandiri.php(47): App\Models\NilailvlModel->filter('159', '2024')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-01-08 03:06:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'komenpk' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idx`, `id_user`, `id_satker`, `id_pm_satker`, `nilai`, `komenpk`, `rekomendasi`, `thn_dipa`, `date_created`
+FROM `nilai_level`
+WHERE `id_satker` = \'159\'
+AND `thn_dipa` = \'2024\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idx`, `id_user`, `id_satker`, `id_pm_satker`, `nilai`, `komenpk`, `rekomendasi`, `thn_dipa`, `date_created`
+FROM `nilai_level`
+WHERE `id_satker` = \'159\'
+AND `thn_dipa` = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `idx`, `id_user`, `id_satker`, `id_pm_satker`, `nilai`, `komenpk`, `rekomendasi`, `thn_dipa`, `date_created`
+FROM `nilai_level`
+WHERE `id_satker` = :id_satker:
+AND `thn_dipa` = :thn_dipa:', [...], false)
+ 4 APPPATH\Models\NilailvlModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\PenilaianMandiri.php(47): App\Models\NilailvlModel->filter('159', '2024')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-01-08 03:06:50 --> [Caused by] mysqli_sql_exception: Unknown column 'komenpk' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `idx`, `id_user`, `id_satker`, `id_pm_satker`, `nilai`, `komenpk`, `rekomendasi`, `thn_dipa`, `date_created`
+FROM `nilai_level`
+WHERE `id_satker` = \'159\'
+AND `thn_dipa` = \'2024\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `idx`, `id_user`, `id_satker`, `id_pm_satker`, `nilai`, `komenpk`, `rekomendasi`, `thn_dipa`, `date_created`
+FROM `nilai_level`
+WHERE `id_satker` = \'159\'
+AND `thn_dipa` = \'2024\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `idx`, `id_user`, `id_satker`, `id_pm_satker`, `nilai`, `komenpk`, `rekomendasi`, `thn_dipa`, `date_created`
+FROM `nilai_level`
+WHERE `id_satker` = \'159\'
+AND `thn_dipa` = \'2024\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `idx`, `id_user`, `id_satker`, `id_pm_satker`, `nilai`, `komenpk`, `rekomendasi`, `thn_dipa`, `date_created`
+FROM `nilai_level`
+WHERE `id_satker` = :id_satker:
+AND `thn_dipa` = :thn_dipa:', [...], false)
+ 5 APPPATH\Models\NilailvlModel.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PenilaianMandiri.php(47): App\Models\NilailvlModel->filter('159', '2024')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-01-08 03:11:34 --> ErrorException: Undefined variable $nilaiPK
+[Method: GET, Route: soal]
+in APPPATH\Views\penilaianMandiri\soal.php on line 4.
+ 1 APPPATH\Views\penilaianMandiri\soal.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nilaiPK', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php', 4)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(113): view('/penilaianMandiri/soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-01-08 03:16:19 --> ErrorException: Undefined variable $row
+[Method: GET, Route: soal]
+in APPPATH\Views\penilaianMandiri\soal.php on line 4.
+ 1 APPPATH\Views\penilaianMandiri\soal.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php', 4)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(113): view('/penilaianMandiri/soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-01-08 06:58:53 --> ErrorException: Undefined array key "id_pm_satker"
+[Method: GET, Route: soal]
+in APPPATH\Views\penilaianMandiri\soal.php on line 149.
+ 1 APPPATH\Views\penilaianMandiri\soal.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pm_satker"', 'D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php', 149)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\DLL\\IT\\SKI\\SKI2025\\app\\Views\\penilaianMandiri\\soal.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/penilaianMandiri/soal', [], true)
+ 5 APPPATH\Controllers\PenilaianMandiri.php(113): view('/penilaianMandiri/soal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenilaianMandiri->soal()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenilaianMandiri))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\DLL\\IT\\SKI\\SKI2025\\public\\index.php')

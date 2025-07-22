@@ -1,0 +1,638 @@
+INFO - 2025-07-18 01:10:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 01:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 01:10:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-18 01:10:42 --> mysqli_sql_exception: Table 'ski_db.status_klvl' doesn't exist in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `sk`.`id...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sk`.`id...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sk`.`id...')
+#3 D:\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `sk`.`id...', Array, false)
+#4 D:\SKI\SKI2025\app\Models\SkSatkerModel.php(99): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SKI\SKI2025\app\Controllers\Auditor.php(46): App\Models\SkSatkerModel->resumeAll()
+#6 D:\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\Auditor->index()
+#7 D:\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+#8 D:\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\SKI\\SKI2025\\...')
+#13 {main}
+CRITICAL - 2025-07-18 01:10:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ski_db.status_klvl' doesn't exist
+[Method: GET, Route: prfl]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `sk`.`id_satker`, `sk`.`thn_anggaran`, `stkr`.`nama_satker`, `stkr`.`pembina`, COALESCE(spm.status, 0) AS status_pim, COALESCE(spk.status, 0) AS status_kpk, COALESCE(slvl.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `sk`
+LEFT JOIN `satker` AS `stkr` ON `stkr`.`id` = `sk`.`id_satker`
+LEFT JOIN `status_pim` AS `spm` ON `spm`.`id_satker` = `sk`.`id_satker` AND `spm`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_kpk` AS `spk` ON `spk`.`id_satker` = `sk`.`id_satker` AND `spk`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_klvl` AS `slvl` ON `slvl`.`id_satker` = `sk`.`id_satker` AND `slvl`.`thn_dipa` = `sk`.`thn_anggaran`
+ORDER BY `sk`.`thn_anggaran` DESC', [], false)
+ 2 APPPATH\Models\SkSatkerModel.php(99): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Auditor.php(46): App\Models\SkSatkerModel->resumeAll()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-07-18 01:10:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ski_db.status_klvl' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sk`.`id_satker`, `sk`.`thn_anggaran`, `stkr`.`nama_satker`, `stkr`.`pembina`, COALESCE(spm.status, 0) AS status_pim, COALESCE(spk.status, 0) AS status_kpk, COALESCE(slvl.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `sk`
+LEFT JOIN `satker` AS `stkr` ON `stkr`.`id` = `sk`.`id_satker`
+LEFT JOIN `status_pim` AS `spm` ON `spm`.`id_satker` = `sk`.`id_satker` AND `spm`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_kpk` AS `spk` ON `spk`.`id_satker` = `sk`.`id_satker` AND `spk`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_klvl` AS `slvl` ON `slvl`.`id_satker` = `sk`.`id_satker` AND `slvl`.`thn_dipa` = `sk`.`thn_anggaran`
+ORDER BY `sk`.`thn_anggaran` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sk`.`id_satker`, `sk`.`thn_anggaran`, `stkr`.`nama_satker`, `stkr`.`pembina`, COALESCE(spm.status, 0) AS status_pim, COALESCE(spk.status, 0) AS status_kpk, COALESCE(slvl.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `sk`
+LEFT JOIN `satker` AS `stkr` ON `stkr`.`id` = `sk`.`id_satker`
+LEFT JOIN `status_pim` AS `spm` ON `spm`.`id_satker` = `sk`.`id_satker` AND `spm`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_kpk` AS `spk` ON `spk`.`id_satker` = `sk`.`id_satker` AND `spk`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_klvl` AS `slvl` ON `slvl`.`id_satker` = `sk`.`id_satker` AND `slvl`.`thn_dipa` = `sk`.`thn_anggaran`
+ORDER BY `sk`.`thn_anggaran` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `sk`.`id_satker`, `sk`.`thn_anggaran`, `stkr`.`nama_satker`, `stkr`.`pembina`, COALESCE(spm.status, 0) AS status_pim, COALESCE(spk.status, 0) AS status_kpk, COALESCE(slvl.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `sk`
+LEFT JOIN `satker` AS `stkr` ON `stkr`.`id` = `sk`.`id_satker`
+LEFT JOIN `status_pim` AS `spm` ON `spm`.`id_satker` = `sk`.`id_satker` AND `spm`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_kpk` AS `spk` ON `spk`.`id_satker` = `sk`.`id_satker` AND `spk`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_klvl` AS `slvl` ON `slvl`.`id_satker` = `sk`.`id_satker` AND `slvl`.`thn_dipa` = `sk`.`thn_anggaran`
+ORDER BY `sk`.`thn_anggaran` DESC', [], false)
+ 4 APPPATH\Models\SkSatkerModel.php(99): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Auditor.php(46): App\Models\SkSatkerModel->resumeAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-07-18 01:10:42 --> [Caused by] mysqli_sql_exception: Table 'ski_db.status_klvl' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `sk`.`id_satker`, `sk`.`thn_anggaran`, `stkr`.`nama_satker`, `stkr`.`pembina`, COALESCE(spm.status, 0) AS status_pim, COALESCE(spk.status, 0) AS status_kpk, COALESCE(slvl.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `sk`
+LEFT JOIN `satker` AS `stkr` ON `stkr`.`id` = `sk`.`id_satker`
+LEFT JOIN `status_pim` AS `spm` ON `spm`.`id_satker` = `sk`.`id_satker` AND `spm`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_kpk` AS `spk` ON `spk`.`id_satker` = `sk`.`id_satker` AND `spk`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_klvl` AS `slvl` ON `slvl`.`id_satker` = `sk`.`id_satker` AND `slvl`.`thn_dipa` = `sk`.`thn_anggaran`
+ORDER BY `sk`.`thn_anggaran` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `sk`.`id_satker`, `sk`.`thn_anggaran`, `stkr`.`nama_satker`, `stkr`.`pembina`, COALESCE(spm.status, 0) AS status_pim, COALESCE(spk.status, 0) AS status_kpk, COALESCE(slvl.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `sk`
+LEFT JOIN `satker` AS `stkr` ON `stkr`.`id` = `sk`.`id_satker`
+LEFT JOIN `status_pim` AS `spm` ON `spm`.`id_satker` = `sk`.`id_satker` AND `spm`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_kpk` AS `spk` ON `spk`.`id_satker` = `sk`.`id_satker` AND `spk`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_klvl` AS `slvl` ON `slvl`.`id_satker` = `sk`.`id_satker` AND `slvl`.`thn_dipa` = `sk`.`thn_anggaran`
+ORDER BY `sk`.`thn_anggaran` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `sk`.`id_satker`, `sk`.`thn_anggaran`, `stkr`.`nama_satker`, `stkr`.`pembina`, COALESCE(spm.status, 0) AS status_pim, COALESCE(spk.status, 0) AS status_kpk, COALESCE(slvl.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `sk`
+LEFT JOIN `satker` AS `stkr` ON `stkr`.`id` = `sk`.`id_satker`
+LEFT JOIN `status_pim` AS `spm` ON `spm`.`id_satker` = `sk`.`id_satker` AND `spm`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_kpk` AS `spk` ON `spk`.`id_satker` = `sk`.`id_satker` AND `spk`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_klvl` AS `slvl` ON `slvl`.`id_satker` = `sk`.`id_satker` AND `slvl`.`thn_dipa` = `sk`.`thn_anggaran`
+ORDER BY `sk`.`thn_anggaran` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `sk`.`id_satker`, `sk`.`thn_anggaran`, `stkr`.`nama_satker`, `stkr`.`pembina`, COALESCE(spm.status, 0) AS status_pim, COALESCE(spk.status, 0) AS status_kpk, COALESCE(slvl.status, 0) AS status_klvl
+FROM `sk_pmsatker` AS `sk`
+LEFT JOIN `satker` AS `stkr` ON `stkr`.`id` = `sk`.`id_satker`
+LEFT JOIN `status_pim` AS `spm` ON `spm`.`id_satker` = `sk`.`id_satker` AND `spm`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_kpk` AS `spk` ON `spk`.`id_satker` = `sk`.`id_satker` AND `spk`.`thn_dipa` = `sk`.`thn_anggaran`
+LEFT JOIN `status_klvl` AS `slvl` ON `slvl`.`id_satker` = `sk`.`id_satker` AND `slvl`.`thn_dipa` = `sk`.`thn_anggaran`
+ORDER BY `sk`.`thn_anggaran` DESC', [], false)
+ 5 APPPATH\Models\SkSatkerModel.php(99): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Auditor.php(46): App\Models\SkSatkerModel->resumeAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-07-18 01:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 01:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-18 01:13:32 --> mysqli_sql_exception: Table 'ski_db.status_lvl' doesn't exist in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT DISTINCT...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT...')
+#3 D:\SKI\SKI2025\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...', Array, false)
+#4 D:\SKI\SKI2025\app\Models\AuditorModel.php(44): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\SKI\SKI2025\app\Controllers\Auditor.php(60): App\Models\AuditorModel->dashboard('223')
+#6 D:\SKI\SKI2025\system\CodeIgniter.php(933): App\Controllers\Auditor->riwayat()
+#7 D:\SKI\SKI2025\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+#8 D:\SKI\SKI2025\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\SKI\SKI2025\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\SKI\SKI2025\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\SKI\SKI2025\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 D:\SKI\SKI2025\system\rewrite.php(44): require_once('D:\\SKI\\SKI2025\\...')
+#13 {main}
+CRITICAL - 2025-07-18 01:13:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ski_db.status_lvl' doesn't exist
+[Method: GET, Route: riwayat]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT `ap`.`id_satker`, `sat`.`nama_satker`, YEAR(ta.tgl_surat) AS periode_penilaian, `sp`.`nilai_pm`, `pim`.`status` AS `status_pim`, `spk`.`nilai_pk`, `kpk`.`status` AS `status_kpk`, `sl`.`nilai_lvl`, `klvl`.`status` AS `status_klvl`, `ap`.`is_active`
+FROM `assign_pk` as `ap`
+JOIN `timaudit` AS `ta` ON `ap`.`id_timaudit` = `ta`.`id_timaudit`
+LEFT JOIN `satker` AS `sat` ON `sat`.`id` = `ap`.`id_satker`
+LEFT JOIN `status_pm` AS `sp` ON `ap`.`id_satker` = `sp`.`id_satker` AND YEAR(ta.tgl_surat) = sp.thn_dipa
+LEFT JOIN `status_pim` AS `pim` ON `ap`.`id_satker` = `pim`.`id_satker` AND YEAR(ta.tgl_surat) = pim.thn_dipa
+LEFT JOIN `status_pk` AS `spk` ON `ap`.`id_satker` = `spk`.`id_satker` AND YEAR(ta.tgl_surat) = spk.thn_dipa
+LEFT JOIN `status_kpk` AS `kpk` ON `ap`.`id_satker` = `kpk`.`id_satker` AND YEAR(ta.tgl_surat) = kpk.thn_dipa
+LEFT JOIN `status_lvl` AS `sl` ON `ap`.`id_satker` = `sl`.`id_satker` AND YEAR(ta.tgl_surat) = sl.thn_dipa
+LEFT JOIN `status_klvl` AS `klvl` ON `ap`.`id_satker` = `klvl`.`id_satker` AND YEAR(ta.tgl_surat) = klvl.thn_dipa
+WHERE `ap`.`id_auditor` = :ap.id_auditor:
+ORDER BY `ap`.`id_satker` ASC, `periode_penilaian` ASC', [...], false)
+ 2 APPPATH\Models\AuditorModel.php(44): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Auditor.php(60): App\Models\AuditorModel->dashboard('223')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->riwayat()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('D:\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-07-18 01:13:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ski_db.status_lvl' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT `ap`.`id_satker`, `sat`.`nama_satker`, YEAR(ta.tgl_surat) AS periode_penilaian, `sp`.`nilai_pm`, `pim`.`status` AS `status_pim`, `spk`.`nilai_pk`, `kpk`.`status` AS `status_kpk`, `sl`.`nilai_lvl`, `klvl`.`status` AS `status_klvl`, `ap`.`is_active`
+FROM `assign_pk` as `ap`
+JOIN `timaudit` AS `ta` ON `ap`.`id_timaudit` = `ta`.`id_timaudit`
+LEFT JOIN `satker` AS `sat` ON `sat`.`id` = `ap`.`id_satker`
+LEFT JOIN `status_pm` AS `sp` ON `ap`.`id_satker` = `sp`.`id_satker` AND YEAR(ta.tgl_surat) = sp.thn_dipa
+LEFT JOIN `status_pim` AS `pim` ON `ap`.`id_satker` = `pim`.`id_satker` AND YEAR(ta.tgl_surat) = pim.thn_dipa
+LEFT JOIN `status_pk` AS `spk` ON `ap`.`id_satker` = `spk`.`id_satker` AND YEAR(ta.tgl_surat) = spk.thn_dipa
+LEFT JOIN `status_kpk` AS `kpk` ON `ap`.`id_satker` = `kpk`.`id_satker` AND YEAR(ta.tgl_surat) = kpk.thn_dipa
+LEFT JOIN `status_lvl` AS `sl` ON `ap`.`id_satker` = `sl`.`id_satker` AND YEAR(ta.tgl_surat) = sl.thn_dipa
+LEFT JOIN `status_klvl` AS `klvl` ON `ap`.`id_satker` = `klvl`.`id_satker` AND YEAR(ta.tgl_surat) = klvl.thn_dipa
+WHERE `ap`.`id_auditor` = \'223\'
+ORDER BY `ap`.`id_satker` ASC, `periode_penilaian` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT `ap`.`id_satker`, `sat`.`nama_satker`, YEAR(ta.tgl_surat) AS periode_penilaian, `sp`.`nilai_pm`, `pim`.`status` AS `status_pim`, `spk`.`nilai_pk`, `kpk`.`status` AS `status_kpk`, `sl`.`nilai_lvl`, `klvl`.`status` AS `status_klvl`, `ap`.`is_active`
+FROM `assign_pk` as `ap`
+JOIN `timaudit` AS `ta` ON `ap`.`id_timaudit` = `ta`.`id_timaudit`
+LEFT JOIN `satker` AS `sat` ON `sat`.`id` = `ap`.`id_satker`
+LEFT JOIN `status_pm` AS `sp` ON `ap`.`id_satker` = `sp`.`id_satker` AND YEAR(ta.tgl_surat) = sp.thn_dipa
+LEFT JOIN `status_pim` AS `pim` ON `ap`.`id_satker` = `pim`.`id_satker` AND YEAR(ta.tgl_surat) = pim.thn_dipa
+LEFT JOIN `status_pk` AS `spk` ON `ap`.`id_satker` = `spk`.`id_satker` AND YEAR(ta.tgl_surat) = spk.thn_dipa
+LEFT JOIN `status_kpk` AS `kpk` ON `ap`.`id_satker` = `kpk`.`id_satker` AND YEAR(ta.tgl_surat) = kpk.thn_dipa
+LEFT JOIN `status_lvl` AS `sl` ON `ap`.`id_satker` = `sl`.`id_satker` AND YEAR(ta.tgl_surat) = sl.thn_dipa
+LEFT JOIN `status_klvl` AS `klvl` ON `ap`.`id_satker` = `klvl`.`id_satker` AND YEAR(ta.tgl_surat) = klvl.thn_dipa
+WHERE `ap`.`id_auditor` = \'223\'
+ORDER BY `ap`.`id_satker` ASC, `periode_penilaian` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT `ap`.`id_satker`, `sat`.`nama_satker`, YEAR(ta.tgl_surat) AS periode_penilaian, `sp`.`nilai_pm`, `pim`.`status` AS `status_pim`, `spk`.`nilai_pk`, `kpk`.`status` AS `status_kpk`, `sl`.`nilai_lvl`, `klvl`.`status` AS `status_klvl`, `ap`.`is_active`
+FROM `assign_pk` as `ap`
+JOIN `timaudit` AS `ta` ON `ap`.`id_timaudit` = `ta`.`id_timaudit`
+LEFT JOIN `satker` AS `sat` ON `sat`.`id` = `ap`.`id_satker`
+LEFT JOIN `status_pm` AS `sp` ON `ap`.`id_satker` = `sp`.`id_satker` AND YEAR(ta.tgl_surat) = sp.thn_dipa
+LEFT JOIN `status_pim` AS `pim` ON `ap`.`id_satker` = `pim`.`id_satker` AND YEAR(ta.tgl_surat) = pim.thn_dipa
+LEFT JOIN `status_pk` AS `spk` ON `ap`.`id_satker` = `spk`.`id_satker` AND YEAR(ta.tgl_surat) = spk.thn_dipa
+LEFT JOIN `status_kpk` AS `kpk` ON `ap`.`id_satker` = `kpk`.`id_satker` AND YEAR(ta.tgl_surat) = kpk.thn_dipa
+LEFT JOIN `status_lvl` AS `sl` ON `ap`.`id_satker` = `sl`.`id_satker` AND YEAR(ta.tgl_surat) = sl.thn_dipa
+LEFT JOIN `status_klvl` AS `klvl` ON `ap`.`id_satker` = `klvl`.`id_satker` AND YEAR(ta.tgl_surat) = klvl.thn_dipa
+WHERE `ap`.`id_auditor` = :ap.id_auditor:
+ORDER BY `ap`.`id_satker` ASC, `periode_penilaian` ASC', [...], false)
+ 4 APPPATH\Models\AuditorModel.php(44): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Auditor.php(60): App\Models\AuditorModel->dashboard('223')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->riwayat()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('D:\\SKI\\SKI2025\\public\\index.php')
+CRITICAL - 2025-07-18 01:13:32 --> [Caused by] mysqli_sql_exception: Table 'ski_db.status_lvl' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT DISTINCT `ap`.`id_satker`, `sat`.`nama_satker`, YEAR(ta.tgl_surat) AS periode_penilaian, `sp`.`nilai_pm`, `pim`.`status` AS `status_pim`, `spk`.`nilai_pk`, `kpk`.`status` AS `status_kpk`, `sl`.`nilai_lvl`, `klvl`.`status` AS `status_klvl`, `ap`.`is_active`
+FROM `assign_pk` as `ap`
+JOIN `timaudit` AS `ta` ON `ap`.`id_timaudit` = `ta`.`id_timaudit`
+LEFT JOIN `satker` AS `sat` ON `sat`.`id` = `ap`.`id_satker`
+LEFT JOIN `status_pm` AS `sp` ON `ap`.`id_satker` = `sp`.`id_satker` AND YEAR(ta.tgl_surat) = sp.thn_dipa
+LEFT JOIN `status_pim` AS `pim` ON `ap`.`id_satker` = `pim`.`id_satker` AND YEAR(ta.tgl_surat) = pim.thn_dipa
+LEFT JOIN `status_pk` AS `spk` ON `ap`.`id_satker` = `spk`.`id_satker` AND YEAR(ta.tgl_surat) = spk.thn_dipa
+LEFT JOIN `status_kpk` AS `kpk` ON `ap`.`id_satker` = `kpk`.`id_satker` AND YEAR(ta.tgl_surat) = kpk.thn_dipa
+LEFT JOIN `status_lvl` AS `sl` ON `ap`.`id_satker` = `sl`.`id_satker` AND YEAR(ta.tgl_surat) = sl.thn_dipa
+LEFT JOIN `status_klvl` AS `klvl` ON `ap`.`id_satker` = `klvl`.`id_satker` AND YEAR(ta.tgl_surat) = klvl.thn_dipa
+WHERE `ap`.`id_auditor` = \'223\'
+ORDER BY `ap`.`id_satker` ASC, `periode_penilaian` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT `ap`.`id_satker`, `sat`.`nama_satker`, YEAR(ta.tgl_surat) AS periode_penilaian, `sp`.`nilai_pm`, `pim`.`status` AS `status_pim`, `spk`.`nilai_pk`, `kpk`.`status` AS `status_kpk`, `sl`.`nilai_lvl`, `klvl`.`status` AS `status_klvl`, `ap`.`is_active`
+FROM `assign_pk` as `ap`
+JOIN `timaudit` AS `ta` ON `ap`.`id_timaudit` = `ta`.`id_timaudit`
+LEFT JOIN `satker` AS `sat` ON `sat`.`id` = `ap`.`id_satker`
+LEFT JOIN `status_pm` AS `sp` ON `ap`.`id_satker` = `sp`.`id_satker` AND YEAR(ta.tgl_surat) = sp.thn_dipa
+LEFT JOIN `status_pim` AS `pim` ON `ap`.`id_satker` = `pim`.`id_satker` AND YEAR(ta.tgl_surat) = pim.thn_dipa
+LEFT JOIN `status_pk` AS `spk` ON `ap`.`id_satker` = `spk`.`id_satker` AND YEAR(ta.tgl_surat) = spk.thn_dipa
+LEFT JOIN `status_kpk` AS `kpk` ON `ap`.`id_satker` = `kpk`.`id_satker` AND YEAR(ta.tgl_surat) = kpk.thn_dipa
+LEFT JOIN `status_lvl` AS `sl` ON `ap`.`id_satker` = `sl`.`id_satker` AND YEAR(ta.tgl_surat) = sl.thn_dipa
+LEFT JOIN `status_klvl` AS `klvl` ON `ap`.`id_satker` = `klvl`.`id_satker` AND YEAR(ta.tgl_surat) = klvl.thn_dipa
+WHERE `ap`.`id_auditor` = \'223\'
+ORDER BY `ap`.`id_satker` ASC, `periode_penilaian` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT `ap`.`id_satker`, `sat`.`nama_satker`, YEAR(ta.tgl_surat) AS periode_penilaian, `sp`.`nilai_pm`, `pim`.`status` AS `status_pim`, `spk`.`nilai_pk`, `kpk`.`status` AS `status_kpk`, `sl`.`nilai_lvl`, `klvl`.`status` AS `status_klvl`, `ap`.`is_active`
+FROM `assign_pk` as `ap`
+JOIN `timaudit` AS `ta` ON `ap`.`id_timaudit` = `ta`.`id_timaudit`
+LEFT JOIN `satker` AS `sat` ON `sat`.`id` = `ap`.`id_satker`
+LEFT JOIN `status_pm` AS `sp` ON `ap`.`id_satker` = `sp`.`id_satker` AND YEAR(ta.tgl_surat) = sp.thn_dipa
+LEFT JOIN `status_pim` AS `pim` ON `ap`.`id_satker` = `pim`.`id_satker` AND YEAR(ta.tgl_surat) = pim.thn_dipa
+LEFT JOIN `status_pk` AS `spk` ON `ap`.`id_satker` = `spk`.`id_satker` AND YEAR(ta.tgl_surat) = spk.thn_dipa
+LEFT JOIN `status_kpk` AS `kpk` ON `ap`.`id_satker` = `kpk`.`id_satker` AND YEAR(ta.tgl_surat) = kpk.thn_dipa
+LEFT JOIN `status_lvl` AS `sl` ON `ap`.`id_satker` = `sl`.`id_satker` AND YEAR(ta.tgl_surat) = sl.thn_dipa
+LEFT JOIN `status_klvl` AS `klvl` ON `ap`.`id_satker` = `klvl`.`id_satker` AND YEAR(ta.tgl_surat) = klvl.thn_dipa
+WHERE `ap`.`id_auditor` = \'223\'
+ORDER BY `ap`.`id_satker` ASC, `periode_penilaian` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT `ap`.`id_satker`, `sat`.`nama_satker`, YEAR(ta.tgl_surat) AS periode_penilaian, `sp`.`nilai_pm`, `pim`.`status` AS `status_pim`, `spk`.`nilai_pk`, `kpk`.`status` AS `status_kpk`, `sl`.`nilai_lvl`, `klvl`.`status` AS `status_klvl`, `ap`.`is_active`
+FROM `assign_pk` as `ap`
+JOIN `timaudit` AS `ta` ON `ap`.`id_timaudit` = `ta`.`id_timaudit`
+LEFT JOIN `satker` AS `sat` ON `sat`.`id` = `ap`.`id_satker`
+LEFT JOIN `status_pm` AS `sp` ON `ap`.`id_satker` = `sp`.`id_satker` AND YEAR(ta.tgl_surat) = sp.thn_dipa
+LEFT JOIN `status_pim` AS `pim` ON `ap`.`id_satker` = `pim`.`id_satker` AND YEAR(ta.tgl_surat) = pim.thn_dipa
+LEFT JOIN `status_pk` AS `spk` ON `ap`.`id_satker` = `spk`.`id_satker` AND YEAR(ta.tgl_surat) = spk.thn_dipa
+LEFT JOIN `status_kpk` AS `kpk` ON `ap`.`id_satker` = `kpk`.`id_satker` AND YEAR(ta.tgl_surat) = kpk.thn_dipa
+LEFT JOIN `status_lvl` AS `sl` ON `ap`.`id_satker` = `sl`.`id_satker` AND YEAR(ta.tgl_surat) = sl.thn_dipa
+LEFT JOIN `status_klvl` AS `klvl` ON `ap`.`id_satker` = `klvl`.`id_satker` AND YEAR(ta.tgl_surat) = klvl.thn_dipa
+WHERE `ap`.`id_auditor` = :ap.id_auditor:
+ORDER BY `ap`.`id_satker` ASC, `periode_penilaian` ASC', [...], false)
+ 5 APPPATH\Models\AuditorModel.php(44): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Auditor.php(60): App\Models\AuditorModel->dashboard('223')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auditor->riwayat()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auditor))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('D:\\SKI\\SKI2025\\public\\index.php')
+INFO - 2025-07-18 01:15:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-18 07:19:38 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'ski' in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ski', 3306, '', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\SKI\SKI2025\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\SKI\SKI2025\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\SKI\SKI2025\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\SKI\SKI2025\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\SKI\SKI2025\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'ski' in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(1485): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 D:\SKI\SKI2025\system\Database\BaseConnection.php(1505): CodeIgniter\Database\BaseConnection->listTables()
+#4 D:\SKI\SKI2025\system\Database\MigrationRunner.php(759): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 D:\SKI\SKI2025\system\Database\MigrationRunner.php(163): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 D:\SKI\SKI2025\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#10 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-07-18 07:20:02 --> mysqli_sql_exception: Invalid default value for 'created_at' in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\SKI\SKI2025\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\SKI\SKI2025\app\Database\Migrations\2025-07-18-012346_UsersCreate.php(67): CodeIgniter\Database\Forge->createTable('users')
+#5 D:\SKI\SKI2025\system\Database\MigrationRunner.php(867): App\Database\Migrations\UsersCreate->up()
+#6 D:\SKI\SKI2025\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\SKI\SKI2025\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 07:22:40 --> mysqli_sql_exception: Invalid default value for 'updated_at' in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\SKI\SKI2025\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\SKI\SKI2025\app\Database\Migrations\2025-07-18-012346_UsersCreate.php(65): CodeIgniter\Database\Forge->createTable('users')
+#5 D:\SKI\SKI2025\system\Database\MigrationRunner.php(867): App\Database\Migrations\UsersCreate->up()
+#6 D:\SKI\SKI2025\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\SKI\SKI2025\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 07:23:31 --> mysqli_sql_exception: Invalid default value for 'created_at' in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `t...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 D:\SKI\SKI2025\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 D:\SKI\SKI2025\app\Database\Migrations\2025-07-18-013008_TimauditCreate.php(70): CodeIgniter\Database\Forge->createTable('timaudit')
+#5 D:\SKI\SKI2025\system\Database\MigrationRunner.php(867): App\Database\Migrations\TimauditCreate->up()
+#6 D:\SKI\SKI2025\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\SKI\SKI2025\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 07:24:52 --> mysqli_sql_exception: Invalid default value for 'created_at' in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `t...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `t...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `t...')
+#3 D:\SKI\SKI2025\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `t...')
+#4 D:\SKI\SKI2025\app\Database\Migrations\2025-07-18-013008_TimauditCreate.php(70): CodeIgniter\Database\Forge->createTable('timaudit')
+#5 D:\SKI\SKI2025\system\Database\MigrationRunner.php(867): App\Database\Migrations\TimauditCreate->up()
+#6 D:\SKI\SKI2025\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\SKI\SKI2025\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 07:26:22 --> mysqli_sql_exception: Invalid default value for 'created_at' in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `s...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 D:\SKI\SKI2025\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 D:\SKI\SKI2025\app\Database\Migrations\2025-07-18-013823_SatkerCreate.php(71): CodeIgniter\Database\Forge->createTable('satker')
+#5 D:\SKI\SKI2025\system\Database\MigrationRunner.php(867): App\Database\Migrations\SatkerCreate->up()
+#6 D:\SKI\SKI2025\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\SKI\SKI2025\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 07:29:47 --> mysqli_sql_exception: Invalid default value for 'updated_at' in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `u...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 D:\SKI\SKI2025\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 D:\SKI\SKI2025\app\Database\Migrations\2025-07-18-012346_UsersCreate.php(67): CodeIgniter\Database\Forge->createTable('users')
+#5 D:\SKI\SKI2025\system\Database\MigrationRunner.php(867): App\Database\Migrations\UsersCreate->up()
+#6 D:\SKI\SKI2025\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\SKI\SKI2025\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 07:33:07 --> mysqli_sql_exception: Incorrect table definition; there can be only one auto column and it must be defined as a key in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `s...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `s...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `s...')
+#3 D:\SKI\SKI2025\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `s...')
+#4 D:\SKI\SKI2025\app\Database\Migrations\2025-07-18-023854_SubUnsurCreate.php(34): CodeIgniter\Database\Forge->createTable('sub_unsur')
+#5 D:\SKI\SKI2025\system\Database\MigrationRunner.php(867): App\Database\Migrations\SubUnsurCreate->up()
+#6 D:\SKI\SKI2025\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\SKI\SKI2025\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 07:34:22 --> mysqli_sql_exception: Table 'komponen_sub_unsur' already exists in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `k...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `k...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `k...')
+#3 D:\SKI\SKI2025\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `k...')
+#4 D:\SKI\SKI2025\app\Database\Migrations\2025-07-18-041913_KomponenSubUnsurCreate.php(43): CodeIgniter\Database\Forge->createTable('komponen_sub_un...')
+#5 D:\SKI\SKI2025\system\Database\MigrationRunner.php(867): App\Database\Migrations\KomponenSubUnsurCreate->up()
+#6 D:\SKI\SKI2025\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 D:\SKI\SKI2025\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 07:38:57 --> mysqli_sql_exception: Unknown column 'nama_komponen' in 'field list' in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ko...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ko...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ko...')
+#3 D:\SKI\SKI2025\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ko...', NULL, false)
+#4 D:\SKI\SKI2025\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\SKI\SKI2025\app\Database\Seeds\KomponenSeeder.php(21): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\SKI\SKI2025\system\Database\Seeder.php(147): App\Database\Seeds\KomponenSeeder->run()
+#7 D:\SKI\SKI2025\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 07:41:14 --> mysqli_sql_exception: Column count doesn't match value count at row 1 in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sa...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 D:\SKI\SKI2025\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', NULL, false)
+#4 D:\SKI\SKI2025\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\SKI\SKI2025\app\Database\Seeds\SatkerSeeder.php(409): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\SKI\SKI2025\system\Database\Seeder.php(147): App\Database\Seeds\SatkerSeeder->run()
+#7 D:\SKI\SKI2025\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 07:46:35 --> mysqli_sql_exception: Column count doesn't match value count at row 1 in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sa...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 D:\SKI\SKI2025\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', NULL, false)
+#4 D:\SKI\SKI2025\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\SKI\SKI2025\app\Database\Seeds\SatkerSeeder.php(409): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\SKI\SKI2025\system\Database\Seeder.php(147): App\Database\Seeds\SatkerSeeder->run()
+#7 D:\SKI\SKI2025\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 07:47:48 --> mysqli_sql_exception: Column count doesn't match value count at row 1 in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sa...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 D:\SKI\SKI2025\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', NULL, false)
+#4 D:\SKI\SKI2025\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\SKI\SKI2025\app\Database\Seeds\SatkerSeeder.php(409): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\SKI\SKI2025\system\Database\Seeder.php(147): App\Database\Seeds\SatkerSeeder->run()
+#7 D:\SKI\SKI2025\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 07:59:31 --> mysqli_sql_exception: Unknown column 'nama_sub_unsur' in 'field list' in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `su...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `su...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `su...')
+#3 D:\SKI\SKI2025\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `su...', NULL, false)
+#4 D:\SKI\SKI2025\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\SKI\SKI2025\app\Database\Seeds\SubUnsurSeeder.php(42): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\SKI\SKI2025\system\Database\Seeder.php(147): App\Database\Seeds\SubUnsurSeeder->run()
+#7 D:\SKI\SKI2025\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 08:00:14 --> mysqli_sql_exception: Column count doesn't match value count at row 1 in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sa...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 D:\SKI\SKI2025\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', NULL, false)
+#4 D:\SKI\SKI2025\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\SKI\SKI2025\app\Database\Seeds\SatkerSeeder.php(409): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\SKI\SKI2025\system\Database\Seeder.php(147): App\Database\Seeds\SatkerSeeder->run()
+#7 D:\SKI\SKI2025\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 08:03:46 --> mysqli_sql_exception: Column count doesn't match value count at row 2 in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sa...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 D:\SKI\SKI2025\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', NULL, false)
+#4 D:\SKI\SKI2025\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\SKI\SKI2025\app\Database\Seeds\SatkerSeeder.php(411): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\SKI\SKI2025\system\Database\Seeder.php(147): App\Database\Seeds\SatkerSeeder->run()
+#7 D:\SKI\SKI2025\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 08:05:20 --> mysqli_sql_exception: Column count doesn't match value count at row 11 in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sa...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 D:\SKI\SKI2025\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', NULL, false)
+#4 D:\SKI\SKI2025\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\SKI\SKI2025\app\Database\Seeds\SatkerSeeder.php(480): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\SKI\SKI2025\system\Database\Seeder.php(147): App\Database\Seeds\SatkerSeeder->run()
+#7 D:\SKI\SKI2025\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 08:06:07 --> mysqli_sql_exception: Column count doesn't match value count at row 11 in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sa...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 D:\SKI\SKI2025\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', NULL, false)
+#4 D:\SKI\SKI2025\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\SKI\SKI2025\app\Database\Seeds\SatkerSeeder.php(488): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\SKI\SKI2025\system\Database\Seeder.php(147): App\Database\Seeds\SatkerSeeder->run()
+#7 D:\SKI\SKI2025\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 08:06:26 --> mysqli_sql_exception: Column count doesn't match value count at row 11 in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sa...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 D:\SKI\SKI2025\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', NULL, false)
+#4 D:\SKI\SKI2025\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\SKI\SKI2025\app\Database\Seeds\SatkerSeeder.php(487): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\SKI\SKI2025\system\Database\Seeder.php(147): App\Database\Seeds\SatkerSeeder->run()
+#7 D:\SKI\SKI2025\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 08:07:48 --> mysqli_sql_exception: Column count doesn't match value count at row 11 in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sa...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 D:\SKI\SKI2025\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', NULL, false)
+#4 D:\SKI\SKI2025\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\SKI\SKI2025\app\Database\Seeds\SatkerSeeder.php(489): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\SKI\SKI2025\system\Database\Seeder.php(147): App\Database\Seeds\SatkerSeeder->run()
+#7 D:\SKI\SKI2025\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-07-18 08:08:44 --> mysqli_sql_exception: Column count doesn't match value count at row 11 in D:\SKI\SKI2025\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\SKI\SKI2025\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `sa...', 0)
+#1 D:\SKI\SKI2025\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 D:\SKI\SKI2025\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 D:\SKI\SKI2025\system\Database\BaseBuilder.php(1836): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', NULL, false)
+#4 D:\SKI\SKI2025\system\Database\BaseBuilder.php(2225): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 D:\SKI\SKI2025\app\Database\Seeds\SatkerSeeder.php(489): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 D:\SKI\SKI2025\system\Database\Seeder.php(147): App\Database\Seeds\SatkerSeeder->run()
+#7 D:\SKI\SKI2025\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 D:\SKI\SKI2025\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 D:\SKI\SKI2025\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 D:\SKI\SKI2025\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 D:\SKI\SKI2025\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 D:\SKI\SKI2025\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+INFO - 2025-07-18 08:10:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:11:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:11:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:11:43 --> Current route: /pm
+INFO - 2025-07-18 08:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:15:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:15:23 --> Current route: /tu
+INFO - 2025-07-18 08:15:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:15:27 --> Current route: /cTim
+INFO - 2025-07-18 08:15:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:16:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:16:49 --> Current route: /cTim
+INFO - 2025-07-18 08:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:17:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:17:37 --> Current route: /cTim
+INFO - 2025-07-18 08:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:17:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:20:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:20:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 08:20:03 --> Current route: /pm
