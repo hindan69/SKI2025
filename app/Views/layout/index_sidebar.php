@@ -107,15 +107,36 @@
         <div data-i18n="Analytics">Petunjuk Penggunaan</div>
     </a>
 </li>
+
+<?php if(session('role') == 1): ?>
 <li class="menu-header small text-uppercase">
     <span class="menu-header-text">Pengaturan</span>
 </li>
+
 <li class="menu-item">
-    <a href="index.html" class="menu-link">
+    <a href="index.html" class="menu-link menu-toggle">
         <i class="bx bx-cog me-2"></i>
         <div data-i18n="Analytics">Maintenance</div>
     </a>
+    <ul class="menu-sub">
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link">
+                <div data-i18n="Without menu">Users</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link">
+                <div data-i18n="Without navbar">Satker</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link">
+                <div data-i18n="Container">Nilai</div>
+            </a>
+        </li>
+    </ul>
 </li>
+<?php endif; ?>
 
 <script>
     function detailPK() {

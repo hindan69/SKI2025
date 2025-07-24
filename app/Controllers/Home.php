@@ -9,8 +9,6 @@ class Home extends BaseController
         echo "beranda";
     }
 
-
-
     public function tbl_pk(): string
     {
         return view('tbl_pk');
@@ -21,8 +19,7 @@ class Home extends BaseController
         return view('tbl_level');
     }
 
-    public function unauthorized()
-    {
-        echo "you're not authorized for this part";
-    }
+   
+
+
 }

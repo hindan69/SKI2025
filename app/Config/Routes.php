@@ -5,11 +5,14 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/blank', 'Home::unauthorized');
 $routes->get('/', 'Home::index', ['filter' => 'LoginFilter']);
-
 $routes->get('/tbl_pk', 'Home::tbl_pk');
 $routes->get('/tbl_lvl', 'Home::tbl_lvl');
+
+// CMS
+$routes->get('/cms', 'CMS::admin');
+$routes->get('/cms/users', 'CMS::users');
+
 
 // autotentikasi
 $routes->get('/login', 'Otentikasi::index');

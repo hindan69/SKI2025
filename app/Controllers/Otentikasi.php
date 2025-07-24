@@ -62,7 +62,7 @@ class Otentikasi extends BaseController
                     return redirect()->to(base_url('/'));
                     // echo "Eselon 1";
                 } elseif ($dataUser['role'] == '1') {
-                    return redirect()->to(base_url('/'));
+                    return redirect()->to(base_url('/cms'));
                     // echo "CMS";
                 }
                 // elseif ($dataUser['role'] == '10') {

@@ -2,12 +2,13 @@
 <html
     lang="en"
     class="light-style layout-menu-fixed"
-    dir="ltr"
+    dir="ltr" 
     data-theme="theme-default"
-    data-assets-path="/sneat/assets/"
+    data-assets-path="<?= base_url(); ?>/sneat/assets/"
     data-template="vertical-menu-template-free">
 
 <head>
+    
     <meta charset="utf-8" />
     <meta
         name="viewport"
@@ -16,20 +17,20 @@
     <title>Penilaian SPI/SKI</title>
 
     <meta name="description" content="" />
-    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="<?= base_url(); ?>/sneat/assets/img/favicon/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="/sneat/assets/vendor/fonts/boxicons.css" />
-    <link rel="stylesheet" href="/sneat/assets/vendor/css/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="/sneat/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="/sneat/assets/css/demo.css" />
-    <link rel="stylesheet" href="/sneat/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-    <link rel="stylesheet" href="/sneat/assets/vendor/libs/apex-charts/apex-charts.css" />
-    <script src="/sneat/assets/vendor/js/helpers.js"></script>
-    <script src="/sneat/assets/js/config.js"></script>
+    <link rel="stylesheet" href="<?= base_url(); ?>/sneat/assets/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>/sneat/assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>/sneat/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>/sneat/assets/css/demo.css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>/sneat/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>/sneat/assets/vendor/libs/apex-charts/apex-charts.css" />
+    <script src="<?= base_url(); ?>/sneat/assets/vendor/js/helpers.js"></script>
+    <script src="<?= base_url(); ?>/sneat/assets/js/config.js"></script>
 </head>
 
 <body>
@@ -41,7 +42,7 @@
             <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
                 <div class="app-brand demo">
                     <a href="index.html" class="app-brand-link">
-                        <img src="/sneat/assets/img/logo.png" alt="" width="130" height="100">
+                        <img src="<?= base_url(); ?>/sneat/assets/img/Logo.png" alt="" width="130" height="100">
                         <h4 class="app-brand-text mb-0">SPI/SKI</h4>
                     </a>
 
@@ -74,7 +75,7 @@
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                                     <div class="avatar avatar-online">
-                                        <img src="/sneat/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                                        <img src="<?= base_url(); ?>/sneat/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                                     </div>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
@@ -83,7 +84,7 @@
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 me-3">
                                                     <div class="avatar avatar-online">
-                                                        <img src="/sneat/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                                                        <img src="<?= base_url(); ?>/sneat/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                                                     </div>
                                                 </div>
                                                 <div class="flex-grow-1">
@@ -160,14 +161,14 @@
         <div class="layout-overlay layout-menu-toggle"></div>
     </div>
 
-    <script src="/sneat/assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="/sneat/assets/vendor/libs/popper/popper.js"></script>
-    <script src="/sneat/assets/vendor/js/bootstrap.js"></script>
-    <script src="/sneat/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="/sneat/assets/vendor/js/menu.js"></script>
-    <script src="/sneat/assets/vendor/libs/apex-charts/apexcharts.js"></script>
-    <script src="/sneat/assets/js/main.js"></script>
-    <script src="/sneat/assets/js/dashboards-analytics.js"></script>
+    <script src="<?= base_url(); ?>/sneat/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="<?= base_url(); ?>/sneat/assets/vendor/libs/popper/popper.js"></script>
+    <script src="<?= base_url(); ?>/sneat/assets/vendor/js/bootstrap.js"></script>
+    <script src="<?= base_url(); ?>/sneat/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="<?= base_url(); ?>/sneat/assets/vendor/js/menu.js"></script>
+    <script src="<?= base_url(); ?>/sneat/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="<?= base_url(); ?>/sneat/assets/js/main.js"></script>
+    <script src="<?= base_url(); ?>/sneat/assets/js/dashboards-analytics.js"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 
