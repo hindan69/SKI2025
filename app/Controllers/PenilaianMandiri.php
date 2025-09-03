@@ -18,6 +18,8 @@ class PenilaianMandiri extends BaseController
     protected $SKModel;
     protected $DataUmumModel;
     protected $UserModel;
+    protected $SatkerModel;
+    protected $AuditorModel;
     public function __construct()
     {
         $this->pertanyaanModel = new \App\Models\PertanyaanModel();
@@ -30,6 +32,8 @@ class PenilaianMandiri extends BaseController
         $this->SKModel = new \App\Models\SkSatkerModel();
         $this->DataUmumModel = new \App\Models\DataUmumModel();
         $this->UserModel = new \App\Models\UserModel();
+        $this->SatkerModel = new \App\Models\SatkerModel();
+        $this->AuditorModel = new \App\Models\AuditorModel();
     }
 
     // function index untuk tampilan awal user PM
@@ -131,7 +135,7 @@ class PenilaianMandiri extends BaseController
     {
         $id_satker = session()->get('id_satker');
         $id_user = session()->get('id');
-        $thn = $this->request->getGet('thn');
+        $thn       = $this->request->getGet('thn');
         $precentage = $this->nilaiPMModel->precentage($id_satker, $thn);
         $dash = $this->nilaiPMModel->dashboard($id_satker, $thn);
         $status_pm = $this->statusPMModel->filter($id_satker, $thn);
@@ -154,8 +158,23 @@ class PenilaianMandiri extends BaseController
     // function untuk form input LKE pengungkit
     public function soal_pengungkit()
     {
-        // Ambil semua data dari model
-        $id_satker = session()->get('id_satker');
+        $user_id = session()->get('id');
+        $default_role = session()->get('role');
+        $thn = $this->request->getGet('thn');
+        $id_satker = null;
+        $role = null;
+
+        if (in_array($default_role, [3, 4])) {
+            $id_satker = session()->get('id_satker');
+            $role = $default_role;
+        } elseif ($default_role == 5) {
+            $id_satker = $this->request->getGet('id_satker');
+            $roles = $this->AuditorModel->filterRole($user_id, $id_satker, $thn);
+            if (!empty($roles)) {
+                $role = (int) $roles[0]['rolepk']; // karena hasilnya array of array
+            }
+        }
+
         $thn = $this->request->getGet('thn');
         $allPertanyaan = $this->pertanyaanModel->soal();
         $allJawaban = $this->nilaiModel->findAll();
@@ -227,20 +246,36 @@ class PenilaianMandiri extends BaseController
         // Output hasil gabungan
         $data = [
             'syncedData' => $syncedArray,
-            'role' => session()->get('role'),
-            'tahun'           => $thn,
-            'presen' => $precentage,
-            's_pm'            => $s_pm
+            'role'       => $role,
+            'tahun'      => $thn,
+            'presen'     => $precentage,
+            's_pm'       => $s_pm,
+            'id_satker'  => $id_satker
         ];
-        // d($data);
-        return view('/penilaianMandiri/soal_pengungkit_V2', $data);
+        // d($nilaiPK);
+        return view('/penilaianMandiri/soal_pengungkit', $data);
     }
 
     // function untuk form input LKE hasil
     public function soal_hasil()
     {
-        // Ambil semua data dari model
-        $id_satker = session()->get('id_satker');
+        $user_id = session()->get('id');
+        $default_role = session()->get('role');
+        $thn = $this->request->getGet('thn');
+        $id_satker = null;
+        $role = null;
+
+        if (in_array($default_role, [3, 4])) {
+            $id_satker = session()->get('id_satker');
+            $role = $default_role;
+        } elseif ($default_role == 5) {
+            $id_satker = $this->request->getGet('id_satker');
+            $roles = $this->AuditorModel->filterRole($user_id, $id_satker, $thn);
+            if (!empty($roles)) {
+                $role = (int) $roles[0]['rolepk']; // karena hasilnya array of array
+            }
+        }
+
         $thn = $this->request->getGet('thn');
         $allPertanyaan = $this->pertanyaanModel->soal();
         $allJawaban = $this->nilaiModel->findAll();
@@ -312,13 +347,14 @@ class PenilaianMandiri extends BaseController
         // Output hasil gabungan
         $data = [
             'syncedData' => $syncedArray,
-            'role' => session()->get('role'),
-            'tahun'           => $thn,
-            'presen' => $precentage,
-            's_pm'            => $s_pm
+            'role'       => $role,
+            'tahun'      => $thn,
+            'presen'     => $precentage,
+            's_pm'       => $s_pm,
+            'id_satker'  => $id_satker
         ];
         // d($data);
-        return view('/penilaianMandiri/soal_hasil_v1', $data);
+        return view('/penilaianMandiri/soal_hasil', $data);
     }
 
     // function untuk penyimpanan input LKE PM,PK,Leveling

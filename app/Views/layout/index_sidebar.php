@@ -75,7 +75,7 @@
 
     <ul class="menu-sub">
         <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link">
+            <a href="javascript:void(0);" onclick="BaPM()" class="menu-link">
                 <div data-i18n="Without menu">Berita Acara PM</div>
             </a>
         </li>
@@ -108,39 +108,51 @@
     </a>
 </li>
 
-<?php if(session('role') == 1): ?>
-<li class="menu-header small text-uppercase">
-    <span class="menu-header-text">Pengaturan</span>
-</li>
+<?php if (session('role') == 1): ?>
+    <li class="menu-header small text-uppercase">
+        <span class="menu-header-text">Pengaturan</span>
+    </li>
 
-<li class="menu-item">
-    <a href="index.html" class="menu-link menu-toggle">
-        <i class="bx bx-cog me-2"></i>
-        <div data-i18n="Analytics">Maintenance</div>
-    </a>
-    <ul class="menu-sub">
-        <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link">
-                <div data-i18n="Without menu">Users</div>
-            </a>
-        </li>
-        <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link">
-                <div data-i18n="Without navbar">Satker</div>
-            </a>
-        </li>
-        <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link">
-                <div data-i18n="Container">Nilai</div>
-            </a>
-        </li>
-    </ul>
-</li>
+    <li class="menu-item">
+        <a href="index.html" class="menu-link menu-toggle">
+            <i class="bx bx-cog me-2"></i>
+            <div data-i18n="Analytics">Maintenance</div>
+        </a>
+        <ul class="menu-sub">
+            <li class="menu-item">
+                <a href="javascript:void(0);" onclick="users()" class="menu-link">
+                    <div data-i18n="Without menu">Users</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="javascript:void(0);" class="menu-link">
+                    <div data-i18n="Without navbar">Satker</div>
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="javascript:void(0);" onclick="nilai()" class="menu-link">
+                    <div data-i18n="Container">Nilai</div>
+                </a>
+            </li>
+        </ul>
+    </li>
 <?php endif; ?>
 
 <script>
     function detailPK() {
         // alert('detail pk')
         window.location.href = '<?= base_url('/riwayat') ?>'
+    }
+
+    function users() {
+        window.location.href = '<?= base_url('/cms/users') ?>'
+    }
+
+    function nilai() {
+        window.location.href = '<?= base_url('/cms/nilai') ?>'
+    }
+
+    function BaPM() {
+        window.location.href = '<?= base_url('/baPM') ?>'
     }
 </script>

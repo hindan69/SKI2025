@@ -33,10 +33,11 @@ class LoginFilter implements FilterInterface
 
         // Definisikan hak akses untuk masing-masing role
         $access = [
+            1 => ['/dash_pm'],
             2 => ['/tu', '/cTim'],
             3 => ['/pm', '/soal_pengungkit', '/soal_hasil', '/dash_pm'],
             4 => ['/pm', '/soal_pengungkit', '/soal_hasil', '/dash_pm', '/prfl_satker'],
-            5 => ['/prfl'],
+            5 => ['/prfl', '/soal_pengungkit', '/soal_hasil', '/dash_pm', '/soal/savePK'],
         ];
 
         // Cek apakah rute yang diminta ada dalam hak akses role

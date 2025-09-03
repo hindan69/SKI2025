@@ -14,6 +14,7 @@
                     <th class="text-center">Status PM</th>
                     <th class="text-center">Nilai PK</th>
                     <th class="text-center">Status PK</th>
+                    <th class="text-center">Peran PK</th>
                     <!-- <th class="text-center">Nilai Level</th> -->
                     <!-- <th class="text-center">Status Level</th> -->
                     <th class="text-center">Aksi</th>
@@ -37,6 +38,9 @@
                         <td class="text-center"><?= !empty($pk['nilai_pk']) ? $pk['nilai_pk'] : "<i class='bx bxs-minus-circle text-secondary'></i>" ?></td>
                         <td class="text-center"><i class='bx <?= $pk['status_kpk'] == 1 ? "bxs-check-circle text-success" : "bxs-minus-circle text-secondary" ?>'></i></td>
                         <td class="text-center">
+                            <?= $pk['rolepk'] == 10 ? "Ketua" : "Anggota" ?>
+                        </td>
+                        <td class="text-center">
                             <!-- <a href="" class="btn btn-primary btn-sm">Penilaian</a> -->
                             <?php
                             if (!array_key_exists('is_active', $pk) || !array_key_exists('status_kpk', $pk) || !array_key_exists('status_pim', $pk)) {
@@ -53,7 +57,7 @@
                                 echo '<a href="#" class="btn btn-secondary btn-sm disabled" tabindex="-1" aria-disabled="true">Menunggu PM</a>';
                             } elseif ($pk['status_kpk'] == 1) {
                                 // Penilaian sudah selesai
-                                echo '<a href="#" class="btn btn-secondary btn-sm disabled" tabindex="-1" aria-disabled="true">Selesai</a>';
+                                echo '<a href="' . base_url('/dash_pk?' . http_build_query($params)) . '" class="btn btn-success btn-sm " tabindex="-1" >Selesai</a>';
                             } else {
                                 // Semua kondisi aman, bisa menilai
                                 echo '<a href="' . base_url('/dash_pk?' . http_build_query($params)) . '" class="btn btn-primary btn-sm">Penilaian</a>';
@@ -67,7 +71,6 @@
             </tbody>
         </table>
     </div>
-
 </div>
 
 <script>

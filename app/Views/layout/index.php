@@ -17,6 +17,7 @@
     <title>Penilaian SPI/SKI</title>
 
     <meta name="description" content="" />
+
     <link rel="icon" type="image/x-icon" href="<?= base_url(); ?>/sneat/assets/img/favicon/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,7 +31,7 @@
     <link rel="stylesheet" href="<?= base_url(); ?>/sneat/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="<?= base_url(); ?>/sneat/assets/vendor/libs/apex-charts/apex-charts.css" />
     <script src="<?= base_url(); ?>/sneat/assets/vendor/js/helpers.js"></script>
-    <script src="<?= base_url(); ?>/sneat/assets/js/config.js"></script>
+    <script src="<?= base_url(); ?>/sneat/assets/js/config.js"></script>  
 </head>
 
 <body>
@@ -169,7 +170,7 @@
     <script src="<?= base_url(); ?>/sneat/assets/vendor/libs/apex-charts/apexcharts.js"></script>
     <script src="<?= base_url(); ?>/sneat/assets/js/main.js"></script>
     <script src="<?= base_url(); ?>/sneat/assets/js/dashboards-analytics.js"></script>
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
 </body>
 
 </html>

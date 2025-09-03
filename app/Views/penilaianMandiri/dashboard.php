@@ -274,11 +274,13 @@ function formatData($dash)
                 <div class="col-sm-0">
                     <div class="card-body">
                         <small class="text-muted float-end">
-                            <a href="<?= base_url('/soal_pengungkit?thn=' . $tahun) ?>" class="btn btn-info btn-sm">LKE</a>
-                            <button id="submitButton" class="btn <?= $btnClass; ?> btn-sm" <?= $isDisabled ? 'disabled' : ''; ?> data-role="<?= $role; ?>" onclick="handleClick()">
-                                <?= $btnText; ?>
-                            </button>
-                            <button id="reverseButton" class="btn btn-warning btn-sm" <?= ($role == 3 && !empty($s_pm) && empty($s_pim)) ? '' : 'hidden'; ?> onclick="reverseClick()">Revisi</button>
+                            <?php if ($role != 1): ?>
+                                <a href="<?= base_url('/soal_pengungkit?thn=' . $tahun) ?>" class="btn btn-info btn-sm">LKE</a>
+                                <button id="submitButton" class="btn <?= $btnClass; ?> btn-sm" <?= $isDisabled ? 'disabled' : ''; ?> data-role="<?= $role; ?>" onclick="handleClick()">
+                                    <?= $btnText; ?>
+                                </button>
+                                <button id="reverseButton" class="btn btn-warning btn-sm" <?= ($role == 3 && !empty($s_pm) && empty($s_pim)) ? '' : 'hidden'; ?> onclick="reverseClick()">Revisi</button>
+                            <?php endif; ?>
                         </small>
                         <h5 class="card-title text-primary">Penilaian Mandiri SPI/SKI <?= $tahun ?></h5>
                         <p class="mb-0">

@@ -12,7 +12,12 @@ $routes->get('/tbl_lvl', 'Home::tbl_lvl');
 // CMS
 $routes->get('/cms', 'CMS::admin');
 $routes->get('/cms/users', 'CMS::users');
-
+$routes->get('/cms/users/data', 'CMS::getUsersData');
+$routes->get('/cms/nilai', 'CMS::nilai');
+$routes->get('/cms/nilai', 'CMS::nilai');
+$routes->get('/cms/nilai/data', 'CMS::getSatkerData');
+$routes->get('/cms/nilai/data/(:any)', 'CMS::getNilai/$1');
+$routes->get('/cms/dashPm', 'CMS::dash_pm');
 
 // autotentikasi
 $routes->get('/login', 'Otentikasi::index');
@@ -56,3 +61,9 @@ $routes->post('/reverse_pm', 'PenilaianMandiri::reverse_pm');
 $routes->get('/prfl', 'Auditor::index');
 $routes->get('/riwayat', 'Auditor::riwayat');
 $routes->get('/dash_pk', 'Auditor::dash');
+$routes->post('/submit_pk', 'Auditor::submit_pk');
+$routes->post('/spk_pim', 'Auditor::submit_pim');
+$routes->post('/reverse_pk', 'Auditor::reverse_pk');
+
+// report 
+$routes->get('/baPM', 'Report::index');

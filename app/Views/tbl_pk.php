@@ -45,6 +45,7 @@ if (($role == 3 && $hasData1) || ($role == 4 && $persentase_pm == 100 && $hasDat
 
 ?>
 
+<?= d($dash) ?>
 <div class="row">
     <div class="col-lg-12 order-0">
         <div class="card">

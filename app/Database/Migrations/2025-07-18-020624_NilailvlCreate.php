@@ -61,11 +61,11 @@ class NilailvlCreate extends Migration
         ]);
     
         $this->forge->addKey('idx', true); // Primary Key
-        $this->forge->createTable('nilai_lvl');
+        $this->forge->createTable('nilai_level');
     }
 
     public function down()
     {
-        //
+        
     }
 }
